@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Заготовка под проект</title>
+  <!-- build:css css/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/style.min.css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <div class="range">
+        <div class="fast-phone">
+          <p class="fast-phone__slogan">По любым вопросам</p>
+          <a href="" class="fast-phone__link">8 800 333 4744</a>
+          <p class="fast-phone__slogan">Бесплатно по РФ</p>
+        </div>
+        <ul class="advantages">
+          <li class="advantages__item advantages__item--finger">
+            <strong class="advantages__head">Без предоплаты</strong>
+            <span class="advantages__description">Оплата при получении</span>
+          </li>
+          <li class="advantages__item advantages__item--flycar">
+            <strong class="advantages__head">Срочная доставка</strong>
+            <span class="advantages__description">В день заказа</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="promo">
+      <div class="container">
+        <h1 class="promo__head">Хотите получать <strong class="promo__accent">печати</strong><br> с бесплатной доставкой<br> до двери?</h1>
+        <ul class="steps">
+          <li class="steps__item">
+            <strong class="steps__hashtag"># Просто</strong>
+            <span class="steps__number">1</span>
+            <p class="steps__text">Заполните онлайн<br> заявку за 5 минут</p>
+          </li>
+          <li class="steps__item">
+            <strong class="steps__hashtag"># Удобно</strong>
+            <span class="steps__number">1</span>
+            <p class="steps__text">через 15 минут<br> мы перезвоним<br> и согласуем все детали</p>
+          </li>
+          <li class="steps__item">
+            <strong class="steps__hashtag"># Быстро</strong>
+            <span class="steps__number">1</span>
+            <p class="steps__text">доставим до двери на<br> следующий день или <br>забирайте из пункта <br>самовывоза в удобное время</p>
+          </li>
+        </ul>
+        <div class="decision">
+          <p class="decision__text">Можно просто послать нам фото документов или оттиска на номер</p>
+          <a href="tel:79110177718" class="decision__phone">+ 7 911 01 777 18</a>
+          <div class="decision__social">
+            <a href="#" class="decision__sociallink">whatsapp</a>
+            <a href="#" class="decision__sociallink">viber</a>
+            <a href="#" class="decision__sociallink">telegram</a>
+          </div>
+          <p class="decision__text--small">Мы свяжемся с вами и согласуем детали!</p>
+        </div>
+      </div>
+      <div class="promo__sloganbox">
+        <div class="container">
+          <strong class="promo__slogan">Экономьте силы, время и деньги<br>Получите печати быстро</strong>
+        </div>
+      </div>
+      <div class="container">
+        <strong class="warranty">100% гарантия конфиденциальности</strong>
+      </div>
+    </section>
+
+    <form class="order" method="#" enctype="multipart/form-data">
+      <section class="order__step order__type-stamp">
+        <div class="order__header">
+          <div class="container">
+            <h2 class="order__head">выберите тип печати</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="type-stamp">
+            <input id="copy_stamp" name="type_stamp" class="order__radio" type="radio">
+            <label class="order__tabs" for="copy_stamp">Копия по оттиску</label>
+            <input id="new_stamp" name="type_stamp" class="order__radio" type="radio" checked>
+            <label class="order__tabs" for="new_stamp">Новая печать</label>
+            <input id="facsimile" name="type_stamp" class="order__radio" type="radio">
+            <label class="order__tabs" for="facsimile">Факсимиле</label>
+          </div>
+          <div class="company-type">
+            <input id="company_ip" name="company-type" class="order__radio" type="radio" checked>
+            <label class="company-type__tabs" for="company_ip">ИП</label>
+            <input id="company_ooo" name="company-type" class="order__radio" type="radio">
+            <label class="company-type__tabs" for="company_ooo">ООО</label>
+            <input id="company_else" name="company-type" class="order__radio" type="radio">
+            <label class="company-type__tabs" for="company_else">Другое</label>
+          </div>
+          <div class="client-info">
+            <div class="client-info__name">
+              <input class="client-info__input filled" type="text" placeholder="Фамилия">
+              <input class="client-info__input" type="text" placeholder="Имя">
+              <input class="client-info__input" type="text" placeholder="Отчество">
+            </div>
+            <div class="client-info__company">
+              <input class="client-info__input" type="text" placeholder="Город">
+              <input class="client-info__input" type="text" placeholder="ОГРНИП">
+              <input class="client-info__input" type="text" placeholder="ИНН">
+            </div>
+            <label class="upload-logo"><input  type="file">Загрузить логотип</label>
+          </div>
+        </div>
+      </section>
+      <section class="order__step order__rigging">
+        <div class="order__header">
+          <div class="container">
+            <h2 class="order__head">выберите оснастку</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="rigging-type">
+            <input id="print" name="rigging_stamp" class="order__radio" type="checkbox" checked>
+            <label class="order__tabs" for="print"><span>Печати</span></label>
+            <input id="stamp" name="rigging_stamp" class="order__radio" type="checkbox">
+            <label class="order__tabs" for="stamp"><span>Штампы</span></label>
+          </div>
+          <div class="rigging-using">
+            <input id="automatic" name="rigging_stamp" class="order__radio" type="checkbox" checked>
+            <label class="order__tabs" for="automatic"><span>Автоматические</span></label>
+            <input id="pocket" name="rigging_stamp" class="order__radio" type="checkbox" checked>
+            <label class="order__tabs" for="pocket"><span>Карманные</span></label>
+            <input id="handheld" name="rigging_stamp" class="order__radio" type="checkbox" checked>
+            <label class="order__tabs" for="handheld"><span>Ручные</span></label>
+          </div>
+          <div class="stamp-gallery owl-carousel">
+            <div class="stamp-gallery__item">
+              <span class="stamp-gallery__price">300р</span>
+              <div class="stamp-gallery__photo"><img src="img/stamp_photo.jpg" alt="#"></div>
+              <h3 class="stamp-gallery__name">Trodat диаметр 40 пр-во Австрия</h3>
+            </div>
+            <div class="stamp-gallery__item">
+              <span class="stamp-gallery__price">300р</span>
+              <div class="stamp-gallery__photo"><img src="img/stamp_photo.jpg" alt="#"></div>
+              <h3 class="stamp-gallery__name">Trodat диаметр 40 пр-во Австрия</h3>
+            </div>
+            <div class="stamp-gallery__item">
+              <span class="stamp-gallery__price">300р</span>
+              <div class="stamp-gallery__photo"><img src="img/stamp_photo.jpg" alt="#"></div>
+              <h3 class="stamp-gallery__name">Trodat диаметр 40 пр-во Австрия</h3>
+            </div>
+            <div class="stamp-gallery__item">
+              <span class="stamp-gallery__price">300р</span>
+              <div class="stamp-gallery__photo"><img src="img/stamp_photo.jpg" alt="#"></div>
+              <h3 class="stamp-gallery__name">Trodat диаметр 40 пр-во Австрия</h3>
+            </div>
+            <div class="stamp-gallery__item">
+              <span class="stamp-gallery__price">300р</span>
+              <div class="stamp-gallery__photo"><img src="img/stamp_photo.jpg" alt="#"></div>
+              <h3 class="stamp-gallery__name">Trodat диаметр 40 пр-во Австрия</h3>
+            </div>
+            <div class="stamp-gallery__item">
+              <span class="stamp-gallery__price">300р</span>
+              <div class="stamp-gallery__photo"><img src="img/stamp_photo.jpg" alt="#"></div>
+              <h3 class="stamp-gallery__name">Trodat диаметр 40 пр-во Австрия</h3>
+            </div>
+            <div class="stamp-gallery__item">
+              <span class="stamp-gallery__price">300р</span>
+              <div class="stamp-gallery__photo"><img src="img/stamp_photo.jpg" alt="#"></div>
+              <h3 class="stamp-gallery__name">Trodat диаметр 40 пр-во Австрия</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="order__step order__more">
+        <div class="order__header">
+          <div class="container">
+            <h2 class="order__head">добавить к заказу</h2>
+          </div>
+          <div class="container">
+            
+          </div>
+        </div>
+
+      </section>
+      <section class="order__step order__contacts">
+        <div class="order__header">
+          <div class="container">
+            <h2 class="order__head">для оперативной связи с вами</h2>
+          </div>
+        </div>
+        <div class="container"></div>
+      </section>
+    </form>
+  </main>
+  <footer class="page-footer"></footer>
+  <!-- build:js js/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/main.min.js -->
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

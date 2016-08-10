@@ -1,0 +1,35 @@
+.container {
+    padding-right: @indent-col/2;
+    padding-left: @indent-col/2;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.range{
+  margin-left: -@indent-col/2;
+  margin-right: -@indent-col/2;
+
+  &:after{
+    content: '';
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+}
+
+.generate-columns(@n, @i: 1) when (@i =< @n) { 
+
+  .col-@{i} {
+  width: (@i * 100% / @n);
+  padding: 0 @indent-col/2;
+  float: left;
+  }
+  .col-offset-@{i} {
+  // width: (@i * 100% / @n);
+  margin-left: (@i * 100% / @n);
+  }
+  
+  .generate-columns(@n, (@i + 1));
+  }
+  
+  .generate-columns(12);
