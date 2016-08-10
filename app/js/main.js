@@ -1,8 +1,12 @@
 $(document).ready(function(){
+
   $('.owl-carousel').owlCarousel({
     center: true,
-    items: 6,
-    margin: 10,
+    items: 4,
+    margin: 0,
     loop: true,
+    nav: true,
+    navText: false
   });
+
 });

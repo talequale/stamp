@@ -29,7 +29,7 @@
           </li>
           <li class="advantages__item advantages__item--flycar">
             <strong class="advantages__head">Срочная доставка</strong>
-            <span class="advantages__description">В день заказа</span>
+            <span class="advantages__description">В день заказа до 24:00</span>
           </li>
         </ul>
       </div>
@@ -47,12 +47,12 @@
           </li>
           <li class="steps__item">
             <strong class="steps__hashtag"># Удобно</strong>
-            <span class="steps__number">1</span>
+            <span class="steps__number">2</span>
             <p class="steps__text">через 15 минут<br> мы перезвоним<br> и согласуем все детали</p>
           </li>
           <li class="steps__item">
             <strong class="steps__hashtag"># Быстро</strong>
-            <span class="steps__number">1</span>
+            <span class="steps__number">3</span>
             <p class="steps__text">доставим до двери на<br> следующий день или <br>забирайте из пункта <br>самовывоза в удобное время</p>
           </li>
         </ul>
@@ -124,18 +124,18 @@
         </div>
         <div class="container">
           <div class="rigging-type">
-            <input id="print" name="rigging_stamp" class="order__radio" type="checkbox" checked>
-            <label class="order__tabs" for="print"><span>Печати</span></label>
-            <input id="stamp" name="rigging_stamp" class="order__radio" type="checkbox">
-            <label class="order__tabs" for="stamp"><span>Штампы</span></label>
+            <input id="print" name="rigging_stamp" class="order__radio" type="checkbox">
+            <label for="print" class="order__tabs"><span>Печати</span></label>
+            <input id="stamp" name="rigging_stamp" class="order__radio" type="checkbox" checked>
+            <label for="stamp" class="order__tabs"><span>Штампы</span></label>
           </div>
           <div class="rigging-using">
             <input id="automatic" name="rigging_stamp" class="order__radio" type="checkbox" checked>
-            <label class="order__tabs" for="automatic"><span>Автоматические</span></label>
+            <label for="automatic" class="order__tabs"><span>Автоматические</span></label>
             <input id="pocket" name="rigging_stamp" class="order__radio" type="checkbox" checked>
-            <label class="order__tabs" for="pocket"><span>Карманные</span></label>
-            <input id="handheld" name="rigging_stamp" class="order__radio" type="checkbox" checked>
-            <label class="order__tabs" for="handheld"><span>Ручные</span></label>
+            <label for="pocket" class="order__tabs"><span>Карманные</span></label>
+            <input id="handheld" name="rigging_stamp" class="order__radio" type="checkbox" disabled>
+            <label for="handheld" class="order__tabs"><span>Ручные</span></label>
           </div>
           <div class="stamp-gallery owl-carousel">
             <div class="stamp-gallery__item">
@@ -179,13 +179,25 @@
       <section class="order__step order__more">
         <div class="order__header">
           <div class="container">
-            <h2 class="order__head">добавить к заказу</h2>
-          </div>
-          <div class="container">
-            
+            <h2 class="order__head">добавить к заказу:</h2>
           </div>
         </div>
-
+        <div class="container container--wide">
+          <div class="add-order">
+            <input id="add-order__one" name="add-order" class="add-order__input" type="checkbox">
+            <label class="add-order__tabs" for="add-order__one">Такую же печать или с пометкой "Для документов"<strong>Со скидкой</strong></label>
+            <input id="add-order__two" name="add-order" class="add-order__input" type="checkbox">
+            <label class="add-order__tabs" for="add-order__two">Такую же печать на корманной оснастке - удобно носить с собой <strong>Со скидкой</strong></label>
+            <input id="add-order__three" name="add-order" class="add-order__input" type="checkbox">
+            <label class="add-order__tabs" for="add-order__three">Добавить штамп для чеков и др. инструментов <strong>Со скидкой</strong></label>
+          </div>
+        </div>
+        <div class="container">
+          <a href="#" class="add-stamp">Новая печать</a>
+        </div>
+        <div class="guarantee">
+          <div class="container"><strong class="guarantee__text">даем гарантию качества — наши клише изготовлены из австрийской резины <br> при помощи лазера и служат очень-очень долго! </strong></div>
+        </div>
       </section>
       <section class="order__step order__contacts">
         <div class="order__header">
@@ -193,7 +205,37 @@
             <h2 class="order__head">для оперативной связи с вами</h2>
           </div>
         </div>
-        <div class="container"></div>
+        <div class="container">
+          <div class="contacts-info">
+            <input class="contacts-info__input" type="text" placeholder="Введите ваш телефон">
+            <input class="contacts-info__input" type="text" placeholder="Введите ваш email">
+          </div>
+          <div class="confirmation">
+            <div class="confirmation__info">
+              <span class="confirmation__stamp">новая печать</span>
+              <span class="confirmation__rigging">на автоматической оснастке</span>
+            </div>
+            <div class="confirmation__delivery">
+              <input id="confirmation__one" class="confirmation__input" name="delivery"  type="radio" checked>
+              <label for="confirmation__one" class="confirmation__text">Бесплатная доставка на следующий день</label>
+              <input id="confirmation__two" class="confirmation__input" name="delivery" type="radio">
+              <label for="confirmation__two" class="confirmation__text">Доставка день в день (до 18:00)</label>
+              <input id="confirmation__three" class="confirmation__input" name="delivery" type="radio">
+              <label for="confirmation__three" class="confirmation__text">Доставка за 3 часа (до 24:00)</label>
+            </div>
+            <div class="confirmation__price">
+              <p>от <span class="confirmation__summ">1999</span> Р</p>
+            </div>
+            
+          </div>
+          <div class="form-send">
+            <button class="btn-send">Получить печати быстро</button>
+          </div>
+        </div>
+        <div class="container container--bottomfix">
+          <p class="feedback-message">Мы свяжемся с вами в течении 15 минут и уточним все детали заказа</p>
+          <p class="feedback-message feedback-message--small">Окончательную цену менеджер назовет после уточнения деталей заказа</p>
+        </div>
       </section>
     </form>
   </main>

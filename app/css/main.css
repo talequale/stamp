@@ -54,6 +54,11 @@ This must be run when you have at least 2 sprites.
   margin-right: auto;
   margin-left: auto;
 }
+.container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .range {
   margin-left: -15px;
   margin-right: -15px;
@@ -226,7 +231,7 @@ textarea {
   }
   .advantages__item--finger:before {
     background-image: url(../img/sprite.png);
-    background-position: -84px -147px;
+    background-position: -84px -227px;
     width: 67px;
     height: 79px;
     top: -10px;
@@ -433,7 +438,7 @@ textarea {
   }
   .advantages__item--finger:before {
     background-image: url(../img/sprite.png);
-    background-position: -84px -147px;
+    background-position: -84px -227px;
     width: 67px;
     height: 79px;
     top: -23px;
@@ -605,6 +610,7 @@ textarea {
     font-size: 34px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
+    letter-spacing: 3px;
     color: #bbbbbb;
   }
   .type-stamp .order__tabs {
@@ -704,7 +710,7 @@ textarea {
     top: 50px;
     right: -170px;
     display: block;
-    border: 1px solid #ff5b5a;
+    border: 1px solid #ff4749;
     font-size: 17px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -720,7 +726,8 @@ textarea {
     display: inline-block;
     padding-right: 30px;
     margin-right: 25px;
-    background-color: #f6f5f3;
+    background: -webkit-linear-gradient(0deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
+    background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
     border: 1px solid #eee;
     -webkit-border-radius: 15px;
     border-radius: 15px;
@@ -751,8 +758,8 @@ textarea {
     color: #777777;
     background-color: #fff;
   }
-  .order__rigging .order__radio:checked + .order__tabs {
-    background-color: #e1e4f7;
+  .order__rigging .order__radio:disabled + .order__tabs span {
+    background-color: #f5f5f5;
   }
   .order__rigging .order__radio {
     display: none;
@@ -760,5 +767,271 @@ textarea {
   .rigging-type,
   .rigging-using {
     margin: 15px 0;
+  }
+  .stamp-gallery__item {
+    padding: 0 23px 45px 23px;
+  }
+  .order__more .container--wide {
+    width: 1366px;
+  }
+  .order__more .order__header {
+    border: none;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .order__more .order__head {
+    color: #ff4749;
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+  .add-order {
+    text-align: center;
+    padding-bottom: 45px;
+  }
+  .add-order__tabs {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ff4749;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #444444;
+    width: 310px;
+    padding: 10px 34px 44px 34px;
+    margin-right: 114px;
+    vertical-align: middle;
+    -webkit-box-shadow: inset 0 0 0 0 #ff4749;
+    box-shadow: inset 0 0 0 0 #ff4749;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .add-order__tabs:last-child {
+    margin-right: 0;
+  }
+  .add-order__tabs strong {
+    position: absolute;
+    display: block;
+    color: #ff4749;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 28px;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .add-order__input {
+    display: none;
+  }
+  .add-order__input:checked + .add-order__tabs {
+    -webkit-box-shadow: inset 0 0 0 4px #ff4749;
+    box-shadow: inset 0 0 0 4px #ff4749;
+  }
+  .add-stamp {
+    display: inline-block;
+    padding: 25px;
+    padding-left: 160px;
+    background-color: #d8d8d8;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0044cc;
+    position: relative;
+  }
+  .add-stamp:before {
+    position: absolute;
+    content: '';
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../img/sprite.png);
+    background-position: -84px -147px;
+    width: 80px;
+    height: 80px;
+  }
+  .guarantee {
+    background-color: #ffffcc;
+    border-top: 1px solid #dddddd;
+    padding: 15px 0;
+  }
+  .guarantee__text {
+    font-size: 16px;
+    color: #ff4749;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .order__contacts {
+    background-color: #d4e7f5;
+  }
+  .order__contacts .order__header {
+    background-color: #fff;
+  }
+  .order__contacts .container--bottomfix {
+    background-color: #ebf2fc;
+  }
+  .contacts-info {
+    float: left;
+    position: relative;
+    height: 40px;
+    width: 70%;
+    -webkit-box-shadow: 0 5px 5px 0 #93a0aa;
+    box-shadow: 0 5px 5px 0 #93a0aa;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .contacts-info__name,
+  .contacts-info__company {
+    margin: 12px 0;
+    position: relative;
+    height: 40px;
+  }
+  .contacts-info__input {
+    position: absolute;
+    border: 2px solid #dddddd;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    width: 53%;
+    padding: 8px 15px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .contacts-info__input:focus {
+    border-color: #ffe600;
+  }
+  .contacts-info__input.filled {
+    border-color: #ffe600;
+  }
+  .contacts-info__input:first-child {
+    left: 0;
+  }
+  .contacts-info__input:nth-child(2) {
+    left: 47%;
+  }
+  .confirmation {
+    float: left;
+    width: 600px;
+    clear: both;
+  }
+  .confirmation:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+  .confirmation__info {
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 3px 0;
+    padding-left: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .confirmation__delivery {
+    width: 400px;
+    float: left;
+  }
+  .confirmation__text {
+    position: relative;
+    display: block;
+    background-color: #dddddd;
+    padding: 3px 0;
+    padding-left: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .confirmation__text:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #aaaaaa;
+  }
+  .confirmation__input {
+    display: none;
+  }
+  .confirmation__input:checked + .confirmation__text {
+    background-color: #ffff66;
+  }
+  .confirmation__input:checked + .confirmation__text:before {
+    border-color: #222222;
+    background-color: #222222;
+  }
+  .confirmation__price {
+    width: 200px;
+    float: left;
+    background-color: #fff;
+  }
+  .confirmation__price p {
+    font-size: 32px;
+    text-align: center;
+    margin: 15px 0;
+    letter-spacing: 2px;
+  }
+  .confirmation__summ {
+    color: #ff4749;
+    font-weight: bold;
+  }
+  .form-send {
+    position: relative;
+    float: right;
+  }
+  .form-send:after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/sprite.png);
+    background-position: -180px -22px;
+    width: 47px;
+    height: 43px;
+    top: 0;
+    left: -40px;
+    z-index: 1;
+  }
+  .btn-send {
+    position: relative;
+    border: none;
+    background-color: #ffe900;
+    color: #0044cc;
+    width: 187px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 17px 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  .container--bottomfix {
+    padding: 30px;
+  }
+  .feedback-message {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #444444;
+    letter-spacing: 2px;
+    margin: 5px 0;
+  }
+  .feedback-message--small {
+    font-size: 14px;
+    text-transform: lowercase;
   }
 }
