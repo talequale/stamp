@@ -1,27 +1,28 @@
 .page-header{
+  padding-top: 20px;
 
   & .container{
-    padding: 0 80px;
+    padding: 0 40px;
   }
 }
 .fast-phone{
   .col-12;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 
   &__slogan{
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
-    font-size: 24px;
-    letter-spacing: 6px;
+    font-size: 12px;
+    letter-spacing: 3px;
     margin: 0;
   }
   &__link{
     display: block;
     text-decoration: none;
     font-weight: bold;
-    font-size: 50px;
-    line-height: 50px;
-    letter-spacing: 6px;
+    font-size: 25px;
+    line-height: 25px;  
+    letter-spacing: 3px;
     color: @c-yellow;
   }
 }
@@ -30,8 +31,8 @@
   &__item{
     list-style: none;
     position: relative;
-    padding-left: 130px;
-    margin-bottom: 50px;
+    padding-left: 70px;
+    margin-bottom: 25px;
     color: @c-grey;
 
     &:last-child{
@@ -46,23 +47,26 @@
       top: 0;
     }
     &--finger:before{
-      .sprite(@icon-finger);
+      .sprite(@icon-finger-small);
       top: -10px;
     }
     &--flycar:before{
-      .sprite(@icon-flycar);
+      .sprite(@icon-flycar-small);
     }
   }
   &__head{
     font-weight: lighter;
-    font-size: 40px;
-    letter-spacing: 5px
+    font-size: 20px;
+    letter-spacing: 1px
   }
   &__description{
     display: block;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
-    font-size: 20px;
-    letter-spacing: 5px;
+    font-size: 10px;
+    letter-spacing: 2px;
   }
+}
+.decision-header{
+  display: none;
 }

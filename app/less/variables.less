@@ -1,22 +1,17 @@
 // закомментировать если не юзать бутстрап
-@container-laptop-wide: 1366px;
-@container-laptop: 800px;
-@container-tablet: 640px;
-// @container-phone: 480px;
-
-@laptop-wide-min: @container-laptop-wide;
+@container-laptop: 1028px;
+@container-phone: 320px;
 
 @laptop-min: @container-laptop;
-@laptop-max: (@container-laptop-wide - 1);
 
-@tablet-min: @container-tablet;
-@tablet-max: (@container-laptop-wide - 1);
+// @tablet-min: @container-tablet;
+// @tablet-max: (@container-laptop-wide - 1);
 
-// @phone-min: @container-phone;
-// @phone-max: (@container-tablet - 1);
+@phone-min: @container-phone;
+@phone-max: (@container-laptop - 1);
 
 
-@indent-col: 30px;      // растояние между колонками сетки. 
+@indent-col: 20px;      // растояние между колонками сетки. 
                         // Левый и правый паддинги каждой колонки и отрицательные левый 
                         // и правый маргин для row высчитываются автоматически
 
