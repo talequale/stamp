@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-  $('.owl-carousel').owlCarousel({
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
     center: true,
     items: 4,
     margin: 0,
@@ -28,6 +29,13 @@ $(document).ready(function(){
           items : 7,
       }
     }
+  });
+
+  // Промотка к слайду, на котором сделан клик
+  $('.stamp-gallery__item').on('click', function(){
+    var slideIndex = $(this).closest('.owl-item').index();
+    console.log(slideIndex);
+    owl.trigger('to.owl.carousel', [slideIndex]);
   });
 
   // var top = $('.promo__sloganbox').offset().top;
