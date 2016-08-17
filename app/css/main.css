@@ -1739,6 +1739,13 @@ textarea {
     text-transform: lowercase;
   }
 }
+.stamp-gallery__item {
+  display: block;
+}
+.stamp-gallery__item input {
+  position: absolute;
+  visibility: hidden;
+}
 @media (min-width: 1028px) {
   .stamp-gallery {
     position: relative;

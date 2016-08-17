@@ -6,7 +6,7 @@ $(document).ready(function(){
     items: 4,
     margin: 0,
     // loop: true,
-    startPosition: 3, // только если слайдов более 3-х изначально
+    startPosition: 3, // только если слайдов более 3-х изначально, завязан на разметку — в третьем слайде выбранный по умолчанию радиобатон
     nav: true,
     navText: false,
     responsiveClass:true,
@@ -18,6 +18,7 @@ $(document).ready(function(){
       // breakpoint from 1028 up
       1028 : {
           items : 4,
+          mouseDrag: false,
       },
       1200 : {
           items : 5,
@@ -36,6 +37,17 @@ $(document).ready(function(){
     var slideIndex = $(this).closest('.owl-item').index();
     console.log(slideIndex);
     owl.trigger('to.owl.carousel', [slideIndex]);
+  });
+  var items = $('.stamp-gallery .owl-item');
+  // Когда в карусели происходит изменение, снимаем чек со всех радиокнопок
+  owl.on('change.owl.carousel', function(event) {
+    var item = event.item.index;
+    items.find('input').removeAttr('checked');
+  });
+  // Когда в карусели завершено изменение, ставим чек на нужную радиокнопку
+  owl.on('changed.owl.carousel', function(event) {
+    var item = event.item.index;
+    items.eq(item).find('input').attr('checked', 'checked');
   });
 
   // var top = $('.promo__sloganbox').offset().top;
