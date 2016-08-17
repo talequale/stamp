@@ -5,6 +5,9 @@
     "Kirill Demidov <kademidov@gmail.com>"
   ],
   "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
