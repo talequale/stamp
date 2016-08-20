@@ -1,1 +1,1 @@
-### gulp-site-starter
+### langing stamp
