@@ -5,17 +5,20 @@
   &__item{
     .col-4;
     list-style: none;
-    margin-bottom: 45px;
+    margin-bottom: 34px;
 
     &:last-child .steps__number:after{
       position: static;
       display: none;
     }
+
+    &:not(:first-child) {
+      .col-offset-1;
+    }
   }
 
   &__hashtag{
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    .proxima(lighter);
     font-size: 26px;
     letter-spacing: 5px;
     color: @c-lightblue;
@@ -23,8 +26,8 @@
 
   &__number{
     display: block;
-    margin-top: 30px;
-    padding-left:   20px;
+    margin-top: 11px;
+    padding-left: 60px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-size: 59px;
     font-weight: bold;
@@ -36,18 +39,18 @@
       position: absolute;
       .sprite(@step-arrow);
       top: 25px;
-      left: 110px;
+      left: 170px;
     }
 
   }
 
   &__text{
-    margin-top: 15px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    .proxima(lighter);
+    margin-top: 14px;
     font-size: 16px;
+    line-height: 23px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 }
 

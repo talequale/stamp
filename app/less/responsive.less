@@ -1,24 +1,35 @@
 @media screen and (min-width: @laptop-min) {
+  .generate-columns(16);
   .container{
-    width: 800px;
-    // width: @container-laptop;
-    padding-left: 0;
-    padding-right: 0;
+    width: @container-laptop;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   @import url(header.less);
   @import url(promo.less);
   @import url(steps.less);
+  @import url(decision.less);
   @import url(order.less);
+  @import url(sloganbox.less);
+  @import url(warranty.less);
+  @import url(next.less);
 
 }
 
 @media screen and (max-width: @phone-max) {
+  .generate-columns(12);
   .container{
+    padding-left: 7px;
+    padding-right: 7px;
     max-width: 480px;
     min-width: @phone-min;
   }
   @import url(header_mobile.less);
   @import url(promo_mobile.less);
   @import url(steps_mobile.less);
+  @import url(decision_mobile.less);
   @import url(order_mobile.less);
+  @import url(sloganbox_mobile.less);
+  @import url(warranty_mobile.less);
+  @import url(next_mobile.less);
 }

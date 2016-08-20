@@ -10,8 +10,6 @@
   transition: all 0.3s ease;
 
   & .container{
-    min-width: 1028px;
-    max-width: 1300px;
     position: relative;
   }
 
@@ -39,14 +37,13 @@
   }
 }
 .fast-phone{
-  .col-4;
+  .col-5;
   float: right;
   margin-bottom: 0;
   text-align: right;
 
   &__slogan{
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    .proxima(lighter);
     font-size: 13px;
     letter-spacing: 3px;
     margin: 0;
@@ -57,15 +54,15 @@
     display: block;
     text-decoration: none;
     font-weight: bold;
-    font-size:42px;
+    font-size:40px;
     line-height: 50px;
-    letter-spacing: 6px;
-    color: #fff;
+    letter-spacing: 3px;
+    color: @c-blue;
   }
 }
 
 .advantages{
-  .col-8;
+  .col-11;
   margin-top: 24px;
   margin-bottom: 8px;
   padding-right: 0;
@@ -88,26 +85,25 @@
       display: block;
       position: absolute;
       left: 0;
+      bottom: 0;
     }
     &--finger:before{
       .sprite(@icon-finger);
-      top: -23px;
     }
     &--flycar:before{
       .sprite(@icon-flycar);
-      top: -15px;
     }
   }
   &__head{
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: 3px;
   }
   &__description{
     display: block;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 3px;
   }
 }

@@ -1,64 +1,132 @@
-.order{
+.order {
 
-  &__header{
+  &__header {
     border: 1px solid @c-light-grey;
     padding: 13px 0;
     margin-bottom: 40px;
   }
 
-  &__head{
+  &__head {
     margin: 0;
     font-size: 34px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    .proxima(lighter);
     letter-spacing: 3px;
     color: @c-order-head;
   }
+
+  &__new{
+
+    & .order__header{
+      display: none;
+    }
+
+  }
+
 }
 
-.type-stamp{
+.type-stamp {
+  .range;
 
-  & .order__tabs{
+  &__item {
+    .col-4;
+  }
+
+  & .order__tabs {
+    .proxima(lighter);
     font-size: 16px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    letter-spacing: 3px;
     text-transform: uppercase;
     background-color: #eee;
-    border: 2px solid #eee;
-    width: 223px;
-    display: inline-block;
+    border: 1px solid #eee;
     text-align: center;
+    display: inline-block;
+    width: 100%;
     padding: 23px 0;
-    margin-right: 5px;
+    color: #777777;
     transition: all 0.3s ease;
   }
 
-  & .order__radio:checked + .order__tabs{
-    border: 2px solid @c-yellow;
+  & .order__radio:checked + .order__tabs {
+    border: 1px solid @c-yellow;
     background-color: #fff;
   }
+
+  & #copy_stamp:checked + .order__tabs, & #facsimile:checked + .order__tabs {
+    position: relative;
+
+    &:after{
+      .sprite(@drag-and-drop-arrow);
+      content: '';
+      position: absolute;
+      left: 30px;
+      bottom: -15px;
+    }
+  }
+
 }
 
-.company-type{
-  margin-top: 15px;
+.download-file {
+  .col-16;
+  text-align: center;
+  color: #444444;
+  margin-top: 10px;
 
-  &__tabs{
-    font-size: 16px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+  &__label{
+    .proxima-cond(lighter);
+    font-size: 30px;
+    line-height: 24px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    background-color: #eee;
-    border: 2px solid #eee;
-    width: 108px;
+    border: 2px solid #fae264;
+    background-color: #ffffcc;
+    display: block;
+    padding: 60px 0 50px 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__hint{
+    .proxima(lighter);
+    font-size: 14px;
+    line-height: 32px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 10px;
+  }
+
+  & input {
+    display: none;
+  }
+
+}
+
+// #download-area {
+//   display: none;
+// }
+
+.company-type {
+  .range;
+  margin-top: 10px;
+
+  &__item {
+    .col-2;
+  }
+
+  &__tabs {
+    .proxima(lighter);
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #f8f8ff;
+    border: 1px solid #f8f8ff;
+    width: 100%;
     display: inline-block;
     text-align: center;
     padding: 13px 0;
-    margin-right: 5px;
     transition: all 0.3s ease;
   }
 
-  & .order__radio:checked + .company-type__tabs{
-    border: 2px solid @c-yellow;
+  & .order__radio:checked + .company-type__tabs {
+    border: 1px solid @c-yellow;
     background-color: #fff;
   }
 
@@ -76,18 +144,18 @@
 
 }
 
-.client-info{
+.client-info {
   position: relative;
   padding-top: 40px;
   padding-bottom: 38px;
 
-  &__name, &__company{
+  &__name, &__company {
     margin: 12px 0;
     position: relative;
     height: 40px;
   }
 
-  &__input{
+  &__input {
     position: absolute;
     border: 2px solid @c-form-border;
     font-size: 16px;
@@ -100,49 +168,54 @@
     border-radius: 20px;
     transition: all 0.3s ease;
 
-    &:focus{
-      border-color: @c-yellow;
-    }
-    &.filled{
+    &:focus {
       border-color: @c-yellow;
     }
 
-    &:first-child{
+    &.filled {
+      border-color: @c-yellow;
+    }
+
+    &:first-child {
       left: 0;
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       left: 33.33%;
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       width: 33.33%;
       right: 0;
     }
+
   }
 
-  .upload-logo{
+  .upload-logo {
+    .col-4;
+    float: none;
     cursor: pointer;
-    position: absolute;
-    top: 50px;
-    right: -170px;
     display: block;
-    border: 1px solid @c-pink;
+    border: 1px solid #444444;
     font-size: 17px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    width: 145px;
-    padding: 20px 10px;
+    padding: 7px 10px;
+    margin-top: 40px;
     text-align: center;
     line-height: 25px;
 
-    & input{
+    & input {
       display: none;
     }
+
   }
+
 }
 
-.order__rigging{
+.order__rigging {
 
-  .order__tabs{
+  .order__tabs {
     display: inline-block;
     padding-right: 30px;
     margin-right: 25px;
@@ -152,23 +225,25 @@
     height: 28px;
     cursor: pointer;
 
-    & span{
+    & span {
       position: relative;
       top: -1px;
       left: 0;
       font-size: 16px;
       letter-spacing: 3px;
-      font-family: "Proxima Nova", Arial, sans-serif;
-      font-weight: lighter;
+      .proxima(lighter);
+      height: 28px;
+      line-height: 28px;
       text-transform: uppercase;
       border: 1px solid #e0e0e0;
       border-radius: 14px;
-      padding: 3px 20px;
+      padding: 0 20px;
       display: inline-block;
       color: #bbbbbb;
       background-color: #fff;
       transition: all 0.3s ease;
     }
+
   }
 
   .order__radio:checked + .order__tabs span {
@@ -314,22 +389,31 @@
 .add-order {
   text-align: center;
   padding-bottom: 45px;
+  .range;
+
+  &__item{
+    .col-5;
+  }
 
   &__tabs{
-    background-color: #fff;
+    background-color: #ffff66;
     position: relative;
-    display: inline-block;
-    border: 1px solid @c-pink;
+    border-bottom: 1px solid @c-pink;
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: @c-grey;
-    width: 310px;
-    padding: 10px 34px 44px 34px;
-    margin-right: 40px;
-    vertical-align: middle;
+    width: 100%;
+    display: block;
+    padding: 10px;
     box-shadow: inset 0 0 0 0 @c-pink;
     transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: inset 0 -4px 0 0 @c-pink;
+      // border-bottom: 3px solid @c-pink;
+    }
 
     &:after{
       z-index: -1;
@@ -359,7 +443,6 @@
     }
 
     & strong {
-      position: absolute;
       display: block;
       color: @c-pink;
       font-family: "Proxima Nova", Arial, sans-serif;
@@ -378,38 +461,63 @@
   }
 
   &__input:checked + &__tabs {
-    box-shadow: inset 0 0 0 4px @c-pink;
+    // box-shadow: inset 0 0 0 4px @c-pink;
+    box-shadow: inset 0 -4px 0 0 @c-pink, inset 0 0 0 1px @c-pink;
   }
 }
 
 .add-stamp{
-  display: inline-block;
-  padding: 25px;
-  padding-left: 160px;
-  background-color: #d8d8d8;
+  .col-6;
+  .col-offset-5;
+  .proxima-cond(normal);
   font-size: 30px;
+  line-height: 38px;
+  padding: 25px;
+  padding-left: 80px;
+  border: 1px solid @c-blue;
+  text-align: center;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-decoration: none;
-  // font-weight: bold;
   color: @c-blue;
   position: relative;
+  box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 0 @c-blue;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
 
-  &:before {
+  &:before, &:after {
     position: absolute;
     content: '';
-    left: 30px;
+    width: 47px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #000;
     top: 0;
     bottom: 0;
+    left: 25px;
     margin: auto;
-    .sprite(@icon-plus);
+    transition: all 0.3s ease;
+  }
+  &:after{
+    transform: rotate(90deg);
+  }
+
+  &:hover{
+    box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 1px @c-blue;
+
+    &:after{
+      transform: rotate(180deg);
+    }
+    &:before{
+      transform: rotate(90deg);
+    }
   }
 }
 
 .guarantee {
   background-color: #ffffcc;
   border-top: 1px solid @c-form-border;
-  padding: 15px 0;
+  padding:27px 0 23px 0;
 
   &__text{
     font-size: 16px;

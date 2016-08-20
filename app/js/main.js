@@ -50,15 +50,13 @@ $(document).ready(function(){
     items.eq(item).find('input').attr('checked', 'checked');
   });
 
-  // var top = $('.promo__sloganbox').offset().top;
-  // console.log(top);
 
   $(function () {
 
     $(window).scroll(function () {
 
-      var top = $('.promo__sloganbox').offset().top;
-      console.log(top);
+      var top = $('.promo .sloganbox').offset().top;
+      // console.log(top);
 
       if ($(this).scrollTop() > top) {
         $('.page-header').addClass('page-header--scroll');
@@ -68,5 +66,20 @@ $(document).ready(function(){
     });
 
   });
+
+
+  // Табы при выборе типа печати (новая, факсимиле, печать по оттиску)
+
+  // $('.order__tabs').on('click', function(){
+  //   $('.type-stamp-tabs').hide();
+  //   // var check = $("#new_stamp").prop("checked");
+  //   var check = $("#new_stamp").is(":checked");
+  //   console.log( check );
+  //   if ( check ){
+  //     $('#newstamp-area').show();
+  //   } else {
+  //     $('#download-area').show();
+  //   }
+  // });
 
 });

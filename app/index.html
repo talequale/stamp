@@ -64,7 +64,7 @@
           <li class="steps__item">
             <strong class="steps__hashtag"># Быстро</strong>
             <span class="steps__number">3</span>
-            <p class="steps__text">доставим до двери на<br> следующий день или <br>забирайте из пункта <br>самовывоза в удобное время</p>
+            <p class="steps__text">доставим до двери на следующий день или забирайте из пункта самовывоза в удобное время</p>
           </li>
         </ul>
         <div class="decision">
@@ -78,18 +78,30 @@
           <p class="decision__text--small">Мы свяжемся с вами и согласуем детали!</p>
         </div>
       </div>
-      <div class="promo__sloganbox">
+      <div class="sloganbox">
         <div class="container">
-          <strong class="promo__slogan">Экономьте силы, время и деньги<br>Получите печати быстро</strong>
+          <strong class="sloganbox__text">Экономьте силы,br время и деньги<br>Получите печати быстро</strong>
         </div>
       </div>
-      <div class="container">
-        <strong class="warranty">100% гарантия конфиденциальности</strong>
+      <div class="warranty">
+        <div class="container">
+          <strong class="warranty__text">100% гарантия конфиденциальности</strong>
+        </div>
       </div>
     </section>
 
     <form class="order" method="#" enctype="multipart/form-data">
       <section class="order__step order__type-stamp">
+        <div class="sloganbox">
+          <div class="container">
+            <strong class="sloganbox__text">Экономьте силы,<br> время и деньги<br>Получите печати быстро</strong>
+          </div>
+        </div>
+        <div class="warranty">
+          <div class="container">
+            <strong class="warranty__text">100% гарантия конфиденциальности</strong>
+          </div>
+        </div>
         <div class="order__header">
           <div class="container">
             <h2 class="order__head">выберите тип печати</h2>
@@ -97,37 +109,74 @@
         </div>
         <div class="container">
           <div class="type-stamp">
-            <input id="copy_stamp" name="type_stamp" class="order__radio" type="radio">
-            <label class="order__tabs" for="copy_stamp">Копия по оттиску</label>
-            <input id="new_stamp" name="type_stamp" class="order__radio" type="radio" checked>
-            <label class="order__tabs" for="new_stamp">Новая печать</label>
-            <input id="facsimile" name="type_stamp" class="order__radio" type="radio">
-            <label class="order__tabs" for="facsimile">Факсимиле</label>
-          </div>
-          <div class="company-type">
-            <input id="company_ip" name="company-type" class="order__radio" type="radio" checked>
-            <label class="company-type__tabs" for="company_ip">ИП</label>
-            <input id="company_ooo" name="company-type" class="order__radio" type="radio">
-            <label class="company-type__tabs" for="company_ooo">ООО</label>
-            <input id="company_else" name="company-type" class="order__radio" type="radio">
-            <label class="company-type__tabs" for="company_else">Другое</label>
-          </div>
-          <div class="client-info">
-            <div class="client-info__name">
-              <input class="client-info__input filled" type="text" placeholder="Фамилия">
-              <input class="client-info__input" type="text" placeholder="Имя">
-              <input class="client-info__input" type="text" placeholder="Отчество">
+            <div class="type-stamp__item">
+              <input id="copy_stamp" name="type_stamp" class="order__radio" type="radio">
+              <label class="order__tabs" for="copy_stamp">Копия по оттиску</label>
             </div>
-            <div class="client-info__company">
-              <input class="client-info__input" type="text" placeholder="Город">
-              <input class="client-info__input" type="text" placeholder="ОГРНИП">
-              <input class="client-info__input" type="text" placeholder="ИНН">
+            <div class="type-stamp__item">
+              <input id="new_stamp" name="type_stamp" class="order__radio" type="radio" checked>
+              <label class="order__tabs" for="new_stamp">Новая печать</label>
             </div>
-            <label class="upload-logo"><input  type="file">Загрузить логотип</label>
+            <div class="type-stamp__item">
+              <input id="facsimile" name="type_stamp" class="order__radio" type="radio">
+              <label class="order__tabs" for="facsimile">Факсимиле</label>
+            </div>
+          </div>
+          <div class="type-stamp-tabs range" id="download-area">
+            <div class="download-file">
+              <label class="download-file__label"><input  type="file">Загрузить скан оттиска 
+                <span class="download-file__hint">(для загрузки кликните или перетащите файлы в эту область)</span>
+              </label>
+            </div>
+          </div>
+          <div class="type-stamp-tabs" id="newstamp-area">
+            <div class="company-type">
+              <div class="company-type__item">
+                <input id="company_ip" name="company-type" class="order__radio" type="radio" checked>
+                <label class="company-type__tabs" for="company_ip">ИП</label>
+              </div>
+              <div class="company-type__item">
+                <input id="company_ooo" name="company-type" class="order__radio" type="radio">
+                <label class="company-type__tabs" for="company_ooo">ООО</label>
+              </div>
+              <div class="company-type__item">
+                <input id="company_else" name="company-type" class="order__radio" type="radio">
+                <label class="company-type__tabs" for="company_else">Другое</label>
+              </div>
+            </div>
+            <div class="client-info">
+              <div class="client-info__name">
+                <input class="client-info__input filled" type="text" placeholder="Фамилия">
+                <input class="client-info__input" type="text" placeholder="Имя">
+                <input class="client-info__input" type="text" placeholder="Отчество">
+              </div>
+              <div class="client-info__company">
+                <input class="client-info__input" type="text" placeholder="Город">
+                <input class="client-info__input" type="text" placeholder="ОГРНИП">
+                <input class="client-info__input" type="text" placeholder="ИНН">
+              </div>
+              <label class="upload-logo"><input  type="file">Загрузить логотип</label>
+            </div>
+          </div>
+          
+        </div>
+        <div class="next">
+          <div class="container">
+            <a href="#" class="next__btn">Далее</a>
           </div>
         </div>
       </section>
       <section class="order__step order__rigging">
+        <div class="sloganbox">
+          <div class="container">
+            <strong class="sloganbox__text">Экономьте силы,<br> время и деньги<br>Получите печати быстро</strong>
+          </div>
+        </div>
+        <div class="warranty">
+          <div class="container">
+            <strong class="warranty__text">100% гарантия конфиденциальности</strong>
+          </div>
+        </div>
         <div class="order__header">
           <div class="container">
             <h2 class="order__head">выберите оснастку</h2>
@@ -221,8 +270,23 @@
             </label>
           </div>
         </div>
+        <div class="next">
+          <div class="container">
+            <a href="#" class="next__btn">Далее</a>
+          </div>
+        </div>
       </section>
       <section class="order__step order__more">
+        <div class="sloganbox">
+          <div class="container">
+            <strong class="sloganbox__text">Экономьте силы,<br> время и деньги<br>Получите печати быстро</strong>
+          </div>
+        </div>
+        <div class="warranty">
+          <div class="container">
+            <strong class="warranty__text">100% гарантия конфиденциальности</strong>
+          </div>
+        </div>
         <div class="order__header">
           <div class="container">
             <h2 class="order__head">добавить к заказу:</h2>
@@ -230,19 +294,54 @@
         </div>
         <div class="container container--wide">
           <div class="add-order">
-            <input id="add-order__one" name="add-order" class="add-order__input" type="checkbox">
-            <label class="add-order__tabs" for="add-order__one">Такую же печать или с пометкой "Для документов"<strong>Со скидкой</strong></label>
-            <input id="add-order__two" name="add-order" class="add-order__input" type="checkbox">
-            <label class="add-order__tabs" for="add-order__two">Такую же печать на корманной оснастке - удобно носить с собой <strong>Со скидкой</strong></label>
-            <input id="add-order__three" name="add-order" class="add-order__input" type="checkbox">
-            <label class="add-order__tabs" for="add-order__three">Добавить штамп для чеков и др. инструментов <strong>Со скидкой</strong></label>
+            <div class="add-order__item">
+              <input id="add-order__one" name="add-order" class="add-order__input" type="checkbox">
+              <label class="add-order__tabs" for="add-order__one">Такую же печать <br>или с пометкой <br>"Для документов"<strong>Со скидкой</strong></label>
+            </div>
+            <div class="add-order__item">
+              <input id="add-order__two" name="add-order" class="add-order__input" type="checkbox">
+              <label class="add-order__tabs" for="add-order__two">Такую же печать <br>на корманной оснастке - <br>удобно носить с собой <strong>Со скидкой</strong></label>
+            </div>
+            <div class="add-order__item">
+              <input id="add-order__three" name="add-order" class="add-order__input" type="checkbox">
+              <label class="add-order__tabs" for="add-order__three">Добавить штамп<br> для чеков <br> и др. инструментов <strong>Со скидкой</strong></label>
+            </div>
+          </div>
+        </div>
+        <div class="next">
+          <div class="container">
+            <a href="#" class="next__btn">Далее</a>
+          </div>
+        </div>
+      </section>
+      <section class="order__step order__new">
+        <div class="sloganbox">
+          <div class="container">
+            <strong class="sloganbox__text">Экономьте силы,<br> время и деньги<br>Получите печати быстро</strong>
+          </div>
+        </div>
+        <div class="warranty">
+          <div class="container">
+            <strong class="warranty__text">100% гарантия конфиденциальности</strong>
+          </div>
+        </div>
+        <div class="order__header">
+          <div class="container">
+            <h2 class="order__head">добавить к заказу:</h2>
           </div>
         </div>
         <div class="container">
-          <a href="#" class="add-stamp">Новая печать</a>
+            <a href="#" class="add-stamp">Новая печать</a>
         </div>
         <div class="guarantee">
-          <div class="container"><strong class="guarantee__text">даем гарантию качества — наши клише изготовлены из австрийской резины <br> при помощи лазера и служат очень-очень долго! </strong></div>
+          <div class="container">
+            <strong class="guarantee__text">даем гарантию качества — наши клише изготовлены из австрийской резины <br> при помощи лазера и служат очень-очень долго! </strong>
+          </div>
+        </div>
+        <div class="next">
+          <div class="container">
+            <a href="#" class="next__btn">Далее</a>
+          </div>
         </div>
       </section>
       <section class="order__step order__contacts">
@@ -252,14 +351,19 @@
           </div>
         </div>
         <div class="container">
-          <div class="contacts-info">
-            <input class="contacts-info__input" type="text" placeholder="Введите ваш телефон">
-            <input class="contacts-info__input" type="text" placeholder="Введите ваш email">
+          <div class="range">
+            <div class="feedback-message">
+              <p class="feedback-message__text">Мы свяжемся с вами в течении 15 минут и уточним все детали заказа</p>
+              <p class="feedback-message__text feedback-message__text--small">Окончательную цену менеджер назовет после уточнения деталей заказа</p>
+            </div>
           </div>
           <div class="confirmation">
             <div class="confirmation__info">
               <span class="confirmation__stamp">новая печать</span>
               <span class="confirmation__rigging">на автоматической оснастке</span>
+            </div>
+            <div class="confirmation__price">
+              <p>от <span class="confirmation__summ">1999</span> Р</p>
             </div>
             <div class="confirmation__delivery">
               <input id="confirmation__one" class="confirmation__input" name="delivery"  type="radio" checked>
@@ -269,23 +373,20 @@
               <input id="confirmation__three" class="confirmation__input" name="delivery" type="radio">
               <label for="confirmation__three" class="confirmation__text">Доставка за 3 часа (до 24:00)</label>
             </div>
-            <div class="confirmation__price">
-              <p>от <span class="confirmation__summ">1999</span> Р</p>
+          </div>
+          <div class="range">
+            <div class="contacts-info">
+              <input class="contacts-info__input" type="text" placeholder="Введите ваш телефон">
+              <input class="contacts-info__input" type="text" placeholder="Введите ваш email">
             </div>
-
           </div>
           <div class="form-send">
             <button class="btn-send">Получить печати быстро</button>
           </div>
         </div>
-        <div class="container container--bottomfix">
-          <p class="feedback-message">Мы свяжемся с вами в течении 15 минут и уточним все детали заказа</p>
-          <p class="feedback-message feedback-message--small">Окончательную цену менеджер назовет после уточнения деталей заказа</p>
-        </div>
       </section>
     </form>
   </main>
-  <footer class="page-footer"></footer>
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>

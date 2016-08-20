@@ -26,16 +26,15 @@
 .generate-columns(@n, @i: 1) when (@i =< @n) { 
 
   .col-@{i} {
-  width: (@i * 100% / @n);
-  padding: 0 @indent-col/2;
-  float: left;
+    width: (@i * 100% / @n);
+    padding: 0 @indent-col/2;
+    float: left;
   }
   .col-offset-@{i} {
-  // width: (@i * 100% / @n);
-  margin-left: (@i * 100% / @n);
+    margin-left: (@i * 100% / @n);
   }
   
   .generate-columns(@n, (@i + 1));
-  }
+}
   
-  .generate-columns(12);
+// .generate-columns(12);
