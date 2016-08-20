@@ -8,6 +8,10 @@ body{
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility:    hidden;
   -ms-backface-visibility:     hidden;
+
+  @media (min-width: @container-laptop) {
+    overflow-x: hidden;
+  }
 }
 input, button, select, textarea{
   outline: none;
