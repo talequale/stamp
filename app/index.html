@@ -35,14 +35,18 @@
         </ul>
       </div>
       <div class="decision-header">
-        <p class="decision-header__text">Можно просто послать нам фото документов или оттиска на номер</p>
-        <a href="tel:79110177718" class="decision-header__phone">+ 7 911 01 777 18</a>
-        <div class="decision-header__social">
-          <a href="#" class="decision-header__sociallink">whatsapp</a>
-          <a href="#" class="decision-header__sociallink">viber</a>
-          <a href="#" class="decision-header__sociallink">telegram</a>
+        <div class="decision-header__block">
+          <p class="decision-header__text">Можно просто послать нам фото документов или оттиска на номер</p>
+          <p class="decision-header__text decision-header__text--small">Мы свяжемся с вами и согласуем детали!</p>
         </div>
-        <p class="decision-header__text--small">Мы свяжемся с вами и согласуем детали!</p>
+        <div class="decision-header__contacts">
+          <a href="tel:79110177718" class="decision-header__phone">+ 7 911 01 777 18</a>
+          <div class="decision-header__social">
+            <a href="#" class="decision-header__sociallink">whatsapp</a>
+            <a href="#" class="decision-header__sociallink">viber</a>
+            <a href="#" class="decision-header__sociallink">telegram</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -80,7 +84,7 @@
       </div>
       <div class="sloganbox">
         <div class="container">
-          <strong class="sloganbox__text">Экономьте силы,br время и деньги<br>Получите печати быстро</strong>
+          <strong class="sloganbox__text">Экономьте силы, время и деньги<br>Получите печати быстро</strong>
         </div>
       </div>
       <div class="warranty">
@@ -146,12 +150,12 @@
             </div>
             <div class="client-info">
               <div class="client-info__name">
-                <input class="client-info__input filled" type="text" placeholder="Фамилия">
+                <input class="client-info__input client-info__input--filled" type="text" placeholder="Фамилия">
                 <input class="client-info__input" type="text" placeholder="Имя">
                 <input class="client-info__input" type="text" placeholder="Отчество">
               </div>
               <div class="client-info__company">
-                <input class="client-info__input" type="text" placeholder="Город">
+                <input class="client-info__input client-info__input--error" type="text" placeholder="Город">
                 <input class="client-info__input" type="text" placeholder="ОГРНИП">
                 <input class="client-info__input" type="text" placeholder="ИНН">
               </div>
@@ -351,37 +355,39 @@
           </div>
         </div>
         <div class="container">
-          <div class="range">
+          <div class="feedback">
             <div class="feedback-message">
-              <p class="feedback-message__text">Мы свяжемся с вами в течении 15 минут и уточним все детали заказа</p>
+              <p class="feedback-message__text">Мы свяжемся с вами в течении <span class="feedback-message__text--blue">15 минут</span> и уточним все детали заказа</p>
               <p class="feedback-message__text feedback-message__text--small">Окончательную цену менеджер назовет после уточнения деталей заказа</p>
             </div>
           </div>
-          <div class="confirmation">
-            <div class="confirmation__info">
-              <span class="confirmation__stamp">новая печать</span>
-              <span class="confirmation__rigging">на автоматической оснастке</span>
+          <div class="order__finished">
+            <div class="confirmation">
+              <div class="confirmation__info">
+                <span class="confirmation__stamp">новая печать</span>
+                <span class="confirmation__rigging">на автоматической оснастке</span>
+              </div>
+              <div class="confirmation__price">
+                <p>от <span class="confirmation__summ">1999</span> Р</p>
+              </div>
+              <div class="confirmation__delivery">
+                <input id="confirmation__one" class="confirmation__input" name="delivery"  type="radio" checked>
+                <label for="confirmation__one" class="confirmation__text">Бесплатная доставка на следующий день</label>
+                <input id="confirmation__two" class="confirmation__input" name="delivery" type="radio">
+                <label for="confirmation__two" class="confirmation__text">Доставка день в день (до 18:00)</label>
+                <input id="confirmation__three" class="confirmation__input" name="delivery" type="radio">
+                <label for="confirmation__three" class="confirmation__text">Доставка за 3 часа (до 24:00)</label>
+              </div>
             </div>
-            <div class="confirmation__price">
-              <p>от <span class="confirmation__summ">1999</span> Р</p>
+            <div class="contacts">
+              <div class="contacts-info">
+                <input class="contacts-info__input" type="text" placeholder="Введите ваш телефон">
+                <input class="contacts-info__input" type="text" placeholder="Введите ваш email">
+              </div>
             </div>
-            <div class="confirmation__delivery">
-              <input id="confirmation__one" class="confirmation__input" name="delivery"  type="radio" checked>
-              <label for="confirmation__one" class="confirmation__text">Бесплатная доставка на следующий день</label>
-              <input id="confirmation__two" class="confirmation__input" name="delivery" type="radio">
-              <label for="confirmation__two" class="confirmation__text">Доставка день в день (до 18:00)</label>
-              <input id="confirmation__three" class="confirmation__input" name="delivery" type="radio">
-              <label for="confirmation__three" class="confirmation__text">Доставка за 3 часа (до 24:00)</label>
+            <div class="form-send">
+              <button class="btn-send">Получить печати быстро</button>
             </div>
-          </div>
-          <div class="range">
-            <div class="contacts-info">
-              <input class="contacts-info__input" type="text" placeholder="Введите ваш телефон">
-              <input class="contacts-info__input" type="text" placeholder="Введите ваш email">
-            </div>
-          </div>
-          <div class="form-send">
-            <button class="btn-send">Получить печати быстро</button>
           </div>
         </div>
       </section>
