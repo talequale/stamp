@@ -94,6 +94,11 @@ textarea {
 * {
   outline: 1px solid red;
 }
+@media screen and (min-width: 1300px) {
+  .left-on-wide-screen {
+    padding-right: 15vw;
+  }
+}
 @media screen and (min-width: 960px) {
   .col-1 {
     width: 6.25%;
@@ -230,7 +235,7 @@ textarea {
   }
   .page-header {
     padding-top: 5px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.95);
     position: fixed;
     width: 100%;
     top: 0;
@@ -250,7 +255,7 @@ textarea {
     transition: all 0.3s ease;
   }
   .page-header--scroll {
-    background-color: rgba(255, 233, 0, 0.85);
+    background-color: rgba(255, 233, 0, 0.95);
     border-bottom: none;
   }
   .page-header--scroll .range {
@@ -286,9 +291,9 @@ textarea {
     display: block;
     text-decoration: none;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 50px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     margin-top: -10px;
     color: #0044cc;
   }
@@ -565,18 +570,26 @@ textarea {
   .order__header {
     border: 1px solid #e0e0e0;
     padding: 13px 0;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .order__head {
     margin: 0;
     font-size: 34px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
-    letter-spacing: 3px;
+    font-weight: normal;
+    letter-spacing: 4px;
     color: #bbbbbb;
   }
   .order__new .order__header {
     display: none;
+  }
+  .order__type-stamp {
+    letter-spacing: 3.5px;
+    font-weight: bolder;
+  }
+  .order__finished {
+    letter-spacing: 3.5px;
+    font-weight: bolder;
   }
   .type-stamp {
     margin-left: -6px;
@@ -595,12 +608,11 @@ textarea {
   }
   .type-stamp .order__tabs {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: bolder;
     font-size: 16px;
-    letter-spacing: 3px;
     text-transform: uppercase;
-    background-color: #eee;
-    border: 1px solid #eee;
+    background-color: #eeeeee;
+    border: 1px solid #eeeeee;
     text-align: center;
     display: inline-block;
     width: 100%;
@@ -608,6 +620,9 @@ textarea {
     color: #777777;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+  .type-stamp .order__tabs:hover {
+    background-color: #ffffff;
   }
   .type-stamp .order__radio:checked + .order__tabs {
     border: 1px solid #ffe600;
@@ -638,10 +653,10 @@ textarea {
   }
   .download-file__label {
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: bolder;
     font-size: 30px;
     line-height: 24px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     border: 2px solid #fae264;
     background-color: #ffffcc;
@@ -680,9 +695,10 @@ textarea {
   }
   .company-type__tabs {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: bolder;
     font-size: 16px;
     text-transform: uppercase;
+    color: #777777;
     background-color: #f8f8ff;
     border: 1px solid #f8f8ff;
     width: 100%;
@@ -691,6 +707,9 @@ textarea {
     padding: 15px 0;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+  .company-type__tabs:hover {
+    background-color: #ffffff;
   }
   .company-type .order__radio:checked + .company-type__tabs {
     border: 1px solid #ffe600;
@@ -719,9 +738,9 @@ textarea {
     position: absolute;
     border: 2px solid #dddddd;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: bolder;
     text-transform: uppercase;
     width: 40%;
     padding: 8px 15px;
@@ -732,6 +751,7 @@ textarea {
   }
   .client-info__input:focus {
     border-color: #ffe600;
+    text-transform: none;
   }
   .client-info__input--filled {
     border-color: #ffe600;
@@ -758,7 +778,7 @@ textarea {
     display: block;
     border: 1px solid #444444;
     font-size: 17px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     padding: 7px 10px;
     margin-top: 40px;
@@ -772,8 +792,7 @@ textarea {
     display: inline-block;
     padding-right: 30px;
     margin-right: 25px;
-    background: -webkit-linear-gradient(0deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
-    background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
+    background: #f9f9f3;
     border: 1px solid #eee;
     -webkit-border-radius: 15px;
     border-radius: 15px;
@@ -785,7 +804,7 @@ textarea {
     top: -1px;
     left: 0;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     height: 28px;
@@ -796,10 +815,10 @@ textarea {
     border-radius: 14px;
     padding: 0 20px;
     display: inline-block;
-    color: #bbbbbb;
+    color: #cccccc;
     background-color: #fff;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.18s ease;
+    transition: all 0.18s ease;
   }
   .order__rigging .order__radio:checked + .order__tabs span {
     left: 30px;
@@ -810,7 +829,7 @@ textarea {
     border: 1px solid #fff;
   }
   .order__rigging .order__radio:disabled + .order__tabs span {
-    background-color: #f5f5f5;
+    background-color: #f9f9f3;
     border: 1px solid #fff;
   }
   .order__rigging .order__radio {
@@ -873,14 +892,14 @@ textarea {
   .stamp-gallery .owl-prev,
   .stamp-gallery .owl-next {
     position: absolute;
-    width: 38px;
-    height: 38px;
+    width: 50px;
+    height: 50px;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid #ffe600;
     text-align: center;
-    top: 65px;
+    top: 45px;
   }
   .stamp-gallery .owl-prev {
     left: 30%;
@@ -892,9 +911,10 @@ textarea {
   .stamp-gallery .owl-next:after {
     content: '';
     display: inline-block;
-    margin: 13px 0;
-    width: 10px;
-    height: 10px;
+    position: absolute;
+    top: 15px;
+    width: 15px;
+    height: 15px;
     border-top: 1px solid #000;
     border-left: 1px solid #000;
   }
@@ -902,13 +922,13 @@ textarea {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    margin-left: 5px;
+    right: 13px;
   }
   .stamp-gallery .owl-next:after {
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg);
-    margin-right: 5px;
+    left: 13px;
   }
   .stamp-gallery__item {
     padding: 0 23px 45px 23px;
@@ -924,8 +944,10 @@ textarea {
   .order__more .order__head {
     color: #ff4749;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-size: 20px;
     font-weight: bold;
-    letter-spacing: 3px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
   }
   .add-order {
     text-align: center;
@@ -994,17 +1016,22 @@ textarea {
   .add-order__tabs:last-child {
     margin-right: 0;
   }
+  .add-order__tabs span {
+    display: block;
+    line-height: 1.4;
+  }
   .add-order__tabs strong {
     display: block;
     color: #ff4749;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 20px;
     bottom: 5px;
+    letter-spacing: 4px;
     left: 0;
     right: 0;
-    margin: auto;
+    margin-top: 6px;
   }
   .add-order__input {
     display: none;
@@ -1019,15 +1046,14 @@ textarea {
     float: left;
     margin-left: 31.25%;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
-    font-weight: normal;
+    font-weight: bolder;
     font-size: 30px;
     line-height: 38px;
     padding: 25px;
     padding-left: 80px;
     border: 1px solid #0044cc;
     text-align: center;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    letter-spacing: 4px;
     text-decoration: none;
     color: #0044cc;
     position: relative;
@@ -1078,6 +1104,7 @@ textarea {
     padding: 27px 0 23px 0;
   }
   .guarantee__text {
+    max-width: 80%;
     font-size: 16px;
     color: #ff4749;
     text-transform: uppercase;
@@ -1094,7 +1121,7 @@ textarea {
     margin-left: -6px;
     margin-right: -6px;
     position: relative;
-    padding-top: 60px;
+    padding-top: 90px;
   }
   .order__finished:after {
     content: '';
@@ -1134,11 +1161,11 @@ textarea {
     position: absolute;
     border: 2px solid #dddddd;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: normal;
+    color: #2979ff;
     text-transform: uppercase;
-    width: 53%;
     padding: 8px 15px;
     -webkit-border-radius: 20px;
     border-radius: 20px;
@@ -1147,15 +1174,20 @@ textarea {
   }
   .contacts-info__input:focus {
     border-color: #ffe600;
+    text-transform: none;
   }
   .contacts-info__input.filled {
     border-color: #ffe600;
   }
   .contacts-info__input:first-child {
     left: 0;
+    z-index: 5;
+    width: 50%;
   }
   .contacts-info__input:nth-child(2) {
-    left: 47%;
+    left: 45%;
+    padding-left: 55px;
+    width: 55%;
   }
   .confirmation {
     width: 75%;
@@ -1176,11 +1208,10 @@ textarea {
     width: 100%;
     color: #ffffff;
     background-color: #444444;
-    padding: 3px 0;
-    padding-left: 50px;
+    padding-bottom: 2px;
+    padding-left: 60px;
     font-size: 18px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 1.4px;
   }
   .confirmation__delivery {
     width: 66.666666%;
@@ -1191,7 +1222,7 @@ textarea {
     display: block;
     background-color: #ffffcc;
     padding: 4px 0;
-    padding-left: 50px;
+    padding-left: 60px;
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1203,10 +1234,10 @@ textarea {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 15px;
+    left: 20px;
     margin: auto;
-    width: 12px;
-    height: 12px;
+    width: 7px;
+    height: 7px;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background-color: #fff;
@@ -1221,8 +1252,8 @@ textarea {
     background-color: #ffff66;
   }
   .confirmation__input:checked + .confirmation__text:before {
-    border: 2px solid #fff;
-    background-color: #222222;
+    border: 2px solid #444444;
+    background-color: #444444;
   }
   .confirmation__price {
     width: 33.333333%;
@@ -1232,12 +1263,14 @@ textarea {
   .confirmation__price p {
     font-size: 32px;
     text-align: center;
-    margin: 15px 0;
+    margin: 0;
+    margin-top: 20px;
     letter-spacing: 2px;
   }
   .confirmation__summ {
     color: #ff4749;
     font-weight: bold;
+    letter-spacing: 5px;
   }
   .form-send {
     position: relative;
@@ -1267,7 +1300,7 @@ textarea {
     text-transform: lowercase;
     letter-spacing: 4px;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 7px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     z-index: 2;
@@ -1281,7 +1314,7 @@ textarea {
     margin-right: -6px;
     position: absolute;
     width: 100%;
-    bottom: 20px;
+    bottom: 40px;
     left: 20px;
   }
   .feedback:after {
@@ -1298,11 +1331,11 @@ textarea {
   }
   .feedback-message__text {
     font-size: 20px;
+    font-weight: bold;
     text-transform: uppercase;
     color: #444444;
-    letter-spacing: 3px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    letter-spacing: 3.2px;
+    margin: 0;
   }
   .feedback-message__text--blue {
     color: #0044cc;

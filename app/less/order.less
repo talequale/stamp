@@ -3,14 +3,14 @@
   &__header {
     border: 1px solid @c-light-grey;
     padding: 13px 0;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   &__head {
     margin: 0;
     font-size: 34px;
-    .proxima(lighter);
-    letter-spacing: 3px;
+    .proxima(normal);
+    letter-spacing: 4px;
     color: @c-order-head;
   }
 
@@ -22,6 +22,17 @@
 
   }
 
+  &__type-stamp {
+    letter-spacing: 3.5px;
+    font-weight: bolder;
+  }
+
+  &__finished {
+    letter-spacing: 3.5px;
+    font-weight: bolder;
+  }
+
+
 }
 
 .type-stamp {
@@ -32,18 +43,21 @@
   }
 
   & .order__tabs {
-    .proxima(lighter);
+    .proxima(bolder);
     font-size: 16px;
-    letter-spacing: 3px;
     text-transform: uppercase;
-    background-color: #eee;
-    border: 1px solid #eee;
+    background-color: #eeeeee;
+    border: 1px solid #eeeeee;
     text-align: center;
     display: inline-block;
     width: 100%;
     padding: 23px 0;
     color: #777777;
     transition: all 0.3s ease;
+  }
+
+  & .order__tabs:hover {
+    background-color: #ffffff;
   }
 
   & .order__radio:checked + .order__tabs {
@@ -72,10 +86,10 @@
   margin-top: 10px;
 
   &__label{
-    .proxima-cond(lighter);
+    .proxima-cond(bolder);
     font-size: 30px;
     line-height: 24px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     border: 2px solid #fae264;
     background-color: #ffffcc;
@@ -113,9 +127,10 @@
   }
 
   &__tabs {
-    .proxima(lighter);
+    .proxima(bolder);
     font-size: 16px;
     text-transform: uppercase;
+    color: #777777;
     background-color: #f8f8ff;
     border: 1px solid #f8f8ff;
     width: 100%;
@@ -123,6 +138,10 @@
     text-align: center;
     padding: 15px 0;
     transition: all 0.3s ease;
+  }
+
+  &__tabs:hover {
+    background-color: #ffffff;
   }
 
   & .order__radio:checked + .company-type__tabs {
@@ -159,9 +178,8 @@
     position: absolute;
     border: 2px solid @c-form-border;
     font-size: 16px;
-    letter-spacing: 3px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    letter-spacing: 3.5px;
+    .proxima(bolder);
     text-transform: uppercase;
     width: 40%;
     padding: 8px 15px;
@@ -170,6 +188,7 @@
 
     &:focus {
       border-color: @c-yellow;
+      text-transform: none;
     }
 
     &--filled {
@@ -201,7 +220,7 @@
     display: block;
     border: 1px solid #444444;
     font-size: 17px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     padding: 7px 10px;
     margin-top: 40px;
@@ -222,7 +241,8 @@
     display: inline-block;
     padding-right: 30px;
     margin-right: 25px;
-    background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
+    background: #f9f9f3;
+    // background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
     border: 1px solid #eee;
     border-radius: 15px;
     height: 28px;
@@ -233,7 +253,7 @@
       top: -1px;
       left: 0;
       font-size: 16px;
-      letter-spacing: 3px;
+      letter-spacing: 3.5px;
       .proxima(lighter);
       height: 28px;
       line-height: 28px;
@@ -242,9 +262,9 @@
       border-radius: 14px;
       padding: 0 20px;
       display: inline-block;
-      color: #bbbbbb;
+      color: #cccccc;
       background-color: #fff;
-      transition: all 0.3s ease;
+      transition: all 0.18s ease;
     }
 
   }
@@ -258,7 +278,7 @@
     border: 1px solid #fff;
   }
   .order__radio:disabled + .order__tabs span {
-    background-color: #f5f5f5;
+    background-color: #f9f9f3;
     border: 1px solid #fff;
   }
 
@@ -333,13 +353,13 @@
 
   .owl-prev, .owl-next{
     position: absolute;
-    width: 38px;
-    height: 38px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid @c-yellow;
     text-align: center;
-    top: 65px;
+    top: 45px;
   }
   .owl-prev{
     left: 30%;
@@ -350,19 +370,20 @@
   .owl-prev:after, .owl-next:after{
     content: '';
     display: inline-block;
-    margin: 13px 0;
-    width: 10px;
-    height: 10px;
+    position: absolute;
+    top: 15px;
+    width: 15px;
+    height: 15px;
     border-top: 1px solid #000;
     border-left: 1px solid #000;
   }
   .owl-prev:after{
     transform: rotate(-45deg);
-    margin-left: 5px;
+    right: 13px;
   }
   .owl-next:after{
     transform: rotate(135deg);
-    margin-right: 5px;
+    left: 13px;
   }
 }
 
@@ -387,8 +408,10 @@
     &__head {
       color: @c-pink;
       font-family: "Proxima Nova Condensed", Arial, sans-serif;
+      font-size: 20px;
       font-weight: bold;
-      letter-spacing: 3px;
+      text-transform: uppercase;
+      letter-spacing: 7px;
     }
   }
 }
@@ -449,17 +472,23 @@
       margin-right: 0;
     }
 
+    & span {
+      display: block; 
+      line-height: 1.4;
+    } 
+
     & strong {
       display: block;
       color: @c-pink;
       font-family: "Proxima Nova", Arial, sans-serif;
       font-weight: lighter;
       text-transform: uppercase;
-      font-size: 28px;
+      font-size: 20px;
       bottom: 5px;
+      letter-spacing: 4px;
       left: 0;
       right: 0;
-      margin: auto;
+      margin-top: 6px;
     }
   }
 
@@ -476,15 +505,14 @@
 .add-stamp{
   .col-6;
   .col-offset-5;
-  .proxima-cond(normal);
+  .proxima-cond(bolder);
   font-size: 30px;
   line-height: 38px;
   padding: 25px;
   padding-left: 80px;
   border: 1px solid @c-blue;
   text-align: center;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  letter-spacing: 4px;
   text-decoration: none;
   color: @c-blue;
   position: relative;
@@ -527,6 +555,7 @@
   padding:27px 0 23px 0;
 
   &__text{
+    max-width: 80%;
     font-size: 16px;
     color: @c-pink;
     text-transform: uppercase;
@@ -551,7 +580,7 @@
 .order__finished {
   .range;
   position: relative;
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 
@@ -584,18 +613,18 @@
     position: absolute;
     border: 2px solid @c-form-border;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: normal;
+    color: @c-lightblue;
     text-transform: uppercase;
-    width: 53%;
     padding: 8px 15px;
     border-radius: 20px;
-
     transition: all 0.3s ease;
 
     &:focus{
       border-color: @c-yellow;
+      text-transform: none;
     }
     &.filled{
       border-color: @c-yellow;
@@ -603,9 +632,13 @@
 
     &:first-child{
       left: 0;
+      z-index: 5;
+      width: 50%;
     }
     &:nth-child(2){
-      left: 47%;
+      left: 45%;
+      padding-left: 55px;
+      width: 55%;
     }
   }
 }
@@ -626,11 +659,11 @@
     width: 100%;
     color: #ffffff;
     background-color: #444444;
-    padding: 3px 0;
-    padding-left: 50px;
+    padding-bottom: 2px;
+    padding-left: 60px;
     font-size: 18px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 1.4px;
+
   }
   &__delivery {
     width: 66.666666%;
@@ -641,7 +674,7 @@
     display: block;
     background-color: #ffffcc;
     padding: 4px 0;
-    padding-left: 50px;
+    padding-left: 60px;
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -652,10 +685,10 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 15px;
+      left: 20px;
       margin: auto;
-      width: 12px;
-      height: 12px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background-color: #fff;
       border: 2px solid #aaaaaa;
@@ -670,9 +703,10 @@
   &__input:checked + &__text {
     background-color: #ffff66;
 
+
     &:before{
-      border: 2px solid #fff;
-      background-color: #222222;
+      border: 2px solid #444444;
+      background-color: #444444;
     }
 
   }
@@ -685,13 +719,15 @@
     & p{
       font-size: 32px;
       text-align: center;
-      margin: 15px 0;
+      margin: 0;
+      margin-top: 20px;
       letter-spacing: 2px;
     }
   }
   &__summ{
     color: @c-pink;
     font-weight: bold;
+    letter-spacing: 5px;
 
   }
 }
@@ -721,7 +757,7 @@
   text-transform: lowercase;
   letter-spacing: 4px;
   font-weight: bold;
-  padding: 10px 10px;
+  padding: 7px;
   border-radius: 10px;
   z-index: 2;
   border-bottom: 5px solid #ffcc00;
@@ -729,7 +765,7 @@
 .container{
 
   &--bottomfix{
-    padding: 30px;
+    padding: 30px; //30
   }
 }
 
@@ -737,7 +773,7 @@
   .range;
   position: absolute;
   width: 100%;
-  bottom: 20px;
+  bottom: 40px;
   left: 20px;
 
 }
@@ -748,11 +784,11 @@
   
   &__text {
     font-size: 20px;
+    font-weight: bold;
     text-transform: uppercase;
     color: #444444;
-    letter-spacing: 3px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    letter-spacing: 3.2px;
+    margin: 0;
 
     &--blue {
       color: @c-blue;

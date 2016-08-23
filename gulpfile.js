@@ -23,9 +23,16 @@ gulp.task('clean', function () {
   .pipe(clean());
 });
 
+// копируем шрифты
+gulp.task('fonts', ['clean'], function () {
+  return gulp.src('app/fonts/*.*')
+  .pipe(gulp.dest('dist/fonts/'))
+});
+
+
 // минифицируем графику и сохраняем в папку для 
-// продакшена, предварительно очистив ее таском 'clean'
-gulp.task('image', ['clean'], function () {
+// продакшена, c предварительно добавленными шрифтами
+gulp.task('image', ['fonts'], function () {
   return gulp.src('app/img/*.*')
   .pipe(imagemin())
   .pipe(gulp.dest('dist/img/'))
@@ -48,11 +55,11 @@ gulp.task('build', ['image'], function () {
 gulp.task('ftp', ['build'], function () {
   return gulp.src('dist/**/*')
   .pipe(ftp({
-    host: '77.222.56.169', //КЭП и далее тоже
-    user: 'kademidovm', // Логин от ftp аккаунта
-    pass: '', //Указать пароль от ftp акаунта
+    host: 'denzakh.ru', //КЭП и далее тоже
+    user: 'fenixx83_stamp', // Логин от ftp аккаунта
+    pass: 'stamp12345', //Указать пароль от ftp акаунта
     port: '21', // указываем при необходимости. порт по умолчанию 22
-    remotePath: 'group/public_html/testgulp'
+    remotePath: ''
   }));
 });
 
