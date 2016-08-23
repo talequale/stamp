@@ -91,6 +91,9 @@ select,
 textarea {
   outline: none;
 }
+* {
+  outline: 1px solid red;
+}
 @media screen and (min-width: 960px) {
   .col-1 {
     width: 6.25%;
@@ -239,6 +242,7 @@ textarea {
   }
   .page-header .container {
     position: relative;
+    width: 100%;
   }
   .page-header .range {
     opacity: 1;
@@ -272,8 +276,10 @@ textarea {
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     font-size: 13px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     margin: 0;
+    margin-bottom: 5px;
     color: #444444;
   }
   .fast-phone__link {
@@ -283,13 +289,14 @@ textarea {
     font-size: 40px;
     line-height: 50px;
     letter-spacing: 3px;
+    margin-top: -10px;
     color: #0044cc;
   }
   .advantages {
     width: 68.75%;
     padding: 0 6px;
     float: left;
-    margin-top: 24px;
+    margin-top: 28px;
     margin-bottom: 8px;
     padding-right: 0;
   }
@@ -297,9 +304,10 @@ textarea {
     display: inline-block;
     list-style: none;
     position: relative;
-    padding-left: 70px;
+    min-width: 278px;
+    padding-left: 77px;
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 10px;
     color: #444444;
   }
   .advantages__item:last-child {
@@ -326,16 +334,20 @@ textarea {
     height: 60px;
   }
   .advantages__head {
+    position: relative;
+    top: 5px;
     font-weight: lighter;
     font-size: 24px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
   .advantages__description {
     display: block;
+    position: relative;
+    top: 2px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     font-size: 14px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
   .decision-header {
     z-index: -100;
@@ -545,7 +557,7 @@ textarea {
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     margin-top: 14px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 23px;
     text-transform: uppercase;
     letter-spacing: 1px;
