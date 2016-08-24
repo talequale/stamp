@@ -91,6 +91,9 @@ select,
 textarea {
   outline: none;
 }
+* {
+  outline: 1px solid red;
+}
 @media screen and (min-width: 1300px) {
   .left-on-wide-screen {
     padding-right: 15vw;
@@ -432,7 +435,7 @@ textarea {
     font-weight: lighter;
     color: #fff;
     margin-top: 0;
-    margin-bottom: 54px;
+    margin-bottom: 74px;
   }
   .promo__accent {
     font-weight: lighter;
@@ -444,10 +447,13 @@ textarea {
   }
   .sloganbox__text {
     font-weight: lighter;
-    font-size: 40px;
-    line-height: 52px;
-    letter-spacing: 10px;
+    font-size: 31px;
+    line-height: 57px;
+    letter-spacing: 13px;
     color: #444444;
+  }
+  .warranty {
+    background-color: #fff;
   }
   .warranty__text {
     display: block;
@@ -519,7 +525,7 @@ textarea {
     padding: 0 6px;
     float: left;
     list-style: none;
-    margin-bottom: 34px;
+    margin-bottom: 22px;
   }
   .steps__item:last-child .steps__number:after {
     position: static;
@@ -530,19 +536,19 @@ textarea {
   }
   .steps__hashtag {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
-    font-size: 26px;
-    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 9px;
     color: #2979ff;
   }
   .steps__number {
     display: block;
-    margin-top: 11px;
-    padding-left: 60px;
+    margin-top: 6px;
+    padding-left: 0;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-size: 59px;
+    font-size: 50px;
     font-weight: bold;
-    color: #fff;
+    color: #333;
     position: relative;
   }
   .steps__number:after {
@@ -552,17 +558,18 @@ textarea {
     background-position: -200px 0px;
     width: 117px;
     height: 22px;
-    top: 25px;
-    left: 170px;
+    top: 20px;
+    left: 151px;
   }
   .steps__text {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
-    margin-top: 14px;
-    font-size: 15px;
-    line-height: 23px;
+    font-weight: bold;
+    margin-top: 11px;
+    font-size: 13px;
+    line-height: 22px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2.5px;
+    color: #444;
   }
   .order__header {
     border: 1px solid #e0e0e0;
@@ -605,8 +612,9 @@ textarea {
   }
   .type-stamp .order__tabs {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: bolder;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     background-color: #eeeeee;
     border: 1px solid #eeeeee;
@@ -650,7 +658,7 @@ textarea {
   }
   .download-file__label {
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 30px;
     line-height: 24px;
     letter-spacing: 3.5px;
@@ -665,7 +673,7 @@ textarea {
   .download-file__hint {
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 32px;
     text-transform: uppercase;
     display: block;
@@ -692,8 +700,9 @@ textarea {
   }
   .company-type__tabs {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: bolder;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     color: #777777;
     background-color: #f8f8ff;
@@ -734,10 +743,10 @@ textarea {
   .client-info__input {
     position: absolute;
     border: 2px solid #dddddd;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 3.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
     text-transform: uppercase;
     width: 40%;
     padding: 8px 15px;
@@ -773,8 +782,9 @@ textarea {
     float: none;
     cursor: pointer;
     display: block;
-    border: 1px solid #444444;
-    font-size: 17px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: lighter;
     letter-spacing: 3.5px;
     text-transform: uppercase;
     padding: 7px 10px;
@@ -789,7 +799,8 @@ textarea {
     display: inline-block;
     padding-right: 30px;
     margin-right: 25px;
-    background: #f9f9f3;
+    background: -webkit-linear-gradient(0deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
+    background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
     border: 1px solid #eee;
     -webkit-border-radius: 15px;
     border-radius: 15px;
@@ -800,10 +811,10 @@ textarea {
     position: relative;
     top: -1px;
     left: 0;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 3.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: bold;
     height: 28px;
     line-height: 28px;
     text-transform: uppercase;
@@ -824,6 +835,7 @@ textarea {
   }
   .order__rigging .order__radio:disabled + .order__tabs {
     border: 1px solid #fff;
+    background-color: #f9f9f3;
   }
   .order__rigging .order__radio:disabled + .order__tabs span {
     background-color: #f9f9f3;
@@ -1101,8 +1113,7 @@ textarea {
   }
   .guarantee {
     background-color: #ffffcc;
-    border-top: 1px solid #dddddd;
-    padding: 27px 0 23px 0;
+    padding: 38px 0 31px;
   }
   .guarantee__text {
     max-width: 80%;
@@ -1113,10 +1124,6 @@ textarea {
   }
   .order__contacts .order__header {
     background-color: #fff;
-  }
-  .order__contacts > .container {
-    padding-bottom: 120px;
-    position: relative;
   }
   .order__finished {
     margin-left: -6px;
@@ -1146,7 +1153,7 @@ textarea {
   .contacts-info {
     width: 100%;
     position: relative;
-    height: 40px;
+    height: 36px;
     -webkit-box-shadow: 0 5px 10px 0 rgba(0, 68, 204, 0.14);
     box-shadow: 0 5px 10px 0 rgba(0, 68, 204, 0.14);
     -webkit-border-radius: 20px;
@@ -1161,8 +1168,8 @@ textarea {
   .contacts-info__input {
     position: absolute;
     border: 2px solid #dddddd;
-    font-size: 16px;
-    letter-spacing: 1.5px;
+    font-size: 14px;
+    letter-spacing: 2.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: normal;
     color: #2979ff;
@@ -1191,14 +1198,19 @@ textarea {
     width: 55%;
   }
   .confirmation {
-    position: fixed;
-    bottom: 10px;
-    z-index: 20;
     width: 687px;
+    z-index: 20;
     clear: both;
     background-color: #ffffff;
-    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 68, 204, 0.5);
-    box-shadow: 0 3px 3px 0 rgba(0, 68, 204, 0.5);
+    -webkit-box-shadow: 0 2px 11px 0 rgba(0, 68, 204, 0.5);
+    box-shadow: 0 2px 11px 0 rgba(0, 68, 204, 0.5);
+  }
+  .confirmation--fixed {
+    position: fixed;
+    bottom: 10px;
+  }
+  .confirmation--absolute {
+    position: absolute;
   }
   .confirmation:after {
     clear: both;
@@ -1239,12 +1251,12 @@ textarea {
     bottom: 0;
     left: 20px;
     margin: auto;
-    width: 7px;
-    height: 7px;
+    width: 5px;
+    height: 5px;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background-color: #fff;
-    border: 2px solid #aaaaaa;
+    border: 1px solid #aaaaaa;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -1252,10 +1264,10 @@ textarea {
     display: none;
   }
   .confirmation__input:checked + .confirmation__text {
-    background-color: #ffff66;
+    background-color: #ffe900;
   }
   .confirmation__input:checked + .confirmation__text:before {
-    border: 2px solid #444444;
+    border: 1px solid #444444;
     background-color: #444444;
   }
   .confirmation__price {
@@ -1312,14 +1324,15 @@ textarea {
     border-bottom: 5px solid #ffcc00;
   }
   .container--bottomfix {
-    padding: 30px;
+    height: 328px;
+    position: relative;
   }
   .feedback {
     margin-left: -6px;
     margin-right: -6px;
     position: absolute;
     width: 100%;
-    bottom: 40px;
+    bottom: 55px;
     left: 20px;
   }
   .feedback:after {

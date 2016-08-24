@@ -41,9 +41,10 @@
     .col-4;
   }
 
-  & .order__tabs {
-    .proxima(bolder);
-    font-size: 16px;
+  & .order__tabs {   // кнопки "новая по оттиску"
+    .proxima(bold);
+    font-size: 13px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     background-color: #eeeeee;
     border: 1px solid #eeeeee;
@@ -85,7 +86,7 @@
   margin-top: 10px;
 
   &__label{
-    .proxima-cond(bolder);
+    .proxima-cond(bold);
     font-size: 30px;
     line-height: 24px;
     letter-spacing: 3.5px;
@@ -100,7 +101,7 @@
 
   &__hint{
     .proxima(lighter);
-    font-size: 14px;
+    font-size: 13px;
     line-height: 32px;
     text-transform: uppercase;
     display: block;
@@ -117,7 +118,7 @@
 //   display: none;
 // }
 
-.company-type {
+.company-type {  // кнопки "ип", "ооо" и "факсимиле"
   .range;
   margin-top: 10px;
 
@@ -126,8 +127,9 @@
   }
 
   &__tabs {
-    .proxima(bolder);
-    font-size: 16px;
+    .proxima(bold);
+    font-size: 13px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     color: #777777;
     background-color: #f8f8ff;
@@ -162,7 +164,7 @@
 
 }
 
-.client-info {
+.client-info {  // ввод имени и данных о клиенте
   position: relative;
   padding-top: 28px;
   padding-bottom: 38px;
@@ -176,9 +178,9 @@
   &__input {
     position: absolute;
     border: 2px solid @c-form-border;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 3.5px;
-    .proxima(bolder);
+    .proxima(bold);
     text-transform: uppercase;
     width: 40%;
     padding: 8px 15px;
@@ -212,13 +214,14 @@
 
   }
 
-  .upload-logo {
+  .upload-logo {  // кнопка загрузки
     .col-4;
     float: none;
     cursor: pointer;
     display: block;
-    border: 1px solid #444444;
-    font-size: 17px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: lighter;
     letter-spacing: 3.5px;
     text-transform: uppercase;
     padding: 7px 10px;
@@ -236,24 +239,23 @@
 
 .order__rigging {
 
-  .order__tabs {
+  .order__tabs {           // стили переключателей, подложка 2 цветный градиент (акт и неакт цвет)
     display: inline-block;
     padding-right: 30px;
     margin-right: 25px;
-    background: #f9f9f3;
-    // background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
+    background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
     border: 1px solid #eee;
     border-radius: 15px;
     height: 28px;
     cursor: pointer;
 
-    & span {
+    & span {  // двигающийся переключатель
       position: relative;
       top: -1px;
       left: 0;
-      font-size: 16px;
+      font-size: 13px;
       letter-spacing: 3.5px;
-      .proxima(lighter);
+      .proxima(bold);
       height: 28px;
       line-height: 28px;
       text-transform: uppercase;
@@ -275,6 +277,7 @@
   }
   .order__radio:disabled + .order__tabs {
     border: 1px solid #fff;
+    background-color: #f9f9f3;
   }
   .order__radio:disabled + .order__tabs span {
     background-color: #f9f9f3;
@@ -554,8 +557,8 @@
 
 .guarantee {
   background-color: #ffffcc;
-  border-top: 1px solid @c-form-border;
-  padding:27px 0 23px 0;
+  // border-top: 1px solid @c-form-border;
+  padding:38px 0 31px;
 
   &__text{
     max-width: 80%;
@@ -571,11 +574,6 @@
 
   & .order__header{
     background-color: #fff;
-  }
-
-  & > .container {
-    padding-bottom: 120px;
-    position: relative;
   }
 
 }
@@ -602,7 +600,7 @@
 .contacts-info {
   width: 100%;
   position: relative;
-  height: 40px;
+  height: 36px;
   box-shadow: 0 5px 10px 0 rgba(0,68,204,0.14);
   border-radius: 20px;
 
@@ -615,8 +613,8 @@
   &__input{
     position: absolute;
     border: 2px solid @c-form-border;
-    font-size: 16px;
-    letter-spacing: 1.5px;
+    font-size: 14px;
+    letter-spacing: 2.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: normal;
     color: @c-lightblue;
@@ -647,14 +645,22 @@
 }
 
 .confirmation{
-  position: fixed;
-  bottom: 10px;
-  z-index: 20;
   width: 687px;
   // .col-12;
+  z-index: 20;
   clear: both;
   background-color: #ffffff;
-  box-shadow: 0 3px 3px 0 rgba(0,68,204,0.5);
+  // box-shadow: 0 3px 3px 0 rgba(0,68,204,0.5);
+  box-shadow: 0 2px 11px 0 rgba(0,68,204,0.5);
+
+  &--fixed {
+    position: fixed;
+    bottom: 10px;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
 
   &:after{
     clear: both;
@@ -695,11 +701,11 @@
       bottom: 0;
       left: 20px;
       margin: auto;
-      width: 7px;
-      height: 7px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background-color: #fff;
-      border: 2px solid #aaaaaa;
+      border: 1px solid #aaaaaa;
       transition: all 0.3s ease;
     }
   }
@@ -709,11 +715,11 @@
   }
 
   &__input:checked + &__text {
-    background-color: #ffff66;
+    background-color: #ffe900;
 
 
     &:before{
-      border: 2px solid #444444;
+      border: 1px solid #444444;
       background-color: #444444;
     }
 
@@ -739,7 +745,6 @@
 
   }
 }
-
 
 .form-send{
   position: absolute;
@@ -775,7 +780,8 @@
 .container{
 
   &--bottomfix{
-    padding: 30px; //30
+    height: 328px;
+    position: relative;
   }
 }
 
@@ -783,7 +789,7 @@
   .range;
   position: absolute;
   width: 100%;
-  bottom: 40px;
+  bottom: 55px;
   left: 20px;
 
 }

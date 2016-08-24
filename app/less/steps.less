@@ -5,7 +5,7 @@
   &__item{
     .col-4;
     list-style: none;
-    margin-bottom: 34px;
+    margin-bottom: 22px;
 
     &:last-child .steps__number:after{
       position: static;
@@ -18,39 +18,40 @@
   }
 
   &__hashtag{
-    .proxima(lighter);
-    font-size: 26px;
-    letter-spacing: 5px;
+    .proxima(bold);
+    font-size: 24px;
+    letter-spacing: 9px;
     color: @c-lightblue;
   }
 
   &__number{
     display: block;
-    margin-top: 11px;
-    padding-left: 60px;
+    margin-top: 6px;
+    padding-left: 0;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-size: 59px;
+    font-size: 50px;
     font-weight: bold;
-    color: #fff;
+    color: #333;
     position: relative;
 
     &:after{
       content: '';
       position: absolute;
       .sprite(@step-arrow);
-      top: 25px;
-      left: 170px;
+      top: 20px;
+      left: 151px;
     }
 
   }
 
   &__text{
-    .proxima(lighter);
-    margin-top: 14px;
-    font-size: 15px;
-    line-height: 23px;
+    .proxima(bold);
+    margin-top: 11px;
+    font-size: 13px;
+    line-height: 22px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2.5px;
+    color: #444;
   }
 }
 
