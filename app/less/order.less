@@ -237,13 +237,13 @@
 
 }
 
+// переключатели фильтра
 .order__rigging {
 
-  .order__tabs {           // стили переключателей, подложка 2 цветный градиент (акт и неакт цвет)
+  .order__tabs {           // общие
     display: inline-block;
     padding-right: 30px;
     margin-right: 25px;
-    background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
     border: 1px solid #eee;
     border-radius: 15px;
     height: 28px;
@@ -265,9 +265,14 @@
       display: inline-block;
       color: #cccccc;
       background-color: #fff;
-      transition: all 0.18s ease;
+      transition: all 0.10s ease;
     }
 
+  }
+
+  // стили переключателей, подложка 2 цветный градиент (акт и неакт цвет)
+  .order__radio + .order__tabs {
+    background: linear-gradient(90deg, #e1e4f7 0%, #e1e4f7 50%, #f6f5f3 50%);
   }
 
   .order__radio:checked + .order__tabs span {
@@ -275,13 +280,14 @@
     color: #777777;
     background-color: #fff;
   }
-  .order__radio:disabled + .order__tabs {
-    border: 1px solid #fff;
-    background-color: #f9f9f3;
+  .order__radio:disabled + .order__tabs  {
+    border: 1px solid rgba(233,233,233,0.8);
+    background: #fff;
   }
   .order__radio:disabled + .order__tabs span {
-    background-color: #f9f9f3;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid rgba(233,233,233,0.8);
+    color: #eee;
   }
 
   .order__radio{
@@ -569,7 +575,6 @@
   }
 }
 
-
 .order__contacts{
 
   & .order__header{
@@ -584,12 +589,12 @@
   padding-top: 90px;
 }
 
-
 .contacts {
   position: absolute;
   top: 0;
   left: 0;
   .col-10;
+  padding: 0;
 }
 .contacts:after {
   clear: both;
@@ -601,7 +606,7 @@
   width: 100%;
   position: relative;
   height: 36px;
-  box-shadow: 0 5px 10px 0 rgba(0,68,204,0.14);
+  box-shadow: 0 3px 12px 0 rgba(0,68,204,0.22);
   border-radius: 20px;
 
   &__name, &__company{
@@ -641,11 +646,32 @@
       padding-left: 55px;
       width: 55%;
     }
+
+    // стилизация плейсхолдера
+    &::-webkit-input-placeholder{color: @c-lightblue;}
+    &::-moz-placeholder{color: @c-lightblue;}
+    &:-moz-placeholder{color: @c-lightblue;}
+    &::-ms-input-placeholder{color: @c-lightblue;}
+    // исчезновение плейсхолдера
+    &:focus::-webkit-input-placeholder {color: transparent}
+    &:focus::-moz-placeholder          {color: transparent}
+    &:focus:-moz-placeholder           {color: transparent}
+    &:focus:-ms-input-placeholder      {color: transparent}
+    //
+    &::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+    &::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+    &:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+    &:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+    &:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+    &:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+    &:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+    &:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
   }
 }
 
+// нижняя перемещающаяся плашка 
 .confirmation{
-  width: 687px;
+  width: 690px;
   // .col-12;
   z-index: 20;
   clear: both;
@@ -669,14 +695,14 @@
   }
 
   &__info {
-    .proxima-cond(lighter);
+    .proxima-cond(bold);
     width: 100%;
-    color: #ffffff;
-    background-color: #444444;
+    color: #aaf;
+    background-color: #444;
     padding-bottom: 2px;
     padding-left: 60px;
-    font-size: 18px;
-    letter-spacing: 1.4px;
+    font-size: 22px;
+    letter-spacing: 2.5px;
 
   }
   &__delivery {
@@ -690,7 +716,7 @@
     padding: 4px 0;
     padding-left: 60px;
     font-size: 14px;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
     transition: all 0.3s ease;
 
@@ -748,7 +774,7 @@
 
 .form-send{
   position: absolute;
-  right: 70px;
+  right: 50px;
   .col-3;
   z-index: 110;
 
@@ -782,6 +808,7 @@
   &--bottomfix{
     height: 328px;
     position: relative;
+    padding: 0 26px;
   }
 }
 

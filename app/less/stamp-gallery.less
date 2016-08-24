@@ -9,6 +9,10 @@
     }
   }
 
+  &__photo {
+    // width: 
+  }
+
   @media (min-width: @container-laptop) {
     position: relative;
     width: 100vw;
@@ -47,6 +51,7 @@
 
     .owl-item {  // карточки с печатями
       background-color: transparent;
+
     }
 
     .owl-nav {
@@ -60,9 +65,11 @@
     .owl-stage-outer {
       z-index: 1;
 
-      &:before {  // центральная печать
+      &:before {  // центральная печать, подложка
         content: '';
-        width: e("calc(25vw + 46px)");
+        // width: e("calc(25vw + 46px)");
+        width: 312px;
+        height: 480px;
         position: absolute;
         z-index: 1;
         top: 115px;
