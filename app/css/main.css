@@ -2411,24 +2411,3 @@ textarea {
     z-index: 2;
   }
 }
-@media (min-width: 1200px) {
-  .stamp-gallery .owl-stage-outer:before,
-  .stamp-gallery .owl-stage-outer:after {
-    width: -webkit-calc(100% / 5 + 46px);
-    width: calc(100% / 5 + 46px);
-  }
-}
-@media (min-width: 1600px) {
-  .stamp-gallery .owl-stage-outer:before,
-  .stamp-gallery .owl-stage-outer:after {
-    width: -webkit-calc(100% / 6 + 46px);
-    width: calc(100% / 6 + 46px);
-  }
-}
-@media (min-width: 1920px) {
-  .stamp-gallery .owl-stage-outer:before,
-  .stamp-gallery .owl-stage-outer:after {
-    width: -webkit-calc(100% / 7 + 46px);
-    width: calc(100% / 7 + 46px);
-  }
-}

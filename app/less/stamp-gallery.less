@@ -25,7 +25,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: #F6F5F3;
+      background-color: #F6F5F3;  // блок с печатями, серая подложка
     }
 
     &__name {
@@ -33,7 +33,7 @@
       background-color: transparent;
     }
 
-    &__item-name-part {
+    &__item-name-part {  //характеристики печати: название, страна
       .proxima(lighter);
       font-size: 15px;
       margin-bottom: 8px;
@@ -45,7 +45,7 @@
       padding: 0 10px;
     }
 
-    .owl-item {
+    .owl-item {  // карточки с печатями
       background-color: transparent;
     }
 
@@ -60,7 +60,7 @@
     .owl-stage-outer {
       z-index: 1;
 
-      &:before {
+      &:before {  // центральная печать
         content: '';
         width: e("calc(25vw + 46px)");
         position: absolute;
@@ -72,7 +72,7 @@
         background-color: #FFFFCC;
       }
 
-      &:after {
+      &:after {  // связанная с центральной печатью подложка под характеристики печати
         content: '';
         position: absolute;
         top: 15px;
@@ -91,36 +91,36 @@
 
   }
 
-  @media (min-width: @screen-lg) {
+  // @media (min-width: @screen-lg) {
 
-    .owl-stage-outer {
+  //   .owl-stage-outer {
 
-      &:before,
-      &:after {
-        width: e("calc(100% / 5 + 46px)");
-      }
-    }
-  }
+  //     &:before,
+  //     &:after {
+  //       width: e("calc(100% / 5 + 46px)");
+  //     }
+  //   }
+  // }
 
-  @media (min-width: @screen-xl) {
+  // @media (min-width: @screen-xl) {
 
-    .owl-stage-outer {
+  //   .owl-stage-outer {
 
-      &:before,
-      &:after {
-        width: e("calc(100% / 6 + 46px)");
-      }
-    }
-  }
+  //     &:before,
+  //     &:after {
+  //       width: e("calc(100% / 6 + 46px)");
+  //     }
+  //   }
+  // }
 
-  @media (min-width: @screen-xxl) {
+  // @media (min-width: @screen-xxl) {
 
-    .owl-stage-outer {
+  //   .owl-stage-outer {
 
-      &:before,
-      &:after {
-        width: e("calc(100% / 7 + 46px)");
-      }
-    }
-  }
+  //     &:before,
+  //     &:after {
+  //       width: e("calc(100% / 7 + 46px)");
+  //     }
+  //   }
+  // }
 }
