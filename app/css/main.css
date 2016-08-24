@@ -998,19 +998,21 @@ textarea {
     transform: rotate(3deg);
   }
   .add-order__tabs:before {
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     content: "";
-    bottom: -1px;
-    right: -8px;
+    bottom: -2px;
+    right: -3px;
     left: auto;
     -webkit-transform: skewY(5deg);
     -ms-transform: skewY(5deg);
     transform: skewY(5deg);
-    width: 100%;
-    height: 88%;
-    background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 0.5) 100%, #e1e1e1 1%);
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 100%, #e1e1e1 1%);
+    width: 90%;
+    height: 86%;
+    background: -webkit-linear-gradient(340deg, rgba(0, 0, 0, 0.18) 55%, rgba(0, 0, 0, 0.02));
+    background: linear-gradient(110deg, rgba(0, 0, 0, 0.18) 55%, rgba(0, 0, 0, 0.02));
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
   }
   .add-order__tabs:last-child {
     margin-right: 0;
