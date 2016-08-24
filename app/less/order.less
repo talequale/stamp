@@ -672,6 +672,7 @@
 // нижняя перемещающаяся плашка 
 .confirmation{
   width: 690px;
+  position: absolute;
   // .col-12;
   z-index: 20;
   clear: both;
@@ -679,13 +680,9 @@
   // box-shadow: 0 3px 3px 0 rgba(0,68,204,0.5);
   box-shadow: 0 2px 11px 0 rgba(0,68,204,0.5);
 
-  &--fixed {
+  &--scroll {
     position: fixed;
     bottom: 10px;
-  }
-
-  &--absolute {
-    position: absolute;
   }
 
   &:after{

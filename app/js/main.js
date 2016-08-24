@@ -50,7 +50,7 @@ $(document).ready(function(){
     items.eq(item).find('input').attr('checked', 'checked');
   });
 
-
+  // скрол верхней панели
   $(function () {
 
     $(window).scroll(function () {
@@ -62,6 +62,28 @@ $(document).ready(function(){
         $('.page-header').addClass('page-header--scroll');
       } else {
         $('.page-header').removeClass('page-header--scroll');
+      }
+    });
+
+  });
+
+
+  // скрол нижней панели
+  $(function () {
+
+    $(window).scroll(function () {
+
+      var link = $('.for-bottom-scroll'); // точка срабатывания
+      var top = link.offset().top; // координаты точки срабатывания
+      // кординаты срабатывания + размер объекта + отступ
+      var confirmationHeight = top + $('.confirmation').height() + 10;       
+      var scrollTop = $(this).scrollTop(); // координаты верхнего края окна
+      var windowBottom = scrollTop + $(window).height(); // координаты нижнего края окна
+
+      if (windowBottom < confirmationHeight) {
+        $('.confirmation').addClass('confirmation--scroll');
+      } else {
+        $('.confirmation').removeClass('confirmation--scroll');
       }
     });
 

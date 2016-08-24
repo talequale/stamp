@@ -1247,18 +1247,16 @@ textarea {
   }
   .confirmation {
     width: 690px;
+    position: absolute;
     z-index: 20;
     clear: both;
     background-color: #ffffff;
     -webkit-box-shadow: 0 2px 11px 0 rgba(0, 68, 204, 0.5);
     box-shadow: 0 2px 11px 0 rgba(0, 68, 204, 0.5);
   }
-  .confirmation--fixed {
+  .confirmation--scroll {
     position: fixed;
     bottom: 10px;
-  }
-  .confirmation--absolute {
-    position: absolute;
   }
   .confirmation:after {
     clear: both;
@@ -2375,10 +2373,21 @@ textarea {
 }
 .stamp-gallery__item {
   display: block;
+  width: 253px;
 }
 .stamp-gallery__item input {
   position: absolute;
   visibility: hidden;
+}
+.stamp-gallery__photo {
+  width: 195px;
+  height: 355px;
+  overflow: hidden;
+}
+.stamp-gallery__photo img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
 }
 @media (min-width: 960px) {
   .stamp-gallery {
@@ -2448,8 +2457,6 @@ textarea {
     top: 15px;
     z-index: 1;
     height: 100px;
-    width: -webkit-calc(25vw + 46px);
-    width: calc(25vw + 46px);
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);

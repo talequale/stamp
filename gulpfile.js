@@ -117,7 +117,7 @@ gulp.task('bootstrapCompil', function () {
   .pipe(minifyCss())
   .pipe(rename('bootstrap.min.css'))
   .pipe(gulp.dest('app/bower_components/bootstrap/dist/css/'))
-  .pipe(notify("Эй мужик! bootstrap перекомпилировали!"));
+  .pipe(notify("bootstrap перекомпилировали!"));
 });
 
 // автоматом прописывает в html файл пути к библиотекам css и js
@@ -140,4 +140,3 @@ gulp.task('watch', function (){
 });
 
 gulp.task('default', ['webserver', 'sprite', 'less', 'bootstrapCompil', 'bower', 'watch']);
-

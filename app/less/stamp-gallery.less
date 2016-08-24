@@ -2,6 +2,7 @@
 
   &__item {
     display: block;
+    width: 253px;
 
     input {
       position: absolute;
@@ -10,7 +11,15 @@
   }
 
   &__photo {
-    // width: 
+    width: 195px;
+    height: 355px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+    }
   }
 
   @media (min-width: @container-laptop) {
@@ -85,7 +94,7 @@
         top: 15px;
         z-index: 1;
         height: 100px;
-        width: e("calc(25vw + 46px)");
+        // width: e("calc(25vw + 46px)");
         left: 50%;
         transform: translateX(-50%);
         background-color: #FACB00;
