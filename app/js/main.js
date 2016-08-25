@@ -15,6 +15,16 @@ $(document).ready(function(){
       0 : {
           items : 1,
       },
+      // breakpoint from 320 up
+      320 : {
+          items : 1,
+          mouseDrag: false,
+      },
+      // breakpoint from 960 up
+      960 : {
+          items : 3,
+          mouseDrag: false,
+      },
       // breakpoint from 1028 up
       1028 : {
           items : 4,

@@ -898,12 +898,18 @@ textarea {
     border: 1px solid #ffe600;
     text-align: center;
     top: 45px;
+    left: -webkit-calc(50% - 25px);
+    left: calc(50% - 25px);
   }
   .stamp-gallery .owl-prev {
-    left: 30%;
+    -webkit-transform: translateX(-250px);
+    -ms-transform: translateX(-250px);
+    transform: translateX(-250px);
   }
   .stamp-gallery .owl-next {
-    right: 30%;
+    -webkit-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    transform: translateX(250px);
   }
   .stamp-gallery .owl-prev:after,
   .stamp-gallery .owl-next:after {
@@ -2373,7 +2379,6 @@ textarea {
 }
 .stamp-gallery__item {
   display: block;
-  width: 253px;
 }
 .stamp-gallery__item input {
   position: absolute;
@@ -2383,6 +2388,7 @@ textarea {
   width: 195px;
   height: 355px;
   overflow: hidden;
+  margin: 0 auto;
 }
 .stamp-gallery__photo img {
   width: 100%;
@@ -2434,36 +2440,38 @@ textarea {
     right: 0;
     z-index: 3;
   }
-  .stamp-gallery .owl-stage-outer {
+  .stamp-gallery .owl-item.center {
     z-index: 1;
   }
-  .stamp-gallery .owl-stage-outer:before {
+  .stamp-gallery .owl-item.center:before {
     content: '';
-    width: 312px;
-    height: 480px;
     position: absolute;
-    z-index: 1;
-    top: 115px;
+    width: -webkit-calc((100% - 195px)/2 + 100%);
+    width: calc((100% - 195px)/2 + 100%);
+    height: 100%;
+    top: 0;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 0;
+    z-index: -1;
     background-color: #FFFFCC;
   }
-  .stamp-gallery .owl-stage-outer:after {
+  .stamp-gallery .owl-item.center:after {
     content: '';
     position: absolute;
-    top: 15px;
-    z-index: 1;
-    height: 100px;
+    width: -webkit-calc((100% - 195px)/2 + 100%);
+    width: calc((100% - 195px)/2 + 100%);
+    height: 90px;
+    top: -90px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    z-index: -1;
     background-color: #FACB00;
   }
-  .stamp-gallery .owl-stage-outer .owl-stage {
+  .stamp-gallery .owl-item.center .owl-stage {
     z-index: 2;
   }
 }

@@ -2,7 +2,6 @@
 
   &__item {
     display: block;
-    width: 253px;
 
     input {
       position: absolute;
@@ -14,6 +13,7 @@
     width: 195px;
     height: 355px;
     overflow: hidden;
+    margin: 0 auto;
 
     & img {
       width: 100%;
@@ -71,33 +71,31 @@
       z-index: 3;
     }
 
-    .owl-stage-outer {
+    .owl-item.center {
       z-index: 1;
 
       &:before {  // центральная печать, подложка
         content: '';
-        // width: e("calc(25vw + 46px)");
-        width: 312px;
-        height: 480px;
-        position: absolute;
-        z-index: 1;
-        top: 115px;
+        position: absolute;        
+        width: e("calc((100% - 195px)/2 + 100%)");
+        height: 100%;
+        top: 0;
         left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        background-color: #FFFFCC;
+        transform: translateX(-50%);  
+        z-index: -1;  
+        background-color: #FFFFCC;                    
       }
 
       &:after {  // связанная с центральной печатью подложка под характеристики печати
         content: '';
-        position: absolute;
-        top: 15px;
-        z-index: 1;
-        height: 100px;
-        // width: e("calc(25vw + 46px)");
+        position: absolute;        
+        width: e("calc((100% - 195px)/2 + 100%)");
+        height: 90px;
+        top: -90px;
         left: 50%;
-        transform: translateX(-50%);
-        background-color: #FACB00;
+        transform: translateX(-50%);  
+        z-index: -1;     
+        background-color: #FACB00; 
       }
 
       .owl-stage {
