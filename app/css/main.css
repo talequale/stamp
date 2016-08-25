@@ -902,14 +902,14 @@ textarea {
     left: calc(50% - 25px);
   }
   .stamp-gallery .owl-prev {
-    -webkit-transform: translateX(-250px);
-    -ms-transform: translateX(-250px);
-    transform: translateX(-250px);
+    -webkit-transform: translateX(-290px);
+    -ms-transform: translateX(-290px);
+    transform: translateX(-290px);
   }
   .stamp-gallery .owl-next {
-    -webkit-transform: translateX(250px);
-    -ms-transform: translateX(250px);
-    transform: translateX(250px);
+    -webkit-transform: translateX(290px);
+    -ms-transform: translateX(290px);
+    transform: translateX(290px);
   }
   .stamp-gallery .owl-prev:after,
   .stamp-gallery .owl-next:after {
@@ -2446,8 +2446,8 @@ textarea {
   .stamp-gallery .owl-item.center:before {
     content: '';
     position: absolute;
-    width: -webkit-calc((100% - 195px)/2 + 100%);
-    width: calc((100% - 195px)/2 + 100%);
+    width: -webkit-calc((100% - 195px) + 100%);
+    width: calc((100% - 195px) + 100%);
     height: 100%;
     top: 0;
     left: 50%;
@@ -2460,8 +2460,8 @@ textarea {
   .stamp-gallery .owl-item.center:after {
     content: '';
     position: absolute;
-    width: -webkit-calc((100% - 195px)/2 + 100%);
-    width: calc((100% - 195px)/2 + 100%);
+    width: -webkit-calc((100% - 195px) + 100%);
+    width: calc((100% - 195px) + 100%);
     height: 90px;
     top: -90px;
     left: 50%;
