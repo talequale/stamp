@@ -16,24 +16,20 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="container">
+
       <div class="range">
         <div class="fast-phone">
-          <p class="fast-phone__slogan">По любым вопросам</p>
-          <p class="fast-phone__slogan">Бесплатно по РФ</p>
           <a href="" class="fast-phone__link">8 800 333 4744</a>
+          <p class="fast-phone__slogan">Бесплатно по РФ</p>
         </div>
-        <ul class="advantages">
-          <li class="advantages__item advantages__item--finger">
-            <strong class="advantages__head">Без предоплаты</strong>
-            <span class="advantages__description">Оплата при получении</span>
-          </li>
-          <li class="advantages__item advantages__item--flycar">
-            <strong class="advantages__head">Срочная доставка</strong>
-            <span class="advantages__description">В день заказа</span>
-          </li>
-        </ul>
+        <div class="header-logo">
+          <div class="header-logo__logo">
+            <img src="" alt=" ">
+          </div>
+          <div class="header-logo__slogan">Экономим ваше время и силы</div>
+        </div>
       </div>
+      
       <div class="decision-header">
         <div class="decision-header__block">
           <p class="decision-header__text">Можно просто послать нам фото документов или оттиска на номер</p>
@@ -47,30 +43,28 @@
           </div>          
           <p class="decision-header__text decision-header__text--small">Мы свяжемся с вами и согласуем детали!</p>
         </div>
-
       </div>
-    </div>
+
+
   </header>
 
   <main class="page-main">
     <section class="promo">
       <div class="container">
-        <h1 class="promo__head">Хотите получать <strong class="promo__accent">печати</strong><br> с бесплатной доставкой<br> до двери?</h1>
+        <div class="promo__accent">#Всё срочно</div>
+        <h1 class="promo__head">Хотите получать печати<br> с бесплатной доставкой до двери?</h1>
         <ul class="steps">
           <li class="steps__item">
             <strong class="steps__hashtag">#Просто</strong>
-            <span class="steps__number">1</span>
-            <p class="steps__text">Заполните онлайн<br> заявку за 5 минут</p>
+            <p class="steps__text">Заполните<br> онлайн заявку <br>за 5 минут</p>
           </li>
           <li class="steps__item">
-            <strong class="steps__hashtag">#Удобно</strong>
-            <span class="steps__number">2</span>
-            <p class="steps__text">через 15 минут<br> мы перезвоним<br> и согласуем все детали</p>
+            <strong class="steps__hashtag">#через 15 минут</strong>
+            <p class="steps__text">через 15 минут мы перезвоним и согласуем все детали</p>
           </li>
           <li class="steps__item">
-            <strong class="steps__hashtag">#Быстро</strong>
-            <span class="steps__number">3</span>
-            <p class="steps__text">доставим до двери на следующий день или забирайте из пункта самовывоза в удобное время</p>
+            <strong class="steps__hashtag">#доставим</strong>
+            <p class="steps__text">курьером до двери на следующий день</p>
           </li>
         </ul>
         <div class="decision">
@@ -84,7 +78,7 @@
           <p class="decision__text--small">Мы свяжемся с вами и согласуем детали!</p>
         </div>
       </div>
-      <div class="sloganbox">
+<!--       <div class="sloganbox">
         <div class="container">
           <strong class="sloganbox__text">Экономьте силы, время и деньги<br>Получите печати быстро</strong>
         </div>
@@ -93,12 +87,12 @@
         <div class="container">
           <strong class="warranty__text">100% гарантия конфиденциальности</strong>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <form class="order" method="#" enctype="multipart/form-data">
       <section class="order__step order__type-stamp">
-        <div class="sloganbox">
+ <!--        <div class="sloganbox">
           <div class="container">
             <strong class="sloganbox__text">Экономьте силы,<br> время и деньги<br>Получите печати быстро</strong>
           </div>
@@ -112,7 +106,7 @@
           <div class="container">
             <h2 class="order__head">выберите тип печати</h2>
           </div>
-        </div>
+        </div> -->
         <div class="container">
           <div class="type-stamp">
             <div class="type-stamp__item">
@@ -362,8 +356,8 @@
           <div class="order__finished">
             <div class="confirmation confirmation--scroll">
               <div class="confirmation__info">
-                <span class="confirmation__stamp">новая печать</span>
-                <span class="confirmation__rigging">на автоматической оснастке</span>
+                <span class="confirmation__stamp">Выбрано: </span>
+                <span class="confirmation__rigging">новая печать на автоматической оснастке</span>
               </div>
               <div class="confirmation__price">
                 <p>от <span class="confirmation__summ">999</span> Р</p>
@@ -375,6 +369,9 @@
                 <label for="confirmation__two" class="confirmation__text">Доставка день в день до 18:00 (заказ до 15:00)</label>
                 <input id="confirmation__three" class="confirmation__input" name="delivery" type="radio">
                 <label for="confirmation__three" class="confirmation__text">Изготовление и доставка за 3 часа (до 24:00)</label>
+              </div>
+              <div class="confirmation__label">
+                <span>оплата при получении</span>
               </div>
             </div>
             <div class="contacts">

@@ -2,6 +2,7 @@
 
   &__item {
     display: block;
+    width: 300px;
 
     input {
       position: absolute;
@@ -74,29 +75,30 @@
     .owl-item.center {
       z-index: 1;
 
-      &:before {  // центральная печать, подложка
-        content: '';
-        position: absolute;        
-        width: e("calc((100% - 195px) + 100%)");
-        height: 100%;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);  
-        z-index: -1;  
-        background-color: #FFFFCC;                    
-      }
+      // &:before {  // центральная печать, подложка
+      //   content: '';
+      //   position: absolute;        
+      //   width: e("calc((100% - 195px) + 100%)");
+      //   height: 100%;
+      //   top: 0;
+      //   left: 50%;
+      //   transform: translateX(-50%);  
+      //   z-index: -1;  
+      //   background-color: #FFFFCC;                    
+      // }
 
-      &:after {  // связанная с центральной печатью подложка под характеристики печати
-        content: '';
-        position: absolute;        
-        width: e("calc((100% - 195px) + 100%)");
-        height: 90px;
-        top: -90px;
-        left: 50%;
-        transform: translateX(-50%);  
-        z-index: -1;     
-        background-color: #FACB00; 
-      }
+      // &:after {  // связанная с центральной печатью подложка под характеристики печати
+      //   content: '';
+      //   position: absolute;        
+      //   width: e("calc((100% - 195px) + 100%)");
+      //   height: 90px;
+      //   top: -90px;
+      //   left: 50%;
+      //   transform: translateX(-50%);  
+      //   z-index: -1;     
+      //   background-color: #FACB00; 
+      //   transition: none;
+      // }
 
       .owl-stage {
         z-index: 2;

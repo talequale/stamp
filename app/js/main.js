@@ -3,6 +3,7 @@ $(document).ready(function(){
   var owl = $('.owl-carousel');
   owl.owlCarousel({
     center: true,
+    itemsScaleUp: false,
     items: 4,
     margin: 0,
     // loop: true,
@@ -27,17 +28,17 @@ $(document).ready(function(){
       },
       // breakpoint from 1028 up
       1028 : {
-          items : 4,
+          items : 3,
           mouseDrag: false,
       },
       1200 : {
-          items : 5,
+          items : 3,
       },
       1600 : {
-          items : 6,
+          items : 4,
       },
       1920 : {
-          items : 7,
+          items : 5,
       }
     }
   });
@@ -60,22 +61,23 @@ $(document).ready(function(){
     items.eq(item).find('input').attr('checked', 'checked');
   });
 
-  // скрол верхней панели
-  $(function () {
+  //скрол верхней панели
+  
+  // $(function () {
 
-    $(window).scroll(function () {
+  //   $(window).scroll(function () {
 
-      var top = $('.promo .sloganbox').offset().top;
-      // console.log(top);
+  //     var top = $('.promo .sloganbox').offset().top;
+  //     // console.log(top);
 
-      if ($(this).scrollTop() > top) {
-        $('.page-header').addClass('page-header--scroll');
-      } else {
-        $('.page-header').removeClass('page-header--scroll');
-      }
-    });
+  //     if ($(this).scrollTop() > top) {
+  //       $('.page-header').addClass('page-header--scroll');
+  //     } else {
+  //       $('.page-header').removeClass('page-header--scroll');
+  //     }
+  //   });
 
-  });
+  // });
 
 
   // скрол нижней панели
@@ -94,6 +96,13 @@ $(document).ready(function(){
         $('.confirmation').addClass('confirmation--scroll');
       } else {
         $('.confirmation').removeClass('confirmation--scroll');
+      }
+
+      // исчезновение лейбла
+      if (windowBottom > confirmationHeight - 106 ) {
+        $('.confirmation__label').addClass('confirmation__label--invisible');
+      } else {
+        $('.confirmation__label').removeClass('confirmation__label--invisible');
       }
     });
 

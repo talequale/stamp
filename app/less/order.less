@@ -23,6 +23,7 @@
   }
 
   &__type-stamp {
+    padding-top: 38px;
     letter-spacing: 3.5px;
     font-weight: bolder;
   }
@@ -308,6 +309,35 @@
 
   .owl-stage-outer {
     padding-top: 115px;
+
+    &:before {  // центральная печать, подложка
+      content: '';
+      position: absolute;        
+      // width: e("calc((100% - 195px) + 100%)");
+      width: 400px;
+      height: 400px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);  
+      z-index: -1;  
+      background-color: #FFFFCC;                    
+    }
+
+    &:after {  // связанная с центральной печатью подложка под характеристики печати
+      content: '';
+      position: absolute;        
+      // width: e("calc((100% - 195px) + 100%)");
+      width: 400px;
+      height: 90px;
+      top: -90px;
+      left: 50%;
+      transform: translateX(-50%);  
+      z-index: -1;     
+      background-color: #FACB00; 
+      transition: none;
+    }
+
+
   }
 
   &__item{
@@ -686,10 +716,46 @@
     bottom: 10px;
   }
 
-  &:after{
-    clear: both;
-    content: '';
+  &__label {
     display: block;
+    position: absolute;
+    right: -126px;
+    top: 0;
+    width: 126px;
+    height: 100%;
+    text-align: center;
+    vertical-align: bottom;
+    background-color: #fff;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+    &--invisible {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      }    
+
+    span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center; 
+      .proxima(lighter);  
+      text-transform: uppercase;  
+      font-size: 13px;
+      letter-spacing: 2px;
+
+
+    }
+
+    &:before{
+      .sprite(@icon-finger);
+      content: '';
+      display: block;
+      position: absolute;
+      left: 36px;
+      top: -5px;  
+    }        
   }
 
   &__info {
@@ -701,7 +767,10 @@
     padding-left: 60px;
     font-size: 22px;
     letter-spacing: 2.5px;
-
+  }
+  &__stamp{
+    text-transform: uppercase;
+    color: #fff;
   }
   &__delivery {
     width: 66.666666%;

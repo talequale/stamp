@@ -1,13 +1,10 @@
 .page-header{
-  padding-top: 5px;
-  background-color: rgba(255, 255, 255, .95);
-  position: fixed;
+  position: absolute;
   width: 100%;
+  min-height: 123px;
   top: 0;
   left: 0;
   z-index: 100;
-  border-bottom: 1px solid @c-light-grey;
-  transition: all 0.3s ease;
 
   & .container{
     position: relative;  // должен тянуться
@@ -41,81 +38,63 @@
 .fast-phone{
   .col-5;
   float: right;
-  margin-bottom: 0;
   text-align: right;
-
-  &__slogan{
-    .proxima(lighter);
-    font-size: 13px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 5px;  // для попадания в макет
-    color: @c-grey;
-  }
+  padding-right: 20px;
 
   &__link{
     display: block;
+    padding-top: 10px;
     text-decoration: none;
     font-weight: bold;
     font-size: 35px;
     line-height: 50px;
-    letter-spacing: 3.5px; 
-    margin-top: -10px; // для попадания в макет
-    color: @c-blue;
+    letter-spacing: 5px; 
+    color: @c-yellow;
   }
+
+  &__slogan{
+    .proxima(lighter);
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: -4px;
+    color: @c-yellow;
+  }
+
 }
 
-.advantages{
-  .col-11;
-  margin-top: 28px;
-  margin-bottom: 8px;
-  padding-right: 0;
-  &__item{
-    display: inline-block;
-    list-style: none;
-    position: relative;
-    min-width: 278px; 
-    padding-left: 77px;
-    margin-bottom: 0;
-    margin-right: 10px;
-    color: @c-grey; 
+.header-logo{
+  width: 400px;
 
-    &:last-child{
-      padding-left: 105px;
-      margin-right: 0;
-    }
 
-    &:before{
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-    &--finger:before{
-      .sprite(@icon-finger);
-    }
-    &--flycar:before{
-      .sprite(@icon-flycar);
-    }
+  &__logo {
+    float: left;
+    width: 150px;
+    height: 123px;
+    background-color: #fff;
   }
-  &__head{
-    position: relative;  // сдвиг для попадания в макет
-    top: 5px;
-    font-weight: lighter;
-    font-size: 24px;
-    letter-spacing: 2px;
+
+  &__slogan {
+    float: left;
+    width: 170px;
+    padding-top: 30px;
+    padding-left: 20px;
+    .proxima(ligth);
+    font-size: 18px;
+    line-height: 135%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
   }
-  &__description{
-    display: block;
-    position: relative;  // сдвиг для попадания в макет
-    top: 2px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
-    letter-spacing: 2px;
+
+  &:after {
+    content: '';
+    clear: both;;
   }
+
+
+
 }
 
 .decision-header {

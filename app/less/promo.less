@@ -1,20 +1,27 @@
 .promo {
+  min-height: 521px;
   background-image: url(../img/promo_background.jpg);
-  background-size: auto 100%;
-  background-position: center;
-  padding-top: 137px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  padding-top: 150px;
+  
+  &__accent{
+    .proxima(lighter);
+    font-size: 36px;
+    color: #fffe00;
+    margin-bottom: 24px;
+    text-transform: uppercase; 
+    letter-spacing: 4px;      
+  }
 
   &__head {
     font-size: 65px;
     line-height: 71px;
     font-weight: lighter;
-    color: #fff;
+    color: @c-yellow;
     margin-top: 0;
-    margin-bottom: 74px;
-  }
-
-  &__accent {
-    font-weight: lighter;
+    margin-bottom: 40px;
   }
 
 }
