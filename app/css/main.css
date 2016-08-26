@@ -91,6 +91,9 @@ select,
 textarea {
   outline: none;
 }
+* {
+  outline: 1px solid red;
+}
 @media screen and (min-width: 1300px) {
   .left-on-wide-screen {
     padding-right: 15vw;
@@ -277,7 +280,7 @@ textarea {
     font-size: 35px;
     line-height: 50px;
     letter-spacing: 5px;
-    color: #ffe600;
+    color: #fffe00;
   }
   .fast-phone__slogan {
     font-family: "Proxima Nova", Arial, sans-serif;
@@ -287,7 +290,7 @@ textarea {
     text-transform: uppercase;
     margin: 0;
     margin-top: -4px;
-    color: #ffe600;
+    color: #fffe00;
   }
   .header-logo {
     width: 400px;
@@ -395,7 +398,7 @@ textarea {
     font-size: 65px;
     line-height: 71px;
     font-weight: lighter;
-    color: #ffe600;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 40px;
   }
@@ -510,12 +513,12 @@ textarea {
   }
   .steps__text {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: ligter;
+    font-weight: bold;
     margin-top: 11px;
     font-size: 13px;
     line-height: 150%;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
     color: #fff;
   }
   .order__header {
@@ -891,6 +894,14 @@ textarea {
     left: -webkit-calc(50% - 25px);
     left: calc(50% - 25px);
     z-index: 5;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+  }
+  .stamp-gallery .owl-prev:hover,
+  .stamp-gallery .owl-next:hover {
+    background-color: #efefef;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
   .stamp-gallery .owl-prev {
     -webkit-transform: translateX(-150px);
@@ -1247,7 +1258,7 @@ textarea {
     position: absolute;
     z-index: 20;
     clear: both;
-    background-color: #ffffff;
+    background-color: #fff;
     -webkit-box-shadow: 0 2px 11px 0 rgba(0, 68, 204, 0.5);
     box-shadow: 0 2px 11px 0 rgba(0, 68, 204, 0.5);
   }
@@ -1264,7 +1275,6 @@ textarea {
     height: 100%;
     text-align: center;
     vertical-align: bottom;
-    background-color: #fff;
     opacity: 1;
     -webkit-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
@@ -1285,6 +1295,7 @@ textarea {
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 2px;
+    background-color: #fff;
   }
   .confirmation__label:before {
     background-image: url(../img/sprite.png);
@@ -1309,7 +1320,6 @@ textarea {
     letter-spacing: 2.5px;
   }
   .confirmation__stamp {
-    text-transform: uppercase;
     color: #fff;
   }
   .confirmation__delivery {

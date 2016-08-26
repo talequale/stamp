@@ -402,6 +402,11 @@
     top: 265px;
     left: e("calc(50% - 25px)");
     z-index: 5;
+    transition: background-color 0.3s ease;
+  }
+  .owl-prev:hover, .owl-next:hover {
+    background-color: #efefef;
+    transition: background-color 0.3s ease;
   }
   .owl-prev{
     transform: translateX(-150px);
@@ -710,8 +715,7 @@
   // .col-12;
   z-index: 20;
   clear: both;
-  background-color: #ffffff;
-  // box-shadow: 0 3px 3px 0 rgba(0,68,204,0.5);
+  background-color: #fff;
   box-shadow: 0 2px 11px 0 rgba(0,68,204,0.5);
 
   &--scroll {
@@ -728,7 +732,6 @@
     height: 100%;
     text-align: center;
     vertical-align: bottom;
-    background-color: #fff;
     opacity: 1;
     transition: opacity 0.5s ease;
 
@@ -747,8 +750,7 @@
       text-transform: uppercase;  
       font-size: 13px;
       letter-spacing: 2px;
-
-
+      background-color: #fff;
     }
 
     &:before{
@@ -772,7 +774,6 @@
     letter-spacing: 2.5px;
   }
   &__stamp{
-    text-transform: uppercase;
     color: #fff;
   }
   &__delivery {
