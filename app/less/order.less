@@ -316,7 +316,7 @@
       // width: e("calc((100% - 195px) + 100%)");
       width: 400px;
       height: 400px;
-      top: 0;
+      top: 117px;
       left: 50%;
       transform: translateX(-50%);  
       z-index: -1;  
@@ -329,7 +329,7 @@
       // width: e("calc((100% - 195px) + 100%)");
       width: 400px;
       height: 90px;
-      top: -90px;
+      top: 25px;
       left: 50%;
       transform: translateX(-50%);  
       z-index: -1;     
@@ -389,6 +389,8 @@
     }
   }
 
+
+//  кнопки вперед/назад
   .owl-prev, .owl-next{
     position: absolute;
     width: 50px;
@@ -397,14 +399,15 @@
     background-color: #fff;
     border: 1px solid @c-yellow;
     text-align: center;
-    top: 45px;
+    top: 265px;
     left: e("calc(50% - 25px)");
+    z-index: 5;
   }
   .owl-prev{
-    transform: translateX(-290px);
+    transform: translateX(-150px);
   }
   .owl-next{
-    transform: translateX(290px);
+    transform: translateX(150px);
   }
   .owl-prev:after, .owl-next:after{
     content: '';

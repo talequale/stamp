@@ -3,7 +3,6 @@ $(document).ready(function(){
   var owl = $('.owl-carousel');
   owl.owlCarousel({
     center: true,
-    itemsScaleUp: false,
     items: 4,
     margin: 0,
     // loop: true,
@@ -32,13 +31,13 @@ $(document).ready(function(){
           mouseDrag: false,
       },
       1200 : {
-          items : 3,
-      },
-      1600 : {
           items : 4,
       },
-      1920 : {
+      1600 : {
           items : 5,
+      },
+      1920 : {
+          items : 6,
       }
     }
   });
