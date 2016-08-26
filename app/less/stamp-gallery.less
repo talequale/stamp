@@ -2,24 +2,10 @@
 
   &__item {
     display: block;
-    width: 300px;
 
     input {
       position: absolute;
       visibility: hidden;
-    }
-  }
-
-  &__photo {
-    width: 195px;
-    height: 355px;
-    overflow: hidden;
-    margin: 0 auto;
-
-    & img {
-      width: 100%;
-      height: auto;
-      vertical-align: bottom;
     }
   }
 
@@ -39,7 +25,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: #F6F5F3;  // блок с печатями, серая подложка
+      background-color: #F6F5F3;
     }
 
     &__name {
@@ -47,7 +33,7 @@
       background-color: transparent;
     }
 
-    &__item-name-part {  //характеристики печати: название, страна
+    &__item-name-part {
       .proxima(lighter);
       font-size: 15px;
       margin-bottom: 8px;
@@ -59,9 +45,8 @@
       padding: 0 10px;
     }
 
-    .owl-item {  // карточки с печатями
+    .owl-item {
       background-color: transparent;
-
     }
 
     .owl-nav {
@@ -72,33 +57,34 @@
       z-index: 3;
     }
 
-    .owl-item.center {
+    .owl-stage-outer {
       z-index: 1;
 
-      // &:before {  // центральная печать, подложка
-      //   content: '';
-      //   position: absolute;        
-      //   width: e("calc((100% - 195px) + 100%)");
-      //   height: 100%;
-      //   top: 0;
-      //   left: 50%;
-      //   transform: translateX(-50%);  
-      //   z-index: -1;  
-      //   background-color: #FFFFCC;                    
-      // }
+      &:before {
+        content: '';
+        // width: e("calc(25vw + 46px)");
+        width: 400px;
+        position: absolute;
+        z-index: 1;
+        top: 115px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        background-color: #FFFFCC;
+      }
 
-      // &:after {  // связанная с центральной печатью подложка под характеристики печати
-      //   content: '';
-      //   position: absolute;        
-      //   width: e("calc((100% - 195px) + 100%)");
-      //   height: 90px;
-      //   top: -90px;
-      //   left: 50%;
-      //   transform: translateX(-50%);  
-      //   z-index: -1;     
-      //   background-color: #FACB00; 
-      //   transition: none;
-      // }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        z-index: 1;
+        height: 100px;
+        // width: e("calc(25vw + 46px)");
+        width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #FACB00;
+      }
 
       .owl-stage {
         z-index: 2;

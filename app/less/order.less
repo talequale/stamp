@@ -305,39 +305,12 @@
   margin-bottom: 16px;
 }
 
+
+// галерея
 .stamp-gallery{
 
   .owl-stage-outer {
     padding-top: 115px;
-
-    &:before {  // центральная печать, подложка
-      content: '';
-      position: absolute;        
-      // width: e("calc((100% - 195px) + 100%)");
-      width: 400px;
-      height: 400px;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);  
-      z-index: -1;  
-      background-color: #FFFFCC;                    
-    }
-
-    &:after {  // связанная с центральной печатью подложка под характеристики печати
-      content: '';
-      position: absolute;        
-      // width: e("calc((100% - 195px) + 100%)");
-      width: 400px;
-      height: 90px;
-      top: -90px;
-      left: 50%;
-      transform: translateX(-50%);  
-      z-index: -1;     
-      background-color: #FACB00; 
-      transition: none;
-    }
-
-
   }
 
   &__item{
@@ -389,45 +362,51 @@
     }
   }
 
+
+// переключатели вперед/назад
   .owl-prev, .owl-next{
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid @c-yellow;
     text-align: center;
-    top: 45px;
-    left: e("calc(50% - 25px)");
+    top: 65px;
   }
   .owl-prev{
-    transform: translateX(-290px);
+    left: 30%;
   }
   .owl-next{
-    transform: translateX(290px);
+    right: 30%;
   }
   .owl-prev:after, .owl-next:after{
     content: '';
     display: inline-block;
-    position: absolute;
-    top: 15px;
-    width: 15px;
-    height: 15px;
+    margin: 13px 0;
+    width: 10px;
+    height: 10px;
     border-top: 1px solid #000;
     border-left: 1px solid #000;
   }
   .owl-prev:after{
     transform: rotate(-45deg);
-    right: 13px;
+    margin-left: 5px;
   }
   .owl-next:after{
     transform: rotate(135deg);
-    left: 13px;
+    margin-right: 5px;
   }
 }
 
 .stamp-gallery__item {
   padding: 0 23px 45px 23px;
+}
+
+.stamp-gallery__photo {
+  width: 195px;
+  height: 354px;
+  margin: 0 auto;
 }
 
 // .order__more - добавить к заказу
