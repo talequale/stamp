@@ -233,6 +233,9 @@ textarea {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .mobile-only {
+    display: none;
+  }
   .page-header {
     position: absolute;
     width: 100%;
@@ -304,14 +307,15 @@ textarea {
   .header-logo__slogan {
     float: left;
     width: 170px;
+    height: 123px;
     padding-top: 30px;
+    padding-bottom: 22px;
     padding-left: 20px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: ligth;
     font-size: 18px;
     line-height: 135%;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    background-color: #222;
     color: #fff;
   }
   .header-logo:after {
@@ -968,30 +972,49 @@ textarea {
     clear: both;
   }
   .add-order__item {
-    width: 31.25%;
+    width: 43.75%;
     padding: 0 6px;
     float: left;
+    padding: 7px;
   }
   .add-order__tabs {
-    background-color: #ffff66;
     position: relative;
-    border-bottom: 1px solid #ff4749;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    min-height: 92px;
+    padding: 10px;
+    cursor: pointer;
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #444444;
-    width: 100%;
-    display: block;
-    padding: 10px;
-    -webkit-box-shadow: inset 0 0 0 0 #ff4749;
-    box-shadow: inset 0 0 0 0 #ff4749;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    background-color: #ffffcc;
+    border: 3px solid #ffffcc;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
-  .add-order__tabs:hover {
-    -webkit-box-shadow: inset 0 -4px 0 0 #ff4749;
-    box-shadow: inset 0 -4px 0 0 #ff4749;
+  .add-order__tabs--add-stamp {
+    background-color: #e7ebed;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: none;
+    border-bottom: 3px solid #ced2ed;
+  }
+  .add-order__tabs--add-stamp:after,
+  .add-order__tabs--add-stamp:before {
+    display: none;
   }
   .add-order__tabs:after {
     z-index: -1;
@@ -1047,29 +1070,19 @@ textarea {
     display: none;
   }
   .add-order__input:checked + .add-order__tabs {
-    -webkit-box-shadow: inset 0 -4px 0 0 #ff4749, inset 0 0 0 1px #ff4749;
-    box-shadow: inset 0 -4px 0 0 #ff4749, inset 0 0 0 1px #ff4749;
+    border: 3px solid #ff9933;
   }
   .add-stamp {
-    width: 37.5%;
-    padding: 0 6px;
-    float: left;
-    margin-left: 31.25%;
+    position: relative;
+    display: block;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
-    font-weight: bolder;
-    font-size: 30px;
-    line-height: 38px;
-    padding: 25px;
-    padding-left: 80px;
-    border: 1px solid #0044cc;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 8px;
     text-decoration: none;
     color: #0044cc;
-    position: relative;
-    -webkit-box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 0 #0044cc;
-    box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 0 #0044cc;
-    margin-bottom: 40px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -1084,7 +1097,7 @@ textarea {
     background-color: #000;
     top: 0;
     bottom: 0;
-    left: 25px;
+    left: 20px;
     margin: auto;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -1093,10 +1106,6 @@ textarea {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-  }
-  .add-stamp:hover {
-    -webkit-box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 1px #0044cc;
-    box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 1px #0044cc;
   }
   .add-stamp:hover:after {
     -webkit-transform: rotate(180deg);
@@ -1575,6 +1584,9 @@ textarea {
     padding-right: 7px;
     max-width: 480px;
     min-width: 320px;
+  }
+  .desktop-only {
+    display: none;
   }
   .page-header {
     padding-top: 20px;

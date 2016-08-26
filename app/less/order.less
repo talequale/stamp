@@ -469,27 +469,40 @@
   .range;
 
   &__item{
-    .col-5;
+    .col-7;
+    padding: 7px;
   }
 
   &__tabs{
-    background-color: #ffff66;
     position: relative;
-    border-bottom: 1px solid @c-pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    min-height: 92px;
+    padding: 10px;
+    cursor: pointer;    
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: @c-grey;
-    width: 100%;
-    display: block;
-    padding: 10px;
-    box-shadow: inset 0 0 0 0 @c-pink;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    background-color: #ffffcc;
+    border: 3px solid #ffffcc;
+    transition: all 0.2s ease; 
+
+    &--add-stamp {
+      background-color: #e7ebed;
+      border-radius: 6px;
+      border: none; 
+      border-bottom: 3px solid #ced2ed;
+      &:after,
+      &:before {
+        display: none;
+      }
+    }  
 
     &:hover {
-      box-shadow: inset 0 -4px 0 0 @c-pink;
-      // border-bottom: 3px solid @c-pink;
+      // border: 3px solid #ff9933;
     }
 
     &:after{
@@ -504,6 +517,7 @@
       // box-shadow: 0 10px 7px 12px #c9c9c9;
       transform: rotate(3deg);
     }
+    
     &:before{
       z-index: -1; // должно быть -1
       position: absolute;
@@ -548,29 +562,23 @@
   }
 
   &__input:checked + &__tabs {
-    // box-shadow: inset 0 0 0 4px @c-pink;
-    box-shadow: inset 0 -4px 0 0 @c-pink, inset 0 0 0 1px @c-pink;
+      border: 3px solid #ff9933;
   }
 }
 
 .add-stamp{
-  .col-6;
-  .col-offset-5;
-  .proxima-cond(bolder);
-  font-size: 30px;
-  line-height: 38px;
-  padding: 25px;
-  padding-left: 80px;
-  border: 1px solid @c-blue;
+  position: relative;  
+  display: block;
+  .proxima-cond(bold);
+  font-size: 20px;
+  padding-left: 10px;
   text-align: center;
-  letter-spacing: 4px;
+  letter-spacing: 8px;
   text-decoration: none;
   color: @c-blue;
-  position: relative;
-  box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 0 @c-blue;
-  margin-bottom: 40px;
-  transition: all 0.3s ease;
 
+  transition: all 0.3s ease;
+  
   &:before, &:after {
     position: absolute;
     content: '';
@@ -580,7 +588,7 @@
     background-color: #000;
     top: 0;
     bottom: 0;
-    left: 25px;
+    left: 20px;
     margin: auto;
     transition: all 0.3s ease;
   }
@@ -589,7 +597,7 @@
   }
 
   &:hover{
-    box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 1px @c-blue;
+    // box-shadow: 0 2px 0 0 #789ce4, inset 0 0 0 1px @c-blue;
 
     &:after{
       transform: rotate(180deg);
