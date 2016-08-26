@@ -1124,7 +1124,7 @@ textarea {
     margin-left: -6px;
     margin-right: -6px;
     position: relative;
-    padding-top: 90px;
+    padding-top: 80px;
   }
   .order__finished:after {
     content: '';
