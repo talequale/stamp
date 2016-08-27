@@ -91,6 +91,9 @@ select,
 textarea {
   outline: none;
 }
+* {
+  outline: 1px solid red;
+}
 @media screen and (min-width: 1300px) {
   .left-on-wide-screen {
     padding-right: 15vw;
@@ -288,13 +291,15 @@ textarea {
     float: left;
     width: 170px;
     height: 123px;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-bottom: 22px;
     padding-left: 20px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: ligth;
+    font-weight: ligthter;
     font-size: 18px;
     line-height: 135%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     background-color: #222;
     color: #fff;
   }
@@ -312,10 +317,13 @@ textarea {
     padding: 10px 20px;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     font-weight: lighter;
-    font-size: 35px;
-    line-height: 100%;
-    color: #fff;
-    letter-spacing: 0px;
+    font-size: 22px;
+    line-height: 35px;
+    color: #413834;
+    letter-spacing: 2.7px;
+    border-bottom: 2 solid #000;
+    -webkit-box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
+    box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
     -webkit-transition: top 0.8s ease;
     transition: top 0.8s ease;
   }
@@ -329,6 +337,9 @@ textarea {
   .decision-header__phone,
   .decision-header__social {
     display: inline;
+  }
+  .decision-header__text {
+    display: block;
   }
   .decision-header__phone,
   .decision-header__social,
@@ -931,16 +942,26 @@ textarea {
     letter-spacing: 7px;
   }
   .add-order {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
     text-align: center;
+    padding: 0;
     padding-bottom: 45px;
-    margin-left: -6px;
-    margin-right: -6px;
-  }
-  .add-order:after {
-    content: '';
-    display: block;
-    overflow: hidden;
-    clear: both;
   }
   .add-order__item {
     width: 43.75%;
@@ -964,17 +985,21 @@ textarea {
     -ms-flex-pack: center;
     justify-content: center;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: bold;
     min-height: 92px;
     padding: 10px;
     cursor: pointer;
     font-size: 16px;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     color: #444444;
     background-color: #ffffcc;
     border: 3px solid #ffffcc;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
+  }
+  .add-order__tabs:hover {
+    border-bottom: 3px solid #ff9933;
   }
   .add-order__tabs--add-stamp {
     background-color: #e7ebed;
@@ -1054,8 +1079,6 @@ textarea {
     letter-spacing: 8px;
     text-decoration: none;
     color: #0044cc;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
   }
   .add-stamp:before,
   .add-stamp:after {
@@ -1078,16 +1101,6 @@ textarea {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
-  .add-stamp:hover:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  .add-stamp:hover:before {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
   .guarantee {
     background-color: #ffffcc;
     padding: 38px 0 31px;
@@ -1106,7 +1119,7 @@ textarea {
     margin-left: -6px;
     margin-right: -6px;
     position: relative;
-    padding-top: 90px;
+    padding-top: 60px;
   }
   .order__finished:after {
     content: '';
@@ -1295,7 +1308,7 @@ textarea {
     color: #aaf;
     background-color: #444;
     padding-bottom: 2px;
-    padding-left: 60px;
+    padding-left: 20px;
     font-size: 22px;
     letter-spacing: 2.5px;
   }
@@ -1313,7 +1326,7 @@ textarea {
     padding: 4px 0;
     padding-left: 60px;
     font-size: 14px;
-    letter-spacing: 2.5px;
+    letter-spacing: 2.2px;
     text-transform: uppercase;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
