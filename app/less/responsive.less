@@ -11,9 +11,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .mobile-only{
-    display: none;
-  }
+
   @import url(header.less);
   @import url(promo.less);
   @import url(steps.less);
@@ -22,6 +20,7 @@
   @import url(sloganbox.less);
   @import url(warranty.less);
   @import url(next.less);
+  @import url(popup.less);
 
 }
 
@@ -33,9 +32,7 @@
     max-width: 480px;
     min-width: @phone-min;
   }
-  .desktop-only{
-    display: none;
-  }
+
   @import url(header_mobile.less);
   @import url(promo_mobile.less);
   @import url(steps_mobile.less);
@@ -44,4 +41,17 @@
   @import url(sloganbox_mobile.less);
   @import url(warranty_mobile.less);
   @import url(next_mobile.less);
+  @import url(popup_mobile.less);
+}
+
+@media (max-width: @phone-max) {
+  .desktop-only{
+    display: none;
+  }  
+}
+
+@media (min-width: @laptop-min) {
+  .mobile-only{
+    display: none;
+  }  
 }

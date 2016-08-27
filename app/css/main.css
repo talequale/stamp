@@ -230,9 +230,6 @@ textarea {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .mobile-only {
-    display: none;
-  }
   .page-header {
     position: absolute;
     width: 100%;
@@ -309,7 +306,7 @@ textarea {
     position: fixed;
     left: 0;
     right: 0;
-    top: 0;
+    top: -100px;
     min-height: 90px;
     background-color: #f6c837;
     padding: 10px 20px;
@@ -319,9 +316,8 @@ textarea {
     line-height: 100%;
     color: #fff;
     letter-spacing: 0px;
-    opacity: 0;
-    -webkit-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
+    -webkit-transition: top 0.8s ease;
+    transition: top 0.8s ease;
   }
   .decision-header__block {
     max-width: 915px;
@@ -354,7 +350,7 @@ textarea {
     display: none;
   }
   .decision-header--scroll {
-    opacity: 1;
+    top: 0;
   }
   .promo {
     min-height: 521px;
@@ -1456,6 +1452,70 @@ textarea {
   .next {
     display: none;
   }
+  .popup {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffcc;
+    z-index: 500;
+    display: none;
+  }
+  .popup--active {
+    display: block;
+  }
+  .popup__inner {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    -webkit-transform: translateY(-50vh);
+    -ms-transform: translateY(-50vh);
+    transform: translateY(-50vh);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+  .popup__header {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 82px;
+  }
+  .popup__text1 {
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .popup__text2 {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 24px;
+    margin: 0;
+  }
+  .popup__exit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 40px;
+    color: #000;
+    width: 235px;
+    padding: 10px;
+    border: 1px solid #000;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 @media screen and (max-width: 959px) {
   .col-1 {
@@ -1559,9 +1619,6 @@ textarea {
     padding-right: 7px;
     max-width: 480px;
     min-width: 320px;
-  }
-  .desktop-only {
-    display: none;
   }
   .page-header {
     padding-top: 20px;
@@ -2404,6 +2461,79 @@ textarea {
     -webkit-border-radius: 8px;
     border-radius: 8px;
     color: #444;
+  }
+  .popup {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffcc;
+    z-index: 500;
+    display: none;
+  }
+  .popup--active {
+    display: block;
+  }
+  .popup__inner {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    -webkit-transform: translateY(-50vh);
+    -ms-transform: translateY(-50vh);
+    transform: translateY(-50vh);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+  .popup__header {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  .popup__text1 {
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .popup__text2 {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    margin: 0;
+  }
+  .popup__exit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 96px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 40px;
+    color: #000;
+    width: 235px;
+    padding: 10px;
+    border: 1px solid #000;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+@media (max-width: 959px) {
+  .desktop-only {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .mobile-only {
+    display: none;
   }
 }
 .stamp-gallery__item {
