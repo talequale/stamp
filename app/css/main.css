@@ -91,9 +91,6 @@ select,
 textarea {
   outline: none;
 }
-* {
-  outline: 1px solid red;
-}
 @media screen and (min-width: 1300px) {
   .left-on-wide-screen {
     padding-right: 15vw;
@@ -584,16 +581,21 @@ textarea {
     position: absolute;
     left: 30px;
     bottom: -15px;
+    z-index: 3;
   }
   .download-file {
     width: 100%;
     padding: 0 6px;
     float: left;
+    position: relative;
     text-align: center;
     color: #444444;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .download-file__label {
+    position: absolute;
+    width: 100%;
+    min-height: 310px;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -604,8 +606,9 @@ textarea {
     background-color: #ffffcc;
     display: block;
     padding: 60px 0 50px 0;
-    width: 100%;
     cursor: pointer;
+    z-index: 2;
+    display: none;
   }
   .download-file__hint {
     font-family: "Proxima Nova", Arial, sans-serif;
