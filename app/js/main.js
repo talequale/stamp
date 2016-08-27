@@ -62,21 +62,18 @@ $(document).ready(function(){
 
   //скрол верхней панели
   
-  // $(function () {
+  $(function () {
 
-  //   $(window).scroll(function () {
+    $(window).scroll(function () {
 
-  //     var top = $('.promo .sloganbox').offset().top;
-  //     // console.log(top);
+      if ($(this).scrollTop() > 200) {
+        $('.decision-header').addClass('decision-header--scroll');
+      } else {
+        $('.decision-header').removeClass('decision-header--scroll');
+      }
+    });
 
-  //     if ($(this).scrollTop() > top) {
-  //       $('.page-header').addClass('page-header--scroll');
-  //     } else {
-  //       $('.page-header').removeClass('page-header--scroll');
-  //     }
-  //   });
-
-  // });
+  });
 
 
   // скрол нижней панели

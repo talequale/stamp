@@ -7,7 +7,7 @@
   z-index: 100;
 
   & .container{
-    position: relative;  // должен тянуться
+    position: relative;  
     width: 100%;
   }
 
@@ -16,23 +16,6 @@
     transition: all 0.3s ease;
   }
 
-  &--scroll{
-    background-color: rgba(255, 233, 0, .95);
-    border-bottom: none;
-
-    & .range{
-      opacity: 0;
-      // height: 65px;
-      position: relative;
-      z-index: -100;
-      overflow: hidden;
-    }
-
-    & .decision-header{
-      opacity: 1;
-      z-index: 101;
-    }
-  }
 }
 
 .fast-phone{
@@ -96,78 +79,56 @@
     clear: both;;
   }
 
-
-
 }
 
 .decision-header {
-  z-index: -100;
-  opacity: 0;
-  position: absolute;
+  position: fixed;
   left: 0;
+  right: 0;
   top: 0;
-  color: #444444;
+  min-height: 90px;
+  background-color: #f6c837;
   padding: 10px 20px;
+  .proxima-cond(lighter);
+  font-size: 35px;
+  line-height: 100%;
+  color: #fff;  
+  letter-spacing: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 
   &__block {
-    // .col-11;
-  }
-  &__contacts {
-    // .col-5;
-  }
-
-  &__text, &__phone, &__social{
-    font-weight: bold;
-    display: inline-block;
+    max-width: 915px;
+    display: block;
+    margin: 0 auto;
   }
 
-  &__phone, &__sociallink{
-    color: #0044cc;
+  &__text, &__contacts, &__phone, &__social{
+    display: inline;
   }
 
-  &__text{
-    margin: 0;
-    font-size: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    &--small{
-      font-size: 15px;
-      font-family: "Proxima Nova", Arial, sans-serif;
-      font-weight: lighter;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      margin: 0;
-    }
-  }
-  &__phone{
-    font-size: 22px;
+  &__phone, &__social, &__sociallink{
+    color: @c-blue;
     text-decoration: none;
-    letter-spacing: 2px;
+    position: relative;    
   }
 
-  &__social{
-    color: #0044cc;
-    &:before{
-      font-weight: bold;
-      content: '(';
-      display: inline-block;
-    }
-    &:after{
-      font-weight: bold;
-      content: ')';
-      display: inline-block;
-    }
+  &__sociallink:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: @c-blue;
   }
 
-  &__sociallink{
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-
-    &:after{
-      content: "\005C";
-    }
+  &__sociallink:hover:after {
+    display: none;
   }
 
+}
+
+.decision-header--scroll{
+  opacity: 1;
 }

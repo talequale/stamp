@@ -522,15 +522,22 @@
       z-index: -1; // должно быть -1
       position: absolute;
       content: "";
-      bottom: -2px;
-      right: -3px;
+      // bottom: -2px;
+      // right: -3px;
+      // left: auto;
+      // transform: skewY(5deg);
+      // width: 90%;
+      // height: 86%;
+      // background: linear-gradient(110deg, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0.02));
+      // box-shadow: 0 0 5px 2px rgba(0,0,0,0.05);
+      bottom: -3px;
+      right: -4px;
       left: auto;
-      // box-shadow: 0 13px 5px 11px #c9c9c9;
-      transform: skewY(5deg);
-      width: 90%;
-      height: 86%;
-      background: linear-gradient(110deg, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0.02));
-      box-shadow: 0 0 5px 2px rgba(0,0,0,0.05);
+      transform: skewY(1.5deg);
+      width: 91%;
+      height: 94%;
+      background: linear-gradient(110deg, rgba(0,0,0,0.18) 25%, rgba(0,0,0,0.04));
+      box-shadow: 0 0 5px 2px rgba(0,0,0,0.06);
     }
 
     &:last-child{
@@ -685,6 +692,7 @@
 
     &:first-child{
       left: 0;
+      padding-left: 25px;
       z-index: 5;
       width: 50%;
     }
@@ -762,10 +770,12 @@
     }
 
     &:before{
-      .sprite(@icon-finger);
-      content: '';
-      display: block;
-      position: absolute;
+      content: '';      
+      position: absolute;  
+      width: 55px;
+      height: 65px;
+      background: url(../img/thumbup-yellow-01.svg) 0 0 no-repeat;
+      background-size: 55px 65px;
       left: 36px;
       top: -5px;  
     }        
@@ -821,7 +831,6 @@
 
   &__input:checked + &__text {
     background-color: #ffe900;
-
 
     &:before{
       border: 1px solid #444444;

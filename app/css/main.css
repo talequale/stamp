@@ -91,9 +91,6 @@ select,
 textarea {
   outline: none;
 }
-* {
-  outline: 1px solid red;
-}
 @media screen and (min-width: 1300px) {
   .left-on-wide-screen {
     padding-right: 15vw;
@@ -253,20 +250,6 @@ textarea {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-  .page-header--scroll {
-    background-color: rgba(255, 233, 0, 0.95);
-    border-bottom: none;
-  }
-  .page-header--scroll .range {
-    opacity: 0;
-    position: relative;
-    z-index: -100;
-    overflow: hidden;
-  }
-  .page-header--scroll .decision-header {
-    opacity: 1;
-    z-index: 101;
-  }
   .fast-phone {
     width: 31.25%;
     padding: 0 6px;
@@ -323,63 +306,55 @@ textarea {
     clear: both;
   }
   .decision-header {
-    z-index: -100;
-    opacity: 0;
-    position: absolute;
+    position: fixed;
     left: 0;
+    right: 0;
     top: 0;
-    color: #444444;
+    min-height: 90px;
+    background-color: #f6c837;
     padding: 10px 20px;
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 35px;
+    line-height: 100%;
+    color: #fff;
+    letter-spacing: 0px;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+  .decision-header__block {
+    max-width: 915px;
+    display: block;
+    margin: 0 auto;
   }
   .decision-header__text,
+  .decision-header__contacts,
   .decision-header__phone,
   .decision-header__social {
-    font-weight: bold;
-    display: inline-block;
+    display: inline;
   }
   .decision-header__phone,
+  .decision-header__social,
   .decision-header__sociallink {
     color: #0044cc;
-  }
-  .decision-header__text {
-    margin: 0;
-    font-size: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .decision-header__text--small {
-    font-size: 15px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .decision-header__phone {
-    font-size: 22px;
     text-decoration: none;
-    letter-spacing: 2px;
-  }
-  .decision-header__social {
-    color: #0044cc;
-  }
-  .decision-header__social:before {
-    font-weight: bold;
-    content: '(';
-    display: inline-block;
-  }
-  .decision-header__social:after {
-    font-weight: bold;
-    content: ')';
-    display: inline-block;
-  }
-  .decision-header__sociallink {
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
+    position: relative;
   }
   .decision-header__sociallink:after {
-    content: "\005C";
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: #0044cc;
+  }
+  .decision-header__sociallink:hover:after {
+    display: none;
+  }
+  .decision-header--scroll {
+    opacity: 1;
   }
   .promo {
     min-height: 521px;
@@ -1033,18 +1008,18 @@ textarea {
     z-index: -1;
     position: absolute;
     content: "";
-    bottom: -2px;
-    right: -3px;
+    bottom: -3px;
+    right: -4px;
     left: auto;
-    -webkit-transform: skewY(5deg);
-    -ms-transform: skewY(5deg);
-    transform: skewY(5deg);
-    width: 90%;
-    height: 86%;
-    background: -webkit-linear-gradient(340deg, rgba(0, 0, 0, 0.18) 55%, rgba(0, 0, 0, 0.02));
-    background: linear-gradient(110deg, rgba(0, 0, 0, 0.18) 55%, rgba(0, 0, 0, 0.02));
-    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.05);
+    -webkit-transform: skewY(1.5deg);
+    -ms-transform: skewY(1.5deg);
+    transform: skewY(1.5deg);
+    width: 91%;
+    height: 94%;
+    background: -webkit-linear-gradient(340deg, rgba(0, 0, 0, 0.18) 25%, rgba(0, 0, 0, 0.04));
+    background: linear-gradient(110deg, rgba(0, 0, 0, 0.18) 25%, rgba(0, 0, 0, 0.04));
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.06);
   }
   .add-order__tabs:last-child {
     margin-right: 0;
@@ -1196,6 +1171,7 @@ textarea {
   }
   .contacts-info__input:first-child {
     left: 0;
+    padding-left: 25px;
     z-index: 5;
     width: 50%;
   }
@@ -1307,13 +1283,12 @@ textarea {
     background-color: #fff;
   }
   .confirmation__label:before {
-    background-image: url(../img/sprite.png);
-    background-position: -84px -262px;
-    width: 54px;
-    height: 64px;
     content: '';
-    display: block;
     position: absolute;
+    width: 55px;
+    height: 65px;
+    background: url(../img/thumbup-yellow-01.svg) 0 0 no-repeat;
+    background-size: 55px 65px;
     left: 36px;
     top: -5px;
   }
