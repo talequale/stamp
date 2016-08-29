@@ -36,7 +36,7 @@ gulp.task('fonts', ['clean'], function () {
 // минифицируем графику и сохраняем в папку для 
 // продакшена, c предварительно добавленными шрифтами
 gulp.task('image', ['fonts'], function () {
-  return gulp.src('app/img/*.*')
+  return gulp.src('app/img/**')
   .pipe(imagemin())
   .pipe(gulp.dest('dist/img/'))
 });
