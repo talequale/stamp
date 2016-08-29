@@ -308,8 +308,8 @@ textarea {
     position: fixed;
     left: 0;
     right: 0;
-    top: -100px;
-    min-height: 90px;
+    top: 0;
+    height: 90px;
     background-color: #fff;
     padding: 10px 20px;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
@@ -321,8 +321,9 @@ textarea {
     border-bottom: 2px solid #413834;
     -webkit-box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
     box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
-    -webkit-transition: top 0.8s ease;
-    transition: top 0.8s ease;
+    opacity: 0;
+    -webkit-transition: opacity 0.8s ease;
+    transition: opacity 0.8s ease;
   }
   .decision-header__block {
     max-width: 915px;
@@ -358,7 +359,12 @@ textarea {
     display: none;
   }
   .decision-header--scroll {
-    top: 0;
+    opacity: 1;
+  }
+  .decision-header--stop {
+    position: absolute;
+    -webkit-transition: none;
+    transition: none;
   }
   .promo {
     min-height: 521px;
@@ -593,7 +599,6 @@ textarea {
     margin-top: 20px;
   }
   .download-file__label {
-    position: absolute;
     width: 100%;
     min-height: 310px;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
@@ -608,10 +613,6 @@ textarea {
     padding: 60px 0 50px 0;
     cursor: pointer;
     z-index: 2;
-    display: none;
-  }
-  .download-file__label--active {
-    display: block;
   }
   .download-file__hint {
     font-family: "Proxima Nova", Arial, sans-serif;
@@ -690,7 +691,6 @@ textarea {
     letter-spacing: 3.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
     width: 40%;
     padding: 8px 15px;
     -webkit-border-radius: 20px;

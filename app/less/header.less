@@ -82,12 +82,14 @@
 
 }
 
+
+// верхняя плашка
 .decision-header {
   position: fixed;
   left: 0;
   right: 0;
-  top: -100px;
-  min-height: 90px;
+  top: 0;
+  height: 90px;
   background-color: #fff;
   padding: 10px 20px;
   .proxima-cond(lighter);
@@ -97,7 +99,10 @@
   letter-spacing: 2.7px;
   border-bottom: 2px solid #413834;
   box-shadow: 0 1px 22px 0 rgba(25,25,25,0.15);
-  transition: top 0.8s ease;
+  opacity: 0;
+  // transform: scaleY(0);
+  // transition: transform 0.8s ease;
+  transition: opacity 0.8s ease;
 
   &__block {
     max-width: 915px;
@@ -136,5 +141,12 @@
 }
 
 .decision-header--scroll{
-  top: 0;
+  // top: 0;
+  opacity: 1;
+}
+
+.decision-header--stop {
+  position: absolute;
+  // +top 
+  transition: none;
 }
