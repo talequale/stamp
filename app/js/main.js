@@ -66,7 +66,7 @@ $(document).ready(function(){
 
     $(window).scroll(function () {
 
-      if ($(this).scrollTop() > 200) {
+      if ( ($(this).scrollTop() > 110) && ($(this).scrollTop() < 430) ) {
         $('.decision-header').addClass('decision-header--scroll');
       } else {
         $('.decision-header').removeClass('decision-header--scroll');

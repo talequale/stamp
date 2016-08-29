@@ -259,7 +259,7 @@ textarea {
     display: block;
     padding-top: 10px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 35px;
     line-height: 50px;
     letter-spacing: 5px;
@@ -282,7 +282,7 @@ textarea {
     float: left;
     width: 150px;
     height: 123px;
-    background: transparent;
+    background: #fff;
   }
   .header-logo__slogan {
     float: left;
@@ -310,7 +310,7 @@ textarea {
     right: 0;
     top: -100px;
     min-height: 90px;
-    background-color: #f6c837;
+    background-color: #fff;
     padding: 10px 20px;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     font-weight: lighter;
@@ -318,7 +318,7 @@ textarea {
     line-height: 35px;
     color: #413834;
     letter-spacing: 2.7px;
-    border-bottom: 2 solid #000;
+    border-bottom: 2px solid #413834;
     -webkit-box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
     box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
     -webkit-transition: top 0.8s ease;
@@ -1332,7 +1332,8 @@ textarea {
     padding: 4px 0;
     padding-left: 60px;
     font-size: 14px;
-    letter-spacing: 2.2px;
+    font-weight: normal;
+    letter-spacing: 2px;
     text-transform: uppercase;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -1641,6 +1642,7 @@ textarea {
   }
   .page-header {
     padding-top: 20px;
+    text-align: center;
   }
   .page-header .container {
     padding: 0 40px 0 57px;
@@ -2637,4 +2639,10 @@ textarea {
   .stamp-gallery .owl-item.center .owl-stage {
     z-index: 2;
   }
+}
+.stamp-gallery__item:hover .stamp-gallery__name,
+.stamp-gallery__item:hover .stamp-gallery__price {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
 }
