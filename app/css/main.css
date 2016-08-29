@@ -1287,8 +1287,8 @@ textarea {
   .confirmation__label span {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 5px;
+    right: 5px;
     text-align: center;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
@@ -1296,6 +1296,10 @@ textarea {
     font-size: 13px;
     letter-spacing: 2px;
     background-color: #fff;
+    -webkit-box-shadow: 0 0 10px 0 #fff;
+    box-shadow: 0 0 10px 0 #fff;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
   }
   .confirmation__label:before {
     content: '';
