@@ -316,7 +316,7 @@ textarea {
     font-weight: lighter;
     font-size: 22px;
     line-height: 35px;
-    color: #413834;
+    color: #fff;
     letter-spacing: 2.7px;
     border-bottom: 2px solid #413834;
     -webkit-box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
@@ -459,6 +459,42 @@ textarea {
   }
   .decision__sociallink:after {
     content: "\005C";
+  }
+  .decision__button {
+    width: 280px;
+    height: 80px;
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: #2654c3;
+    background-color: #ffe600;
+    border: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 0 0 #587ac4;
+    box-shadow: 0 2px 0 0 #587ac4;
+    outline: none;
+  }
+  .seo {
+    color: #795548;
+  }
+  .seo__header {
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+  .seo__text {
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 3px;
+    color: #795548;
+    max-width: 768px;
   }
   .steps {
     padding-left: 0;
