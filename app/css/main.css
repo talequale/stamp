@@ -489,10 +489,10 @@ textarea {
   }
   .seo__text {
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 1px;
     color: #795548;
     max-width: 768px;
   }
