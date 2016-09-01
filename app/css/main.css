@@ -636,7 +636,7 @@ textarea {
   }
   .download-file__label {
     width: 100%;
-    min-height: 310px;
+    min-height: 297px;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -677,7 +677,7 @@ textarea {
   .company-type {
     margin-left: -6px;
     margin-right: -6px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .company-type:after {
     content: '';
