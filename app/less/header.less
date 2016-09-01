@@ -53,9 +53,23 @@
 
   &__logo {
     float: left;
+    position: relative;
     width: 150px;
     height: 123px;
     background: #fff;
+
+    // дополнительная надпись
+    &:after {
+      content: "конфиденциально 100%";
+      position: absolute;
+      color: #f00;
+      font-size: 14px;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
   }
 
   &__slogan {

@@ -280,9 +280,23 @@ textarea {
   }
   .header-logo__logo {
     float: left;
+    position: relative;
     width: 150px;
     height: 123px;
     background: #fff;
+  }
+  .header-logo__logo:after {
+    content: "конфиденциально 100%";
+    position: absolute;
+    color: #f00;
+    font-size: 14px;
+    bottom: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+    letter-spacing: 1.5px;
   }
   .header-logo__slogan {
     float: left;
@@ -636,7 +650,8 @@ textarea {
   }
   .download-file__label {
     width: 100%;
-    min-height: 297px;
+    min-height: 277px;
+    margin-bottom: 20px;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     font-weight: bold;
     font-size: 30px;
