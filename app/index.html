@@ -91,34 +91,11 @@
           <p class="decision__text--small">Мы свяжемся с вами и согласуем детали!</p>
         </div>
       </div>
-<!--       <div class="sloganbox">
-        <div class="container">
-          <strong class="sloganbox__text">Экономьте силы, время и деньги<br>Получите печати быстро</strong>
-        </div>
-      </div>
-      <div class="warranty">
-        <div class="container">
-          <strong class="warranty__text">100% гарантия конфиденциальности</strong>
-        </div>
-      </div> -->
+
     </section>
     <form class="order" method="#" enctype="multipart/form-data">
       <section class="order__step order__type-stamp">
- <!--        <div class="sloganbox">
-          <div class="container">
-            <strong class="sloganbox__text">Экономьте силы,<br> время и деньги<br>Получите печати быстро</strong>
-          </div>
-        </div>
-        <div class="warranty">
-          <div class="container">
-            <strong class="warranty__text">100% гарантия конфиденциальности</strong>
-          </div>
-        </div>
-        <div class="order__header">
-          <div class="container">
-            <h2 class="order__head">выберите тип печати</h2>
-          </div>
-        </div> -->
+
         <div class="container">
           <div class="type-stamp">
             <div class="type-stamp__item">
@@ -136,7 +113,7 @@
           </div>
           <div class="type-stamp-tabs range" id="download-area">            
             <div class="download-file">
-              <label class="download-file__label "><input type="file">Загрузить скан оттиска 
+              <label class="download-file__label "><input type="file">Загрузите скан оттиска 
                 <span class="download-file__hint">(для загрузки кликните или перетащите файлы в эту область)</span>
               </label>
             </div>
@@ -317,8 +294,9 @@
               <input id="add-order__three" name="add-order" class="add-order__input" type="checkbox">
               <label class="add-order__tabs" for="add-order__three"><span>Добавить штамп<br> для чеков <br> и др. документов</span></label>
             </div>
-            <div class="add-order__item desktop-only">              
-              <div class="add-order__tabs  add-order__tabs--add-stamp"><a href="#" class="add-stamp">новая печать</a></div>
+            <div class="add-order__item desktop-only">  
+              <input id="add-order__new" name="add-order" class="add-order__input" type="checkbox">
+              <label class="add-order__tabs  add-order__tabs--add-stamp" for="add-order__new"><a href="#" class="add-stamp">новая печать</a></label>
             </div>
           </div>
         </div>
@@ -373,7 +351,7 @@
                 <span class="confirmation__rigging">новая печать на автоматической оснастке</span>
               </div>
               <div class="confirmation__price">
-                <p>от <span class="confirmation__summ">999</span> &#8381;</p>
+                <p><span class="confirmation__summ">999</span> &#8381;</p>
               </div>
               <div class="confirmation__delivery">
                 <input id="confirmation__one" class="confirmation__input" name="delivery" type="radio" checked>

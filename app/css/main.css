@@ -868,7 +868,7 @@ textarea {
     position: absolute;
     width: 400px;
     height: 400px;
-    top: 117px;
+    top: 115px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -1424,6 +1424,7 @@ textarea {
   .confirmation__text strong {
     color: #ff0000;
     font-weight: bold;
+    border-bottom: 2px solid #000000;
   }
   .confirmation__input {
     display: none;
