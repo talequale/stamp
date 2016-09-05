@@ -66,7 +66,7 @@ $(document).ready(function(){
     var choise = $('.order__rigging').offset().top - 180; 
     $(window).scroll(function () {
 
-      if ( $(this).scrollTop() > 110) {
+      if ( $(this).scrollTop() > 60) {
         $('.decision-header').addClass('decision-header--scroll');
       } else {
         $('.decision-header').removeClass('decision-header--scroll');
