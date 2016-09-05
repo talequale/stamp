@@ -1,7 +1,7 @@
 .order {
 
   &__header {
-    border: 1px solid @c-light-grey;
+    // border: 1px solid @c-light-grey;
     padding: 13px 0;
     margin-bottom: 50px;
   }
@@ -12,6 +12,14 @@
     .proxima(normal);
     letter-spacing: 4px;
     color: @c-order-head;
+  }
+
+  // большие заголовки
+  &__head--strong {
+    background-color: #444;
+    padding: 2px 0;
+    border-bottom: 4px solid #eee;
+    border-top: 4px solid #eee;    
   }
 
   &__new{
@@ -53,7 +61,7 @@
     display: inline-block;
     width: 100%;
     padding: 23px 0;
-    color: #777777;
+    color: #333;
     transition: all 0.3s ease;
   }
 
@@ -139,7 +147,7 @@
     font-size: 13px;
     letter-spacing: 3.5px;
     text-transform: uppercase;
-    color: #777777;
+    color: #333;
     background-color: #f8f8ff;
     border: 1px solid #f8f8ff;
     width: 100%;
@@ -284,7 +292,7 @@
 
   .order__radio:checked + .order__tabs span {
     left: 30px;
-    color: #777777;
+    color: #333;
     background-color: #fff;
   }
   .order__radio:disabled + .order__tabs  {
@@ -781,7 +789,7 @@
   &__info {
     .proxima-cond(bold);
     width: 100%;
-    color: #aaf;
+    color: #FACB00;
     background-color: #444;
     padding-bottom: 2px;
     padding-left: 20px;

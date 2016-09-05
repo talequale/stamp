@@ -561,7 +561,6 @@ textarea {
     color: #fff;
   }
   .order__header {
-    border: 1px solid #e0e0e0;
     padding: 13px 0;
     margin-bottom: 50px;
   }
@@ -571,7 +570,13 @@ textarea {
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: normal;
     letter-spacing: 4px;
-    color: #bbbbbb;
+    color: #eeeeee;
+  }
+  .order__head--strong {
+    background-color: #444;
+    padding: 2px 0;
+    border-bottom: 4px solid #eee;
+    border-top: 4px solid #eee;
   }
   .order__new .order__header {
     display: none;
@@ -612,7 +617,7 @@ textarea {
     display: inline-block;
     width: 100%;
     padding: 23px 0;
-    color: #777777;
+    color: #333;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -711,7 +716,7 @@ textarea {
     font-size: 13px;
     letter-spacing: 3.5px;
     text-transform: uppercase;
-    color: #777777;
+    color: #333;
     background-color: #f8f8ff;
     border: 1px solid #f8f8ff;
     width: 100%;
@@ -838,7 +843,7 @@ textarea {
   }
   .order__rigging .order__radio:checked + .order__tabs span {
     left: 30px;
-    color: #777777;
+    color: #333;
     background-color: #fff;
   }
   .order__rigging .order__radio:disabled + .order__tabs {
@@ -1378,7 +1383,7 @@ textarea {
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     font-weight: bold;
     width: 100%;
-    color: #aaf;
+    color: #FACB00;
     background-color: #444;
     padding-bottom: 2px;
     padding-left: 20px;
@@ -1919,7 +1924,7 @@ textarea {
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     letter-spacing: 2px;
-    color: #bbbbbb;
+    color: #eeeeee;
   }
   .order__contacts .order__header {
     display: none;
@@ -1945,7 +1950,7 @@ textarea {
     font-weight: lighter;
     font-size: 10px;
     text-transform: uppercase;
-    color: #777777;
+    color: #333;
     letter-spacing: 2px;
     border: 1px solid #eee;
     display: block;
@@ -2033,7 +2038,7 @@ textarea {
     text-transform: uppercase;
     border: 1px solid #eee;
     width: 32%;
-    color: #777777;
+    color: #333;
     letter-spacing: 2px;
     display: block;
     width: 100%;
@@ -2074,7 +2079,7 @@ textarea {
     font-weight: lighter;
     text-transform: uppercase;
     width: 40%;
-    color: #777777;
+    color: #333;
     padding: 12px 15px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -2132,7 +2137,7 @@ textarea {
   }
   .order__rigging .order__radio:checked + .order__tabs span {
     top: 8px;
-    color: #777777;
+    color: #333;
     background-color: #fff;
   }
   .order__rigging .order__radio:disabled + .order__tabs span {
@@ -2166,7 +2171,7 @@ textarea {
   .stamp-gallery__name {
     font-size: 10px;
     text-transform: uppercase;
-    color: #777777;
+    color: #333;
     position: absolute;
     z-index: 1;
     width: 33.33%;
@@ -2688,7 +2693,7 @@ textarea {
     font-weight: lighter;
     font-size: 15px;
     margin-bottom: 8px;
-    color: #777;
+    color: #333;
     text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
