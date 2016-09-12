@@ -1898,7 +1898,7 @@ textarea {
     right: 0;
     display: block;
     width: 100%;
-    min-height: 88px;
+    height: 88px;
     padding: 10px 18px;
     font-size: 13px;
     line-height: 15px;
@@ -2216,6 +2216,7 @@ textarea {
   }
   .order-contacts .form-send {
     top: 0;
+    right: 0;
   }
   .order-contacts__note {
     margin: 0 auto;
