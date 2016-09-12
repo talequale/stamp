@@ -42,6 +42,23 @@ $(document).ready(function(){
     }
   });
 
+  // высота колонок в блоке order-content
+
+  $(function () {
+    var leftColHeight = $('.order-content__left-col').height();
+    var rightColHeight = $('.order-content__right-col').height();
+
+    if (leftColHeight > rightColHeight) {
+      console.log('piu');
+      $('.order-content__right-col').height(leftColHeight);
+    } else {
+      console.log('uip');
+      $('.order-content__left-col').height(rightColHeight);
+    }
+
+  });
+
+
   // Промотка к слайду, на котором сделан клик
   $('.stamp-gallery__item').on('click', function(){
     var slideIndex = $(this).closest('.owl-item').index();
@@ -61,7 +78,7 @@ $(document).ready(function(){
   });
 
   //скрол верхней панели
-  
+
   $(function () {
     var choise = $('.order__rigging').offset().top - 180; 
     $(window).scroll(function () {
@@ -112,7 +129,6 @@ $(document).ready(function(){
     });
 
   });
-
 
   // Табы при выборе типа печати (новая, факсимиле, печать по оттиску)
 

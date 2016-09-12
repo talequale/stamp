@@ -1,18 +1,19 @@
 .promo {
-  min-height: 521px;
+  position: relative;
+  min-height: 520px;
   background-image: url(../img/promo_background.jpg);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: 100% 0;
   padding-top: 150px;
-  
+
   &__accent{
     .proxima(lighter);
     font-size: 36px;
     color: #fffe00;
     margin-bottom: 24px;
-    text-transform: uppercase; 
-    letter-spacing: 4px;      
+    text-transform: uppercase;
+    letter-spacing: 4px;
   }
 
   &__head {
@@ -21,9 +22,19 @@
     font-weight: lighter;
     color: #fff;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
+  &__slogan {
+    padding: 8px 0;
+    text-transform: uppercase;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 29px;
+    color: @c-aqua;
+    letter-spacing: 3.5px;
+  }
 }
 
 .sloganbox {
@@ -62,7 +73,7 @@
     letter-spacing: 5px;
     font-size: 48px;
     text-transform: uppercase;
-    
+
   }
 
   &__text{
@@ -95,7 +106,7 @@
       display: inline-block;
     }
   }
-  
+
   &__sociallink{
     text-decoration: none;
     letter-spacing: 4px;
@@ -123,8 +134,8 @@
 }
 
 .seo {
-  color: #795548; 
-   
+  color: #795548;
+
   &__header {
     .proxima-cond(bolder);
     font-size: 30px;
@@ -142,5 +153,72 @@
     max-width: 768px;
   }
 
+}
+
+.discount-flag {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  margin-top: -115px;
+  width: 164px;
+  height: 164px;
+  background-color: @c-orange;
+  text-transform: uppercase;
+  text-align: center;
+  color: #434343;
+  font-family: "Proxima Nova", Arial, sans-serif;
+  border-radius: 50%;
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-34%);
+    left: 10px;
+    display: block;
+    max-width: 100px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 3px;
+  }
+
+  .discount-size {
+    font-size: 29px;
+    line-height: 42px;
+  }
+}
+
+.express-order {
+  position: absolute;
+  top: 100%;
+  right: 60px;
+  display: block;
+  box-sizing: border-box;
+  padding: 14px;
+  max-width: 247px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Proxima Nova", Arial, sans-serif;
+  color: #fff;
+  background-color: #ff9965;
+  box-shadow: 0 6px 0 #db6327;
+
+  span {
+    display: block;
+  }
+
+  &__slogan {
+    margin-bottom: 4px;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #434343;
+    letter-spacing: 2px;
+  }
 }
 
