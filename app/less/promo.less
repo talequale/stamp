@@ -155,11 +155,20 @@
 
 }
 
-.discount-flag {
+.discount-flag-wrapper {
   position: absolute;
   top: 50%;
-  right: -50px;
+  right: 0;
   margin-top: -115px;
+  width: 114px;
+  height: 164px;
+  overflow: hidden;
+}
+
+.discount-flag {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 164px;
   height: 164px;
   background-color: @c-orange;

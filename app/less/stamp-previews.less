@@ -1,0 +1,50 @@
+.stamp-previews {
+  text-align: left;
+  font-size: 0;
+}
+
+.stamp-preview {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  width: 145px;
+  max-width: 33%;
+  background-color: #ffc;
+
+  &__name {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    color: #434343;
+    background-color: @c-yellow;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    min-height: 170px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 80%;
+      height: auto;
+    }
+  }
+
+  &__price {
+    padding: 0 10px 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fc0;
+  }
+
+  &__price-rubl {
+    font-weight: lighter;
+  }
+}

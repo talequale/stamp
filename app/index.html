@@ -64,7 +64,6 @@
   <main class="page-main">
     <section class="promo">
       <div class="container">
-        <!-- <div class="promo__accent">#Всё срочно #В СПБ</div> -->
         <div class="promo__slogan">никуда ходить не надо — мы сами привезем!</div>
         <h1 class="promo__head">Бесплатная доставка до двери <br> от 1 печати!</h1>
         <div class="promo__accent"></div>
@@ -92,13 +91,14 @@
           </div>
           <p class="decision__text--small">Мы свяжемся с вами и согласуем детали!</p>
         </div>
-        <div class="discount-flag"><span class="discount-flag__text">скидка <span class="discount-size">15%</span></span></div>
+        <div class="discount-flag-wrapper">
+          <div class="discount-flag"><span class="discount-flag__text">скидка <span class="discount-size">15%</span></span></div>
+        </div>
         <a href="#" class="express-order">
           <span class="express-order__slogan">для тех, кому всё срочно  </span>
           <span class="express-order__text">заказ за 30 сек  </span>
         </a>
       </div>
-
     </section>
     <form class="order" method="#" enctype="multipart/form-data">
       <section class="order__step order__product-type">
@@ -111,18 +111,19 @@
                 <div class="product-type__img">
                   <img src="img/stamp-photo-01.png" alt="">
                 </div>
-                <div class="product-type__order-block">
-                  <h4 class="product-type__title">Новая печать</h4>
-                  <div class="product-type__price product-type__price--old">500 руб.</div>
-                  <div class="product-type__price">500 руб.</div>
-                  <a href="#" class="cart-flag">В корзину</a>
-                </div>
               </div>
-              <div class="product-type__order-block">
+              <a href="#" class="product-type__order-block">
                 <h4 class="product-type__title">Новая печать</h4>
                 <div class="product-type__price product-type__price--old">500 руб.</div>
                 <div class="product-type__price">500 руб.</div>
-              </div>
+                <span class="cart-flag">В корзине</span>
+              </a>
+              <a href="#" class="product-type__order-block">
+                <h4 class="product-type__title">По оттиску</h4>
+                <div class="product-type__price product-type__price--old">500 руб.</div>
+                <div class="product-type__price">500 руб.</div>
+                <span class="cart-flag">В корзине</span>
+              </a>
             </div>
             <div class="product-type">
               <div class="product-type__inner">
@@ -130,37 +131,39 @@
                 <div class="product-type__img">
                   <img src="img/stamp-photo-02.png" alt="">
                 </div>
-                <div class="product-type__order-block">
-                  <h4 class="product-type__title">Новая печать</h4>
-                  <div class="product-type__price product-type__price--old">500 руб.</div>
-                  <div class="product-type__price">500 руб.</div>
-                  <a href="#" class="cart-flag">В корзину</a>
-                </div>
               </div>
-              <div class="product-type__order-block">
+              <a href="#" class="product-type__order-block">
                 <h4 class="product-type__title">Новая печать</h4>
                 <div class="product-type__price product-type__price--old">500 руб.</div>
                 <div class="product-type__price">500 руб.</div>
-              </div>
+                <span class="cart-flag">В корзине</span>
+              </a>
+              <a href="#" class="product-type__order-block">
+                <h4 class="product-type__title">По оттиску</h4>
+                <div class="product-type__price product-type__price--old">500 руб.</div>
+                <div class="product-type__price">500 руб.</div>
+                <span class="cart-flag">В корзине</span>
+              </a>
             </div>
-            <div class="product-type product-type--chosen">
+            <div class="product-type">
               <div class="product-type__inner">
                 <h3 class="product-type__name">автомат</h3>
                 <div class="product-type__img">
                   <img src="img/stamp-photo-03.png" alt="">
                 </div>
-                <div class="product-type__order-block">
-                  <h4 class="product-type__title">Новая печать</h4>
-                  <div class="product-type__price product-type__price--old">500 руб.</div>
-                  <div class="product-type__price">500 руб.</div>
-                  <a href="#" class="cart-flag">В корзину</a>
-                </div>
               </div>
-              <div class="product-type__order-block">
+              <a href="#" class="product-type__order-block">
                 <h4 class="product-type__title">Новая печать</h4>
                 <div class="product-type__price product-type__price--old">500 руб.</div>
                 <div class="product-type__price">500 руб.</div>
-              </div>
+                <span class="cart-flag">В корзине</span>
+              </a>
+              <a href="#" class="product-type__order-block chosen">
+                <h4 class="product-type__title">По оттиску</h4>
+                <div class="product-type__price product-type__price--old">500 руб.</div>
+                <div class="product-type__price">500 руб.</div>
+                <span class="cart-flag">В корзине</span>
+              </a>
             </div>
             <div class="product-type">
               <div class="product-type__inner">
@@ -168,18 +171,19 @@
                 <div class="product-type__img">
                   <img src="img/stamp-photo-04.png" alt="">
                 </div>
-                <div class="product-type__order-block">
-                  <h4 class="product-type__title">Новая печать</h4>
-                  <div class="product-type__price product-type__price--old">500 руб.</div>
-                  <div class="product-type__price">500 руб.</div>
-                  <a href="#" class="cart-flag">В корзину</a>
-                </div>
               </div>
-              <div class="product-type__order-block">
+              <a href="#" class="product-type__order-block">
                 <h4 class="product-type__title">Новая печать</h4>
                 <div class="product-type__price product-type__price--old">500 руб.</div>
                 <div class="product-type__price">500 руб.</div>
-              </div>
+                <span class="cart-flag">В корзине</span>
+              </a>
+              <a href="#" class="product-type__order-block">
+                <h4 class="product-type__title">По оттиску</h4>
+                <div class="product-type__price product-type__price--old">500 руб.</div>
+                <div class="product-type__price">500 руб.</div>
+                <span class="cart-flag">В корзине</span>
+              </a>
             </div>
             <div class="product-type">
               <div class="product-type__inner">
@@ -187,18 +191,19 @@
                 <div class="product-type__img">
                   <img src="img/stamp-photo-05.png" alt="">
                 </div>
-                <div class="product-type__order-block">
-                  <h4 class="product-type__title">Новая печать</h4>
-                  <div class="product-type__price product-type__price--old">500 руб.</div>
-                  <div class="product-type__price">500 руб.</div>
-                  <a href="#" class="cart-flag">В корзину</a>
-                </div>
               </div>
-              <div class="product-type__order-block">
+              <a href="#" class="product-type__order-block">
                 <h4 class="product-type__title">Новая печать</h4>
                 <div class="product-type__price product-type__price--old">500 руб.</div>
                 <div class="product-type__price">500 руб.</div>
-              </div>
+                <span class="cart-flag">В корзине</span>
+              </a>
+              <a href="#" class="product-type__order-block">
+                <h4 class="product-type__title">По оттиску</h4>
+                <div class="product-type__price product-type__price--old">500 руб.</div>
+                <div class="product-type__price">500 руб.</div>
+                <span class="cart-flag">В корзине</span>
+              </a>
             </div>
             <div class="product-type">
               <div class="product-type__inner">
@@ -206,18 +211,19 @@
                 <div class="product-type__img">
                   <img src="img/stamp-photo-06.png" alt="">
                 </div>
-                <div class="product-type__order-block">
-                  <h4 class="product-type__title">Новая печать</h4>
-                  <div class="product-type__price product-type__price--old">500 руб.</div>
-                  <div class="product-type__price">500 руб.</div>
-                  <a href="#" class="cart-flag">В корзину</a>
-                </div>
               </div>
-              <div class="product-type__order-block">
+              <a href="#" class="product-type__order-block">
                 <h4 class="product-type__title">Новая печать</h4>
                 <div class="product-type__price product-type__price--old">500 руб.</div>
                 <div class="product-type__price">500 руб.</div>
-              </div>
+                <span class="cart-flag">В корзине</span>
+              </a>
+              <a href="#" class="product-type__order-block">
+                <h4 class="product-type__title">По оттиску</h4>
+                <div class="product-type__price product-type__price--old">500 руб.</div>
+                <div class="product-type__price">500 руб.</div>
+                <span class="cart-flag">В корзине</span>
+              </a>
             </div>
           </div>
         </div>
@@ -321,12 +327,84 @@
       </div>
     </form>
   </main>
-  <section class="popup ">
+  <section class="popup">
     <div class="popup__inner">
       <h3 class="popup__header">Спасибо за заказ!</h3>
       <p class="popup__text1">мы свяжемся с вами в течении 15 минут и уточним все детали заказа</p>
       <p class="popup__text2">окончательную цену менеджер назовет после уточнения деталей заказа</p>
       <a href="#" class="popup__exit">Ок</a>
+    </div>
+  </section>
+  <section class="popup popup--order">
+    <button type="button" class="close-popup">Закрыть</button>
+    <div class="popup__inner">
+      <form action="#" method="post">
+        <div class="type-stamp-tabs" id="newstamp-area">
+          <div class="company-type">
+            <div class="company-type__item">
+              <input id="company_ip" name="company-type" class="order__radio" type="radio" checked>
+              <label class="company-type__tabs" for="company_ip">ИП</label>
+            </div>
+            <div class="company-type__item">
+              <input id="company_ooo" name="company-type" class="order__radio" type="radio">
+              <label class="company-type__tabs" for="company_ooo">ООО</label>
+            </div>
+            <div class="company-type__item">
+              <input id="company_else" name="company-type" class="order__radio" type="radio">
+              <label class="company-type__tabs" for="company_else">Другое</label>
+            </div>
+          </div>
+          <div class="client-info">
+            <div class="client-info__name">
+              <input class="client-info__input client-info__input--filled" type="text" placeholder="Фамилия">
+              <input class="client-info__input" type="text" placeholder="Имя">
+              <input class="client-info__input" type="text" placeholder="Отчество">
+            </div>
+            <div class="client-info__company">
+              <input class="client-info__input client-info__input--error" type="text" placeholder="Город">
+              <input class="client-info__input" type="text" placeholder="ОГРНИП">
+              <input class="client-info__input" type="text" placeholder="ИНН">
+            </div>
+            <label class="upload-logo"><input type="file">Загрузить логотип</label>
+          </div>
+        </div>
+        <div class="stamp-previews">
+          <div class="stamp-preview">
+            <div class="stamp-preview__name">
+              <div class="stamp-preview__name-part">Trodat</div>
+              <div class="stamp-preview__name-part">размер 42</div>
+              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            </div>
+            <div class="stamp-preview__img">
+              <img src="img/stamp-photo-01.png" alt="">
+            </div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-number">530</span><span class="stamp-preview__price-rubl">₽</span></div>
+          </div>
+          <div class="stamp-preview">
+            <div class="stamp-preview__name">
+              <div class="stamp-preview__name-part">Trodat</div>
+              <div class="stamp-preview__name-part">размер 42</div>
+              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            </div>
+            <div class="stamp-preview__img">
+              <img src="img/stamp-photo-02.png" alt="">
+            </div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-number">530</span><span class="stamp-preview__price-rubl">₽</span></div>
+          </div>
+          <div class="stamp-preview">
+            <div class="stamp-preview__name">
+              <div class="stamp-preview__name-part">Trodat</div>
+              <div class="stamp-preview__name-part">размер 42</div>
+              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            </div>
+            <div class="stamp-preview__img">
+              <img src="img/stamp-photo-03.png" alt="">
+            </div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-number">530</span><span class="stamp-preview__price-rubl">₽</span></div>
+          </div>
+        </div>
+        <button class="btn-submit">Ок</button>
+      </form>
     </div>
   </section>
   <!-- build:js js/vendor.js -->

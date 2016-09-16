@@ -1,0 +1,42 @@
+.add-more-items {
+  font-size: 0;
+}
+
+.add-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  margin-bottom: 10px;
+  width: 100%;
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__label {
+    display: block;
+    padding: 17px;
+    min-height: 94px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 26px;
+    line-height: 29px;
+    color: #434343;
+    letter-spacing: 3px;
+    border: 1px solid @c-blue;
+    border-radius: 4px;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 300px;
+    }
+  }
+
+  input[type="checkbox"]:checked + .add-item__label {
+    background-color: #d1dcff;
+  }
+}

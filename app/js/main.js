@@ -58,6 +58,33 @@ $(document).ready(function(){
 
   });
 
+  //
+
+  $('.product-type').on('click', function() {
+    $('.product-type').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $('.product-type__order-block').on('click', function(e) {
+    $(this).addClass('chosen');
+    if ($('.product-type__order-block').hasClass('chosen')) {
+      $('.product-type').removeClass('active');
+      $(this).parents('.product-type').addClass('active');
+    };
+    return false;
+  });
+
+  //попап
+
+  $('.cart-flag').on('click', function() {
+    $('.popup--order').addClass('popup--active');
+    $('body').addClass('overflow');
+  });
+
+  $('.close-popup').on('click', function() {
+    $(this).parents('.popup').removeClass('popup--active');
+    $('body').removeClass('overflow');
+  });
 
   // Промотка к слайду, на котором сделан клик
   $('.stamp-gallery__item').on('click', function(){
