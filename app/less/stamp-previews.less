@@ -10,6 +10,7 @@
   width: 145px;
   max-width: 33%;
   background-color: #ffc;
+  cursor: pointer;
 
   &__name {
     padding: 10px;
@@ -17,7 +18,7 @@
     font-size: 14px;
     line-height: 18px;
     color: #434343;
-    background-color: @c-yellow;
+    background-color: #e1e4f7;
   }
 
   &__img {
@@ -46,5 +47,14 @@
 
   &__price-rubl {
     font-weight: lighter;
+  }
+
+  &.active,
+  &:hover {
+    outline: 5px solid #F93;
+
+    .stamp-preview__name {
+      background-color: @c-yellow;
+    }
   }
 }

@@ -69,6 +69,22 @@ This must be run when you have at least 2 sprites.
   overflow: hidden;
   clear: both;
 }
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1693,6 +1709,8 @@ textarea {
   }
   .popup--active {
     display: block;
+    -webkit-animation: popup 0.8s;
+    animation: popup 0.8s;
   }
   .close-popup {
     position: absolute;
@@ -2332,6 +2350,7 @@ textarea {
     width: 145px;
     max-width: 33%;
     background-color: #ffc;
+    cursor: pointer;
   }
   .stamp-preview__name {
     padding: 10px;
@@ -2339,7 +2358,7 @@ textarea {
     font-size: 14px;
     line-height: 18px;
     color: #434343;
-    background-color: #ffe600;
+    background-color: #e1e4f7;
   }
   .stamp-preview__img {
     position: relative;
@@ -2366,6 +2385,14 @@ textarea {
   }
   .stamp-preview__price-rubl {
     font-weight: lighter;
+  }
+  .stamp-preview.active,
+  .stamp-preview:hover {
+    outline: 5px solid #F93;
+  }
+  .stamp-preview.active .stamp-preview__name,
+  .stamp-preview:hover .stamp-preview__name {
+    background-color: #ffe600;
   }
 }
 @media screen and (max-width: 959px) {

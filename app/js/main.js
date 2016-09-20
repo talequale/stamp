@@ -42,6 +42,13 @@ $(document).ready(function(){
     }
   });
 
+  //
+
+  $('.stamp-preview').on('click', function() {
+    $('.stamp-preview').removeClass('active');
+    $(this).toggleClass('active');
+  })
+
   // высота колонок в блоке order-content
 
   $(function () {
