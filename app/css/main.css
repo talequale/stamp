@@ -1700,10 +1700,10 @@ textarea {
     background-color: #fff;
   }
   .popup--order .popup__inner {
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
     width: 920px;
     padding: 80px 0;
   }
@@ -2341,14 +2341,17 @@ textarea {
   }
   .stamp-previews {
     text-align: left;
-    font-size: 0;
+  }
+  .stamp-previews:after {
+    display: table;
+    clear: both;
+    content: "";
   }
   .stamp-preview {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px;
-    width: 145px;
-    max-width: 33%;
+    float: left;
+    margin: 0 0.5%;
+    margin-bottom: 15px;
+    width: 19%;
     background-color: #ffc;
     cursor: pointer;
   }

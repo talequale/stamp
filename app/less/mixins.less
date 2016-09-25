@@ -8,3 +8,12 @@
   font-family: "Proxima Nova Condensed", Arial, sans-serif;
   font-weight: @fw;
 }
+
+.clearfix() {
+    &:after {
+        display: table;
+        clear: both;
+
+        content: "";
+    }
+}
