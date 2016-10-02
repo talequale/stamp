@@ -2357,6 +2357,7 @@ textarea {
   }
   .stamp-preview__name {
     padding: 10px;
+    min-height: 72px;
     text-align: center;
     font-size: 14px;
     line-height: 18px;
