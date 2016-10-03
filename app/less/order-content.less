@@ -19,14 +19,16 @@
   }
 
   &__data {
-    padding-bottom: 88px;
+    padding-bottom: 10px;
   }
 
   &__img {
     display: inline-block;
     vertical-align: top;
     margin-top: 5px;
-    width: 40%;
+    max-width: 40%;
+    max-height: 100%;
+    overflow: hidden;
 
     img {
       display: block;
@@ -50,10 +52,6 @@
   }
 
   &__message {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: block;
     width: 100%;
     height: 88px;
@@ -67,7 +65,6 @@
   }
 
   &__price-block {
-    margin-bottom: 30px;
     padding-top: 20px;
     text-align: center;
 

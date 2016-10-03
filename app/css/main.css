@@ -1976,13 +1976,15 @@ textarea {
     width: 58.333335%;
   }
   .order-content__data {
-    padding-bottom: 88px;
+    padding-bottom: 10px;
   }
   .order-content__img {
     display: inline-block;
     vertical-align: top;
     margin-top: 5px;
-    width: 40%;
+    max-width: 40%;
+    max-height: 100%;
+    overflow: hidden;
   }
   .order-content__img img {
     display: block;
@@ -2003,10 +2005,6 @@ textarea {
     color: #0044cc;
   }
   .order-content__message {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: block;
     width: 100%;
     height: 88px;
@@ -2019,7 +2017,6 @@ textarea {
     border-right: 1px solid #888;
   }
   .order-content__price-block {
-    margin-bottom: 30px;
     padding-top: 20px;
     text-align: center;
   }

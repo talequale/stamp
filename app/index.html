@@ -233,38 +233,46 @@
           <h2 class="order__step-title">Выбрано</h2>
           <div class="order-content">
             <div class="cart-marker">Корзина</div>
-            <div class="order-content__left-col">
-              <div class="order-content__data">
-                <p class="order-content__text">
-                  Печать ип <br>
-                  Иванов Иван Иванович <br>
-                  Санкт-Петербуг <br>
-                  ИНН: 12334557899000 <br>
-                  ОГРНИП: 1234567890 <br>
-                </p>
-                <div class="order-content__img">
-                  <img src="img/stamp-photo-03.png" alt="">
-                </div>
-              </div>
-              <textarea name="order-message" id="order-message" class="order-content__message" placeholder="Оставить комментарий"></textarea>
-            </div>
-            <div class="order-content__right-col">
-              <div class="order-content__price-block">
-                <div class="order-content__qty">
-                  <label for="items-qty" class="order-content__label">количество</label>
-                  <div class="order-content__field-wrapper">
-                    <input type="text" id="items-qty" class="order-content__field order-content__field--number" value="1">
-                    <button type="button" class="order-btn decrease-btn">-</button>
-                    <button type="button" class="order-btn increase-btn">+</button>
+            <div class="order-content__row">
+              <div class="order-content__left-col">
+                <div class="order-content__data">
+                  <p class="order-content__text">
+                    Печать ип <br>
+                    Иванов Иван Иванович <br>
+                    Санкт-Петербуг <br>
+                    ИНН: 12334557899000 <br>
+                    ОГРНИП: 1234567890 <br>
+                  </p>
+                  <div class="order-content__img">
+                    <img src="img/stamp-photo-03.png" alt="">
                   </div>
                 </div>
-                <div class="order-content__price">
-                  <label for="items-price" class="order-content__label">стоимость</label>
-                  <input type="text" id="items-price" class="order-content__field order-content__field--price" value="750 руб." readonly>
+              </div>
+              <div class="order-content__right-col">
+                <div class="order-content__price-block">
+                  <div class="order-content__qty">
+                    <label for="items-qty" class="order-content__label">количество</label>
+                    <div class="order-content__field-wrapper">
+                      <input type="text" id="items-qty" class="order-content__field order-content__field--number" value="1">
+                      <button type="button" class="order-btn decrease-btn">-</button>
+                      <button type="button" class="order-btn increase-btn">+</button>
+                    </div>
+                  </div>
+                  <div class="order-content__price">
+                    <label for="items-price" class="order-content__label">стоимость</label>
+                    <input type="text" id="items-price" class="order-content__field order-content__field--price" value="750 руб." readonly>
+                  </div>
                 </div>
               </div>
-              <a href="#" class="order-content__edit-btn"><span>редактировать</span></a>
-              <a href="#" class="order-content__cancel-btn"><span>удалить</span></a>
+            </div>
+              <div class="order-content__row">
+              <div class="order-content__left-col">
+                <textarea name="order-message" id="order-message" class="order-content__message" placeholder="Оставить комментарий"></textarea>
+              </div>
+              <div class="order-content__right-col">
+                <a href="#" class="order-content__edit-btn"><span>редактировать</span></a>
+                <a href="#" class="order-content__cancel-btn"><span>удалить</span></a>
+              </div>
             </div>
           </div>
         </div>

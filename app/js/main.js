@@ -49,22 +49,6 @@ $(document).ready(function(){
     $(this).toggleClass('active');
   })
 
-  // высота колонок в блоке order-content
-
-  $(function () {
-    var leftColHeight = $('.order-content__left-col').height();
-    var rightColHeight = $('.order-content__right-col').height();
-
-    if (leftColHeight > rightColHeight) {
-      console.log('piu');
-      $('.order-content__right-col').height(leftColHeight);
-    } else {
-      console.log('uip');
-      $('.order-content__left-col').height(rightColHeight);
-    }
-
-  });
-
   //
 
   $('.product-type').on('click', function() {
