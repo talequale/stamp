@@ -94,17 +94,46 @@
   &__add-more {
     font-size: 0;
 
+    .container {
+      margin: 0;
+      margin-left: 20px;
+      padding-top: 12px;
+      padding-bottom: 5px;
+      max-width: 750px;
+      background-image: url("../img/bg-order-content.png");
+      background-repeat: repeat-x;
+      background-position: top left;
+      background-size: 1px auto;
+    }
+
     .order__step-title {
       padding-top: 0;
       display: inline-block;
       vertical-align: top;
       width: 50%;
+      text-align: left;
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__delivery-type {
+
+    .order__step-title {
+      margin-bottom: 7px;
+      padding: 6px;
+      font-size: 28px;
+      line-height: 45px;
+      color: #878787;
+      background-color: #eee;
     }
   }
 
   &__block-wrapper {
     max-width: 960px;
     margin: 0 auto;
+    margin-bottom: 54px;
     padding-top: 60px;
     margin-top: 110px;
     border: 3px solid #ffe37f;
@@ -688,14 +717,16 @@
 }
 
 .guarantee {
-  background-color: #ffffcc;
+  background-color: #fdebcf;
   // border-top: 1px solid @c-form-border;
   padding:38px 0 31px;
 
   &__text{
-    max-width: 80%;
-    font-size: 16px;
-    color: @c-pink;
+    .proxima(300);
+    max-width: 745px;
+    font-size: 21px;
+    line-height: 27px;
+    color: #ff4118;
     text-transform: uppercase;
     letter-spacing: 3px;
   }
@@ -747,12 +778,12 @@
 
   &__input{
     position: absolute;
-    border: 2px solid @c-form-border;
+    border: 3px solid #bdbdbd;
     font-size: 14px;
     letter-spacing: 2.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: normal;
-    color: @c-lightblue;
+    color: #0044cc;
     text-transform: uppercase;
     padding: 8px 15px;
     border-radius: 20px;
@@ -779,10 +810,10 @@
     }
 
     // стилизация плейсхолдера
-    &::-webkit-input-placeholder{color: @c-lightblue;}
-    &::-moz-placeholder{color: @c-lightblue;}
-    &:-moz-placeholder{color: @c-lightblue;}
-    &::-ms-input-placeholder{color: @c-lightblue;}
+    &::-webkit-input-placeholder{color: #0044cc;}
+    &::-moz-placeholder{color: #0044cc;}
+    &:-moz-placeholder{color: #0044cc;}
+    &::-ms-input-placeholder{color: #0044cc;}
     // исчезновение плейсхолдера
     &:focus::-webkit-input-placeholder {color: transparent}
     &:focus::-moz-placeholder          {color: transparent}
@@ -964,13 +995,13 @@
   position: relative;
   border: none;
   background-color: #ffe900;
-  color: #0044cc;
+  color: #434343;
   width: 100%;
   text-align: center;
   font-size: 24px;
   text-transform: lowercase;
   letter-spacing: 4px;
-  font-weight: bold;
+  font-weight: 400;
   padding: 7px;
   border-radius: 10px;
   z-index: 2;

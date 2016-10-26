@@ -1,12 +1,12 @@
 .delivery-type {
+  margin-bottom: 38px;
   font-size: 0;
 
   &__col {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin: 0 0.25%;
-    width: 49.5%;
+    width: 50%;
 
     &:nth-child(2n + 1) {
       margin-left: 0;
@@ -16,35 +16,43 @@
       margin-right: 0;
     }
 
-    &:nth-child(2) {
-      padding: 13px;
-      min-height: 130px;
-      box-shadow: 0 3px 3px rgba(0, 68, 204, 0.47);
-    }
-
     input[type="radio"] {
       position: absolute;
       opacity: 0;
+    }
+
+    &.left {
+      border: 1px solid #ffe37f;
+    }
+
+    &.right {
+      padding-left: 13px;
+      min-height: 130px;
     }
   }
 
   &__toggle {
     display: block;
-    margin-bottom: 2px;
     padding: 11px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 300;
     font-size: 15px;
-    line-height: 20px;
+    line-height: 18px;
     color: #434343;
     letter-spacing: 2.6px;
-    background-color: #cdcdcd;
+    background-color: #fff;
+    border-bottom: 1px solid #ffe37f;
     cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 
   input[type="radio"]:checked + .delivery-type__toggle {
-    background-color: #fff69b;
+    background-color: #ffe37f;
   }
 
   &__payment-info,
@@ -57,30 +65,33 @@
 
   &__payment-info {
     position: relative;
-    padding-top: 74px;
+    padding-top: 85px;
     text-transform: uppercase;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     font-size: 13px;
     line-height: 15px;
+    letter-spacing: 1px;
 
     &:before {
       .sprite(@icon-finger);
       content: "";
       position: absolute;
-      top: 0;
+      top: 7px;
       left: 50%;
       transform: translateX(-50%);
     }
   }
 
   &__total {
-    padding: 0 10px;
+    padding: 9px 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 6px rgba(193,193,193,.58);
   }
 
   &__label {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     text-transform: uppercase;
     text-align: center;
     font-weight: normal;
@@ -92,6 +103,7 @@
   &__field {
     width: 100%;
     text-align: center;
+    font-weight: 100;
     font-size: 41px;
     line-height: 43px;
     color: @c-blue;

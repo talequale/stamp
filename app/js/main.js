@@ -77,6 +77,28 @@ $(document).ready(function(){
     $('body').removeClass('overflow');
   });
 
+  $('.page-main').removeClass('blur');
+
+  $(document).on('click', function() {
+    if (!($('.popup').is(':visible'))) {
+      $('.page-main').removeClass('blur');
+      $('.page-header').removeClass('blur');
+    } else {
+      $('.page-main').addClass('blur');
+      $('.page-header').addClass('blur');
+    }
+  });
+
+  $(document).ready(function() {
+    if (!($('.popup').is(':visible'))) {
+      $('.page-main').removeClass('blur');
+      $('.page-header').removeClass('blur');
+    } else {
+      $('.page-main').addClass('blur');
+      $('.page-header').addClass('blur');
+    }
+  });
+
   // Промотка к слайду, на котором сделан клик
   $('.stamp-gallery__item').on('click', function(){
     var slideIndex = $(this).closest('.owl-item').index();

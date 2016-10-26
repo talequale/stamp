@@ -293,11 +293,11 @@
         </section>
         <section class="order__step order__add-more">
           <div class="container">
-            <h2 class="order__step-title">Добавить к заказу со скидкой 15%:</h2>
+            <h2 class="order__step-title">Добавить со скидкой 15%:</h2>
             <div class="add-more-items">
               <div class="add-item">
                 <input type="checkbox" id="same-stamp">
-                <label for="same-stamp" class="add-item__label"><span>Такую же печать на&nbsp;другой&nbsp;оснастке</span></label>
+                <label for="same-stamp" class="add-item__label"><span>Такую же на&nbsp;другой&nbsp;оснастке</span></label>
               </div>
               <div class="add-item">
                 <input type="checkbox" id="other-stamp">
@@ -309,9 +309,9 @@
       </section>
       <section class="order__step order__delivery-type">
         <div class="container">
-          <h2 class="order__step-title">Выберите тип доставки:</h2>
+          <h2 class="order__step-title">Выберите тип доставки и введите контактные данные:</h2>
           <div class="delivery-type">
-            <div class="delivery-type__col">
+            <div class="delivery-type__col left">
               <input type="radio" name="delivery-btn" id="next-day-delivery" checked>
               <label for="next-day-delivery" class="delivery-type__toggle">БЕСПЛАТНАЯ ДОСТАВКА НА СЛЕДУЮЩИЙ ДЕНЬ</label>
               <input type="radio" name="delivery-btn" id="same-day-delivery">
@@ -319,7 +319,7 @@
               <input type="radio" name="delivery-btn" id="express-delivery">
               <label for="express-delivery" class="delivery-type__toggle">ИЗГОТОВЛЕНИЕ И ДОСТАВКА ЗА 3 ЧАСА (ДО 24:00)</label>
             </div>
-            <div class="delivery-type__col">
+            <div class="delivery-type__col right">
               <div class="delivery-type__payment-info">Оплата при <br>получении</div>
               <div class="delivery-type__total">
                 <label for="total-price" class="delivery-type__label">итого:</label>
@@ -331,7 +331,6 @@
       </section>
       <section class="order__step order__client-contacts">
         <div class="container">
-          <h2 class="order__step-title">Введите контактные данные:</h2>
           <div class="order-contacts">
             <div class="contacts-info">
               <input class="contacts-info__input" type="text" placeholder="Введите ваш телефон">
@@ -345,7 +344,7 @@
       </section>
       <div class="guarantee guarantee--center">
         <div class="container">
-          <strong class="guarantee__text">даем гарантию качества — наши клише изготовлены из австрийской резины <br> при помощи лазера и служат очень-очень долго! </strong>
+          <strong class="guarantee__text">даем гарантию качества — наши клише изготовлены&nbsp;из&nbsp;австрийской&nbsp;резины <br> при помощи лазера и служат очень-очень долго! </strong>
         </div>
       </div>
     </form>
@@ -358,7 +357,7 @@
       <a href="#" class="popup__exit">Ок</a>
     </div>
   </section>
-  <section class="popup popup--order">
+  <section class="popup popup--order popup--active">
     <button type="button" class="close-popup">Закрыть</button>
     <div class="popup__inner">
       <form action="#" method="post">
@@ -391,141 +390,84 @@
             <label class="upload-logo"><input type="file">Загрузить логотип</label>
           </div>
         </div>
+        <div class="upload-block">
+          <div class="upload-link">
+            <div class="upload-link__title">ЗАГРУЗИТe СКАН ОТТИСКА</div>
+            <div class="upload-link__text">(ДЛЯ ЗАГРУЗКИ КЛИКНИТЕ ИЛИ ПЕРЕТАЩИТЕ ФАЙЛЫ В ЭТУ ОБЛАСТЬ)</div>
+          </div>
+          <input type="file" id="upload-input">
+        </div>
         <div class="stamp-previews">
           <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Colop</div>
-              <div class="stamp-preview__name-part">размер 38x14</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            <div class="stamp-preview__inner">
+              <div class="stamp-preview__img">
+                <img src="/img/stamp-photo-03.png" alt="">
+              </div>
+              <div class="stamp-preview__name">
+                <div class="stamp-preview__name-part title">Colop</div>
+                <div class="stamp-preview__name-part origin"><span class="fade">пр-во</span> Австрия</div>
+                <div class="stamp-preview__name-part"><span class="fade">размер</span> 59x23</div>
+              </div>
             </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asc-1.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">470</span><span class="stamp-preview__price-rubl">₽</span></div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-amount">500 <span class="units">руб.</span></span></div>
           </div>
           <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Colop</div>
-              <div class="stamp-preview__name-part">размер 59x23</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            <div class="stamp-preview__inner">
+              <div class="stamp-preview__img">
+                <img src="/img/stamp-photo-03.png" alt="">
+              </div>
+              <div class="stamp-preview__name">
+                <div class="stamp-preview__name-part title">Colop</div>
+                <div class="stamp-preview__name-part origin"><span class="fade">пр-во</span> Австрия</div>
+                <div class="stamp-preview__name-part"><span class="fade">размер</span> 59x23</div>
+              </div>
             </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asc-2.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">520</span><span class="stamp-preview__price-rubl">₽</span></div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-amount">500 <span class="units">руб.</span></span></div>
           </div>
           <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Colop</div>
-              <div class="stamp-preview__name-part">размер 60x40</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            <div class="stamp-preview__inner">
+              <div class="stamp-preview__img">
+                <img src="/img/stamp-photo-03.png" alt="">
+              </div>
+              <div class="stamp-preview__name">
+                <div class="stamp-preview__name-part title">Colop</div>
+                <div class="stamp-preview__name-part origin"><span class="fade">пр-во</span> Австрия</div>
+                <div class="stamp-preview__name-part"><span class="fade">размер</span> 59x23</div>
+              </div>
             </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asc-3.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">670</span><span class="stamp-preview__price-rubl">₽</span></div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-amount">500 <span class="units">руб.</span></span></div>
           </div>
           <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Colop</div>
-              <div class="stamp-preview__name-part">размер 75x37</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            <div class="stamp-preview__inner">
+              <div class="stamp-preview__img">
+                <img src="/img/stamp-photo-03.png" alt="">
+              </div>
+              <div class="stamp-preview__name">
+                <div class="stamp-preview__name-part title">Colop</div>
+                <div class="stamp-preview__name-part origin"><span class="fade">пр-во</span> Австрия</div>
+                <div class="stamp-preview__name-part"><span class="fade">размер</span> 59x23</div>
+              </div>
             </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asc-4.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">650</span><span class="stamp-preview__price-rubl">₽</span></div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-amount">500 <span class="units">руб.</span></span></div>
           </div>
           <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Trodat</div>
-              <div class="stamp-preview__name-part">размер 38x14</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
+            <div class="stamp-preview__inner">
+              <div class="stamp-preview__img">
+                <img src="/img/stamp-photo-03.png" alt="">
+              </div>
+              <div class="stamp-preview__name">
+                <div class="stamp-preview__name-part title">Colop</div>
+                <div class="stamp-preview__name-part origin"><span class="fade">пр-во</span> Австрия</div>
+                <div class="stamp-preview__name-part"><span class="fade">размер</span> 59x23</div>
+              </div>
             </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/ast-1.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">510</span><span class="stamp-preview__price-rubl">₽</span></div>
-          </div>
-          <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Trodat</div>
-              <div class="stamp-preview__name-part">размер 59x22</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
-            </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/ast-2.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">650</span><span class="stamp-preview__price-rubl">₽</span></div>
-          </div>
-          <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Trodat</div>
-              <div class="stamp-preview__name-part">размер 60x40</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
-            </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/ast-3.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">700</span><span class="stamp-preview__price-rubl">₽</span></div>
-          </div>
-          <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">Trodat</div>
-              <div class="stamp-preview__name-part">размер 75x38</div>
-              <div class="stamp-preview__name-part">пр-во Австрия</div>
-            </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/ast-4.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">720</span><span class="stamp-preview__price-rubl">₽</span></div>
-          </div>
-          <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">GRM</div>
-              <div class="stamp-preview__name-part">размер 38x14</div>
-              <div class="stamp-preview__name-part">пр-во Китай</div>
-            </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asg-1.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">450</span><span class="stamp-preview__price-rubl">₽</span></div>
-          </div>
-          <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">GRM</div>
-              <div class="stamp-preview__name-part">размер 59x23</div>
-              <div class="stamp-preview__name-part">пр-во Китай</div>
-            </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asg-2.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">510</span><span class="stamp-preview__price-rubl">₽</span></div>
-          </div>
-          <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">GRM</div>
-              <div class="stamp-preview__name-part">размер 60x40</div>
-              <div class="stamp-preview__name-part">пр-во Китай</div>
-            </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asg-3.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">340</span><span class="stamp-preview__price-rubl">₽</span></div>
-          </div>
-          <div class="stamp-preview">
-            <div class="stamp-preview__name">
-              <div class="stamp-preview__name-part">GRM</div>
-              <div class="stamp-preview__name-part">размер 75x37</div>
-              <div class="stamp-preview__name-part">пр-во Китай</div>
-            </div>
-            <div class="stamp-preview__img">
-              <img src="/img/stamps/auto-stamp/asg-4.jpg" alt="">
-            </div>
-            <div class="stamp-preview__price"><span class="stamp-preview__price-number">350</span><span class="stamp-preview__price-rubl">₽</span></div>
+            <div class="stamp-preview__price"><span class="stamp-preview__price-amount">500 <span class="units">руб.</span></span></div>
           </div>
         </div>
-        <button class="btn-submit">Ок</button>
+        <div class="popup__btns-wrapper">
+          <input type="reset" class="btn-reset" value="Отменить">
+          <button class="btn-submit">Ок</button>
+        </div>
       </form>
     </div>
   </section>
@@ -540,6 +482,9 @@
   <!-- endbuild -->
 </body>
 </html>
+
+
+
 
 
 

@@ -119,6 +119,10 @@ select,
 textarea {
   outline: none;
 }
+.page-main.blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
 @media screen and (min-width: 1300px) {
   .left-on-wide-screen {
     padding-right: 15vw;
@@ -265,6 +269,10 @@ textarea {
     top: 0;
     left: 0;
     z-index: 100;
+  }
+  .page-header.blur {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
   }
   .page-header .container {
     position: relative;
@@ -833,15 +841,39 @@ textarea {
   .order__add-more {
     font-size: 0;
   }
+  .order__add-more .container {
+    margin: 0;
+    margin-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    max-width: 750px;
+    background-image: url("../img/bg-order-content.png");
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: 1px auto;
+  }
   .order__add-more .order__step-title {
     padding-top: 0;
     display: inline-block;
     vertical-align: top;
     width: 50%;
+    text-align: left;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 3px;
+  }
+  .order__delivery-type .order__step-title {
+    margin-bottom: 7px;
+    padding: 6px;
+    font-size: 28px;
+    line-height: 45px;
+    color: #878787;
+    background-color: #eee;
   }
   .order__block-wrapper {
     max-width: 960px;
     margin: 0 auto;
+    margin-bottom: 54px;
     padding-top: 60px;
     margin-top: 110px;
     border: 3px solid #ffe37f;
@@ -1432,13 +1464,16 @@ textarea {
     transform: rotate(90deg);
   }
   .guarantee {
-    background-color: #ffffcc;
+    background-color: #fdebcf;
     padding: 38px 0 31px;
   }
   .guarantee__text {
-    max-width: 80%;
-    font-size: 16px;
-    color: #ff4749;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 300;
+    max-width: 745px;
+    font-size: 21px;
+    line-height: 27px;
+    color: #ff4118;
     text-transform: uppercase;
     letter-spacing: 3px;
   }
@@ -1491,12 +1526,12 @@ textarea {
   }
   .contacts-info__input {
     position: absolute;
-    border: 2px solid #dddddd;
+    border: 3px solid #bdbdbd;
     font-size: 14px;
     letter-spacing: 2.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: normal;
-    color: #2979ff;
+    color: #0044cc;
     text-transform: uppercase;
     padding: 8px 15px;
     -webkit-border-radius: 20px;
@@ -1523,16 +1558,16 @@ textarea {
     width: 55%;
   }
   .contacts-info__input::-webkit-input-placeholder {
-    color: #2979ff;
+    color: #0044cc;
   }
   .contacts-info__input::-moz-placeholder {
-    color: #2979ff;
+    color: #0044cc;
   }
   .contacts-info__input:-moz-placeholder {
-    color: #2979ff;
+    color: #0044cc;
   }
   .contacts-info__input::-ms-input-placeholder {
-    color: #2979ff;
+    color: #0044cc;
   }
   .contacts-info__input:focus::-webkit-input-placeholder {
     color: transparent;
@@ -1740,13 +1775,13 @@ textarea {
     position: relative;
     border: none;
     background-color: #ffe900;
-    color: #0044cc;
+    color: #434343;
     width: 100%;
     text-align: center;
     font-size: 24px;
     text-transform: lowercase;
     letter-spacing: 4px;
-    font-weight: bold;
+    font-weight: 400;
     padding: 7px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -1814,13 +1849,13 @@ textarea {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ffffcc;
+    background-color: rgba(255, 255, 204, 0.8);
     z-index: 500;
     overflow-y: scroll;
     display: none;
   }
   .popup--order {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   .popup--order .popup__inner {
     top: 0;
@@ -1924,21 +1959,41 @@ textarea {
     text-transform: uppercase;
     text-decoration: none;
   }
+  .popup__btns-wrapper {
+    font-size: 0;
+    text-align: center;
+  }
   .btn-submit {
-    display: block;
-    margin: 0 auto;
-    margin-top: 70px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px;
+    padding: 10px;
+    min-width: 125px;
     font-size: 20px;
-    color: #000;
-    padding: 5px 40px;
-    min-width: 200px;
-    background-color: transparent;
+    color: #0043cb;
+    background-color: #fff;
     border: 1px solid #000;
+    -webkit-border-radius: 21px;
+    border-radius: 21px;
     outline: none;
     text-transform: uppercase;
     text-decoration: none;
+    border: 1px solid #bdbdbd;
+    letter-spacing: 4px;
+  }
+  .btn-reset {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px;
+    padding: 10px;
+    min-width: 125px;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 22px;
+    color: #434343;
+    background-color: #fff;
+    border: 1px solid #bdbdbd;
+    letter-spacing: 4px;
   }
   .product-types {
     padding: 0 20px 5px;
@@ -1948,16 +2003,13 @@ textarea {
   .product-type {
     display: inline-block;
     vertical-align: top;
-    margin: 0 0.1665%;
     width: 16.333%;
-    border: 1px solid transparent;
     cursor: pointer;
   }
   .product-type__inner {
     display: block;
     text-decoration: none;
     padding-top: 20px;
-    border: 1px solid transparent;
     border-bottom: none;
   }
   .product-type__name {
@@ -1972,7 +2024,7 @@ textarea {
   .product-type__img {
     position: relative;
     width: 100%;
-    height: 163px;
+    height: 165px;
   }
   .product-type__img img {
     display: none;
@@ -1987,6 +2039,7 @@ textarea {
     display: block;
     text-decoration: none;
     margin-bottom: 30px;
+    padding: 0 5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -2088,7 +2141,7 @@ textarea {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 41.666665%;
+    width: 41%;
     background-color: #fffffe;
   }
   .order-content__left-col.gray {
@@ -2101,7 +2154,7 @@ textarea {
   .order-content__right-col {
     display: inline-block;
     vertical-align: top;
-    width: 58.333335%;
+    width: 59%;
   }
   .order-content__data {
     padding-bottom: 10px;
@@ -2340,11 +2393,11 @@ textarea {
   }
   .add-item__label {
     display: block;
-    padding: 17px;
-    min-height: 94px;
+    margin-bottom: 15px;
+    padding: 2px 10px;
     text-align: center;
     font-weight: lighter;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 29px;
     color: #434343;
     letter-spacing: 3px;
@@ -2359,17 +2412,18 @@ textarea {
     max-width: 300px;
   }
   .add-item input[type="checkbox"]:checked + .add-item__label {
-    background-color: #d1dcff;
+    color: #fff;
+    background-color: #3363ff;
   }
   .delivery-type {
+    margin-bottom: 38px;
     font-size: 0;
   }
   .delivery-type__col {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin: 0 0.25%;
-    width: 49.5%;
+    width: 50%;
   }
   .delivery-type__col:nth-child(2n + 1) {
     margin-left: 0;
@@ -2377,32 +2431,37 @@ textarea {
   .delivery-type__col:nth-child(even) {
     margin-right: 0;
   }
-  .delivery-type__col:nth-child(2) {
-    padding: 13px;
-    min-height: 130px;
-    -webkit-box-shadow: 0 3px 3px rgba(0, 68, 204, 0.47);
-    box-shadow: 0 3px 3px rgba(0, 68, 204, 0.47);
-  }
   .delivery-type__col input[type="radio"] {
     position: absolute;
     opacity: 0;
   }
+  .delivery-type__col.left {
+    border: 1px solid #ffe37f;
+  }
+  .delivery-type__col.right {
+    padding-left: 13px;
+    min-height: 130px;
+  }
   .delivery-type__toggle {
     display: block;
-    margin-bottom: 2px;
     padding: 11px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 300;
     font-size: 15px;
-    line-height: 20px;
+    line-height: 18px;
     color: #434343;
     letter-spacing: 2.6px;
-    background-color: #cdcdcd;
+    background-color: #fff;
+    border-bottom: 1px solid #ffe37f;
     cursor: pointer;
   }
+  .delivery-type__toggle:last-child {
+    border-bottom: none;
+  }
   .delivery-type input[type="radio"]:checked + .delivery-type__toggle {
-    background-color: #fff69b;
+    background-color: #ffe37f;
   }
   .delivery-type__payment-info,
   .delivery-type__total {
@@ -2413,12 +2472,13 @@ textarea {
   }
   .delivery-type__payment-info {
     position: relative;
-    padding-top: 74px;
+    padding-top: 85px;
     text-transform: uppercase;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     font-size: 13px;
     line-height: 15px;
+    letter-spacing: 1px;
   }
   .delivery-type__payment-info:before {
     background-image: url(../img/sprite.png);
@@ -2427,18 +2487,21 @@ textarea {
     height: 64px;
     content: "";
     position: absolute;
-    top: 0;
+    top: 7px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   .delivery-type__total {
-    padding: 0 10px;
+    padding: 9px 10px;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
+    box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
   }
   .delivery-type__label {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     text-transform: uppercase;
     text-align: center;
     font-weight: normal;
@@ -2449,6 +2512,7 @@ textarea {
   .delivery-type__field {
     width: 100%;
     text-align: center;
+    font-weight: 100;
     font-size: 41px;
     line-height: 43px;
     color: #0044cc;
@@ -2474,9 +2538,10 @@ textarea {
     width: 62.5%;
     text-align: center;
     font-size: 16px;
+    font-weight: 300;
     line-height: 20px;
     letter-spacing: 2px;
-    color: #0044cc;
+    color: #bcbcbc;
   }
   .stamp-previews {
     text-align: left;
@@ -2488,25 +2553,56 @@ textarea {
   }
   .stamp-preview {
     float: left;
-    margin: 0 0.5%;
-    margin-bottom: 15px;
-    width: 19%;
-    background-color: #ffc;
+    margin: 0 0.545%;
+    margin-bottom: 25px;
+    width: 23.91%;
+    font-size: 0;
     cursor: pointer;
   }
+  .stamp-preview__inner {
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
   .stamp-preview__name {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     padding: 10px;
     min-height: 72px;
+    width: 50%;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
     color: #434343;
-    background-color: #e1e4f7;
+    background-color: #f8f8ff;
+    border-left: 1px solid #ffcc00;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .stamp-preview__name-part.title {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .stamp-preview__name-part.origin {
+    margin-bottom: 10px;
+  }
+  .stamp-preview__name-part .fade {
+    color: #b3b3b7;
   }
   .stamp-preview__img {
     position: relative;
-    width: 100%;
-    height: 170px;
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    min-height: 126px;
     overflow: hidden;
   }
   .stamp-preview__img img {
@@ -2520,23 +2616,73 @@ textarea {
     height: auto;
   }
   .stamp-preview__price {
-    padding: 0 10px 10px 10px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    color: #e7e5e5;
+  }
+  .stamp-preview__price .units {
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: 400;
+  }
+  .stamp-preview__price-amount {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 3px 10px;
+    background-color: #343c4a;
+    -webkit-border-radius: 0 0 0 4px;
+    border-radius: 0 0 0 4px;
+  }
+  .stamp-preview.active .stamp-preview__inner,
+  .stamp-preview:hover .stamp-preview__inner {
+    background-color: #fffab1;
+    -webkit-box-shadow: 0 1px 6px #ffe900;
+    box-shadow: 0 1px 6px #ffe900;
+    border: 1px solid #ffcc00;
+  }
+  .upload-block {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 150px;
     text-align: center;
-    font-weight: bold;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fffab5), to(rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(top, #fffab5 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to bottom, #fffab5 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .upload-block input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+  }
+  .upload-link {
+    display: inline-block;
+    vertical-align: top;
+    color: #434343;
+  }
+  .upload-link__title {
+    text-transform: uppercase;
+    font-family: "Proxima Nova Condensed", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 40px;
+    letter-spacing: 4px;
+  }
+  .upload-link__text {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 300;
     font-size: 14px;
-    line-height: 18px;
-    color: #fc0;
-  }
-  .stamp-preview__price-rubl {
-    font-weight: lighter;
-  }
-  .stamp-preview.active,
-  .stamp-preview:hover {
-    outline: 5px solid #F93;
-  }
-  .stamp-preview.active .stamp-preview__name,
-  .stamp-preview:hover .stamp-preview__name {
-    background-color: #ffe600;
+    line-height: 36px;
   }
 }
 @media screen and (max-width: 959px) {
