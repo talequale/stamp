@@ -1,5 +1,5 @@
 .product-types {
-  padding: 0 20px 5px;
+  padding: 0 5px 5px;
   font-size: 0;
   background-color: rgba(255, 255, 255, 0);
 }
@@ -24,7 +24,7 @@
     font-size: 23px;
     line-height: 37px;
     color: #ddd;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
   }
 
   &__img {
@@ -33,7 +33,7 @@
     height: 165px;
 
     img {
-      display: none;
+      display: block;
       margin: 0 auto;
       width: auto;
       height: auto;
@@ -46,7 +46,8 @@
     position: relative;
     display: block;
     text-decoration: none;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 45px;
     padding: 0 5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-size: 13px;
@@ -59,7 +60,7 @@
     &.chosen,
     &:hover {
       background-color: #fffab1;
-      box-shadow: 0px 5px 0px 5px rgba(255,250,177,1);
+      box-shadow: 0px 7px 0px 6px rgba(255,250,177,1), 0px -4px 0px 6px rgba(255,250,177,1);
 
       .product-type__title {
         background-color: rgba(255, 255, 255, 0);
@@ -85,10 +86,11 @@
     line-height: 35px;
     color: #434343;
     background-color: #ededed;
+    letter-spacing: 2px;
   }
 
   &__price-block {
-    padding: 0 8px;
+    padding: 0 2px;
     font-size: 0;
   }
 
@@ -96,8 +98,8 @@
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-    padding: 0 6px;
-    width: 50%;
+    padding: 0;
+    width: 49%;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     text-align: right;
     font-size: 16px;
@@ -107,6 +109,7 @@
 
     &--old {
       position: relative;
+      padding: 0 0 0 6px;
       text-align: left;
       color: #bebebe;
 
@@ -125,10 +128,23 @@
 
   &.active,
   &:hover {
-    background-image: url("../img/bg-active-product.png");
-    background-repeat: repeat-x;
-    background-size: 1px 84px;
-    background-position: top 138px left 0;
+
+    .product-type__inner {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -3.5%;
+        right: -3.5%;
+        height: 100%;
+        background-image: url("../img/bg-active-product.png");
+        background-repeat: repeat-x;
+        background-size: 1px 84px;
+        background-position: bottom left;
+      }
+    }
 
     .product-type__title {
       background-color: rgba(255, 255, 255, 0);
@@ -140,10 +156,6 @@
       &--old {
         background-color: rgba(255, 255, 255, 0);
       }
-    }
-
-    .product-type__img img {
-      display: block;
     }
   }
 }

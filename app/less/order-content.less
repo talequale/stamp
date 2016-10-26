@@ -7,7 +7,7 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 41%;
+    width: 42%;
     background-color: #fffffe;
 
     &.gray {
@@ -22,7 +22,7 @@
   &__right-col {
     display: inline-block;
     vertical-align: top;
-    width: 59%;
+    width: 57%;
   }
 
   &__data {
@@ -95,7 +95,8 @@
   &__price {
     float: right;
     padding-bottom: 10px;
-    width: 45%;
+    width: 38%;
+    min-width: 205px;
     box-shadow: 0 0 6px rgba(193,193,193,.58);
   }
 
@@ -113,13 +114,14 @@
 
   &__field-wrapper {
     position: relative;
+    padding-left: 30px;
   }
 
   &__field {
     width: 100%;
     text-align: center;
     font-size: 41px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 43px;
     color: #888;
     background-color: transparent;
@@ -127,14 +129,15 @@
 
     &--number {
       padding: 16px 10px;
-      width: 36.333%;
+      width: 38%;
       border: 1px solid #ffe900;
     }
 
     &--price {
       padding: 15px;
+      padding-left: 23px;
       text-align: center;
-      font-weight: 300;
+      font-weight: lighter;
       color: @c-blue;
       letter-spacing: 4px;
     }
@@ -144,7 +147,7 @@
     display: block;
     text-align: center;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: lighter;
     font-size: 28px;
     line-height: 42px;
     color: #434343;
@@ -177,7 +180,7 @@
     margin-bottom: 10px;
     text-align: center;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: lighter;
     font-size: 21px;
     line-height: 29px;
     color: #ff5b59;
@@ -230,7 +233,7 @@
   }
 
   .decrease-btn {
-    left: 0;
+    left: 25px;
   }
 
   .increase-btn {

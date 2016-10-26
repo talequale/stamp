@@ -77,6 +77,11 @@ $(document).ready(function(){
     $('body').removeClass('overflow');
   });
 
+  $('.btn-reset').on('click', function() {
+    $(this).parents('.popup').removeClass('popup--active');
+    $('body').removeClass('overflow');
+  });
+
   $('.page-main').removeClass('blur');
 
   $(document).on('click', function() {

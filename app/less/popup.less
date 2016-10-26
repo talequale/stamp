@@ -5,14 +5,14 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 204 ,0.8);
+  background-color: rgba(255, 255, 204 ,0.9);
   z-index: 500;
   overflow-y: scroll;
   display: none;
 }
 
 .popup--order {
-  background-color: rgba(255, 255, 255 ,0.8);
+  background-color: rgba(255, 255, 255 ,0.9);
 
   .popup__inner {
     top: 0;
@@ -129,6 +129,12 @@
   text-decoration: none;
   border: 1px solid #bdbdbd;
   letter-spacing: 4px;
+  cursor: pointer;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .btn-reset {
@@ -144,4 +150,10 @@
   background-color: #fff;
   border: 1px solid #bdbdbd;
   letter-spacing: 4px;
+  cursor: pointer;
+  transition: opacity 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

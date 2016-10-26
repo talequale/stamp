@@ -1,9 +1,3 @@
-@media screen and (min-width: @screen-lg1300) {
-  .left-on-wide-screen{
-    padding-right: 15vw;
-  }
-}
-
 @media screen and (min-width: @laptop-min) {
   .generate-columns(16);
   .container{
@@ -29,6 +23,32 @@
   @import url(stamp-previews.less);
   @import url(upload-block.less);
 
+}
+
+@media screen and (min-width: @screen-lg1300) {
+  .left-on-wide-screen{
+    padding-right: 15vw;
+  }
+  .container {
+    width: 1060px;
+  }
+
+  @import url(header.less);
+  @import url(promo.less);
+  @import url(steps.less);
+  @import url(decision.less);
+  @import url(order.less);
+  @import url(sloganbox.less);
+  @import url(warranty.less);
+  @import url(next.less);
+  @import url(popup.less);
+  @import url(product-types.less);
+  @import url(order-content.less);
+  @import url(add-more-items.less);
+  @import url(delivery-type.less);
+  @import url(order-contacts.less);
+  @import url(stamp-previews.less);
+  @import url(upload-block.less);
 }
 
 @media screen and (max-width: @phone-max) {

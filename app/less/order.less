@@ -48,7 +48,7 @@
     margin-bottom: 25px;
     padding-top: 75px;
     text-align: center;
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 41px;
     line-height: 50px;
     color: @c-blue;
@@ -88,6 +88,8 @@
 
     .container {
       width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 
@@ -108,8 +110,7 @@
 
     .order__step-title {
       padding-top: 0;
-      display: inline-block;
-      vertical-align: top;
+      float: left;
       width: 50%;
       text-align: left;
       font-size: 28px;
@@ -128,10 +129,21 @@
       color: #878787;
       background-color: #eee;
     }
+
+    .container {
+      width: 1024px;
+    }
+  }
+
+  &__client-contacts {
+
+    .container {
+      width: 1024px;
+    }
   }
 
   &__block-wrapper {
-    max-width: 960px;
+    max-width: 1024px;
     margin: 0 auto;
     margin-bottom: 54px;
     padding-top: 60px;
@@ -722,7 +734,7 @@
   padding:38px 0 31px;
 
   &__text{
-    .proxima(300);
+    .proxima(lighter);
     max-width: 745px;
     font-size: 21px;
     line-height: 27px;
@@ -1001,7 +1013,7 @@
   font-size: 24px;
   text-transform: lowercase;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: normal;
   padding: 7px;
   border-radius: 10px;
   z-index: 2;

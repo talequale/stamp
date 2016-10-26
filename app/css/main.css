@@ -2,25 +2,25 @@
   font-family: "Proxima Nova Condensed";
   src: url("../fonts/Proxima_Nova_Condensed_Regular.woff") format("woff"), url("../fonts/Proxima_Nova_Condensed_Regular.otf") format("opentype");
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
 }
 @font-face {
   font-family: "Proxima Nova Condensed";
   src: url("../fonts/Proxima_Nova_Condensed_Thin.woff") format("woff"), url("../fonts/Proxima_Nova_Condensed_Thin.otf") format("opentype");
   font-style: normal;
-  font-weight: 100;
+  font-weight: lighter;
 }
 @font-face {
   font-family: "Proxima Nova";
   src: url("../fonts/Proxima_Nova_Light.woff") format("woff"), url("../fonts/Proxima_Nova_Light.otf") format("opentype");
   font-style: normal;
-  font-weight: 300;
+  font-weight: lighter;
 }
 @font-face {
   font-family: 'Proxima Nova';
   src: url('fonts/ProximaNovaBold.woff') format('woff'), url('fonts/ProximaNovaBold.0tf') format('opentype');
   font-style: normal;
-  font-weight: 700;
+  font-weight: bolder;
 }
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
@@ -120,13 +120,18 @@ textarea {
   outline: none;
 }
 .page-main.blur {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
 }
-@media screen and (min-width: 1300px) {
-  .left-on-wide-screen {
-    padding-right: 15vw;
-  }
+h1,
+h2,
+h3,
+p,
+input,
+button,
+span,
+label {
+  letter-spacing: 1.2px;
 }
 @media screen and (min-width: 960px) {
   .col-1 {
@@ -271,8 +276,8 @@ textarea {
     z-index: 100;
   }
   .page-header.blur {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
   }
   .page-header .container {
     position: relative;
@@ -294,7 +299,7 @@ textarea {
   .fast-phone__link {
     display: block;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: normal;
     font-size: 19px;
     line-height: 28px;
     letter-spacing: 3.8px;
@@ -361,10 +366,10 @@ textarea {
     display: inline-block;
     vertical-align: middle;
     padding-left: 15px;
-    width: 174px;
+    width: 170px;
     font-family: "Proxima Nova", Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: bolder;
     font-size: 12px;
     line-height: 18px;
     color: #ebebeb;
@@ -373,7 +378,7 @@ textarea {
   .header-logo__action {
     text-transform: uppercase;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 12px;
     line-height: 24px;
     color: #fff650;
@@ -539,13 +544,14 @@ textarea {
     color: #fff;
     margin-top: 0;
     margin-bottom: 30px;
+    letter-spacing: 0;
   }
   .promo__slogan {
     margin-bottom: 20px;
     padding: 8px 0;
     text-transform: uppercase;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 25px;
     line-height: 29px;
     color: #fff650;
@@ -802,7 +808,7 @@ textarea {
     margin-bottom: 25px;
     padding-top: 75px;
     text-align: center;
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 41px;
     line-height: 50px;
     color: #0044cc;
@@ -837,6 +843,8 @@ textarea {
   }
   .order__order-content .container {
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .order__add-more {
     font-size: 0;
@@ -854,8 +862,7 @@ textarea {
   }
   .order__add-more .order__step-title {
     padding-top: 0;
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     width: 50%;
     text-align: left;
     font-size: 28px;
@@ -870,8 +877,14 @@ textarea {
     color: #878787;
     background-color: #eee;
   }
+  .order__delivery-type .container {
+    width: 1024px;
+  }
+  .order__client-contacts .container {
+    width: 1024px;
+  }
   .order__block-wrapper {
-    max-width: 960px;
+    max-width: 1024px;
     margin: 0 auto;
     margin-bottom: 54px;
     padding-top: 60px;
@@ -1469,7 +1482,7 @@ textarea {
   }
   .guarantee__text {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
     max-width: 745px;
     font-size: 21px;
     line-height: 27px;
@@ -1781,7 +1794,7 @@ textarea {
     font-size: 24px;
     text-transform: lowercase;
     letter-spacing: 4px;
-    font-weight: 400;
+    font-weight: normal;
     padding: 7px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -1849,13 +1862,13 @@ textarea {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 204, 0.8);
+    background-color: rgba(255, 255, 204, 0.9);
     z-index: 500;
     overflow-y: scroll;
     display: none;
   }
   .popup--order {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
   }
   .popup--order .popup__inner {
     top: 0;
@@ -1980,6 +1993,12 @@ textarea {
     text-decoration: none;
     border: 1px solid #bdbdbd;
     letter-spacing: 4px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .btn-submit:hover {
+    opacity: 0.7;
   }
   .btn-reset {
     display: inline-block;
@@ -1994,9 +2013,15 @@ textarea {
     background-color: #fff;
     border: 1px solid #bdbdbd;
     letter-spacing: 4px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .btn-reset:hover {
+    opacity: 0.7;
   }
   .product-types {
-    padding: 0 20px 5px;
+    padding: 0 5px 5px;
     font-size: 0;
     background-color: rgba(255, 255, 255, 0);
   }
@@ -2019,7 +2044,7 @@ textarea {
     font-size: 23px;
     line-height: 37px;
     color: #ddd;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
   }
   .product-type__img {
     position: relative;
@@ -2027,7 +2052,7 @@ textarea {
     height: 165px;
   }
   .product-type__img img {
-    display: none;
+    display: block;
     margin: 0 auto;
     width: auto;
     height: auto;
@@ -2038,7 +2063,8 @@ textarea {
     position: relative;
     display: block;
     text-decoration: none;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 45px;
     padding: 0 5px;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-size: 13px;
@@ -2050,8 +2076,8 @@ textarea {
   .product-type__order-block.chosen,
   .product-type__order-block:hover {
     background-color: #fffab1;
-    -webkit-box-shadow: 0px 5px 0px 5px #fffab1;
-    box-shadow: 0px 5px 0px 5px #fffab1;
+    -webkit-box-shadow: 0px 7px 0px 6px #fffab1, 0px -4px 0px 6px #fffab1;
+    box-shadow: 0px 7px 0px 6px #fffab1, 0px -4px 0px 6px #fffab1;
   }
   .product-type__order-block.chosen .product-type__title,
   .product-type__order-block:hover .product-type__title {
@@ -2075,9 +2101,10 @@ textarea {
     line-height: 35px;
     color: #434343;
     background-color: #ededed;
+    letter-spacing: 2px;
   }
   .product-type__price-block {
-    padding: 0 8px;
+    padding: 0 2px;
     font-size: 0;
   }
   .product-type__price {
@@ -2085,8 +2112,8 @@ textarea {
     vertical-align: top;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 6px;
-    width: 50%;
+    padding: 0;
+    width: 49%;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     text-align: right;
     font-size: 16px;
@@ -2096,6 +2123,7 @@ textarea {
   }
   .product-type__price--old {
     position: relative;
+    padding: 0 0 0 6px;
     text-align: left;
     color: #bebebe;
   }
@@ -2109,12 +2137,22 @@ textarea {
     height: 1px;
     background-color: #f0f0f0;
   }
-  .product-type.active,
-  .product-type:hover {
+  .product-type.active .product-type__inner,
+  .product-type:hover .product-type__inner {
+    position: relative;
+  }
+  .product-type.active .product-type__inner:before,
+  .product-type:hover .product-type__inner:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -3.5%;
+    right: -3.5%;
+    height: 100%;
     background-image: url("../img/bg-active-product.png");
     background-repeat: repeat-x;
     background-size: 1px 84px;
-    background-position: top 138px left 0;
+    background-position: bottom left;
   }
   .product-type.active .product-type__title,
   .product-type:hover .product-type__title {
@@ -2128,10 +2166,6 @@ textarea {
   .product-type:hover .product-type__price--old {
     background-color: rgba(255, 255, 255, 0);
   }
-  .product-type.active .product-type__img img,
-  .product-type:hover .product-type__img img {
-    display: block;
-  }
   .order-content {
     position: relative;
     font-size: 0;
@@ -2141,7 +2175,7 @@ textarea {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 41%;
+    width: 42%;
     background-color: #fffffe;
   }
   .order-content__left-col.gray {
@@ -2154,7 +2188,7 @@ textarea {
   .order-content__right-col {
     display: inline-block;
     vertical-align: top;
-    width: 59%;
+    width: 57%;
   }
   .order-content__data {
     padding-bottom: 10px;
@@ -2219,7 +2253,8 @@ textarea {
   .order-content__price {
     float: right;
     padding-bottom: 10px;
-    width: 45%;
+    width: 38%;
+    min-width: 205px;
     -webkit-box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
     box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
   }
@@ -2236,12 +2271,13 @@ textarea {
   }
   .order-content__field-wrapper {
     position: relative;
+    padding-left: 30px;
   }
   .order-content__field {
     width: 100%;
     text-align: center;
     font-size: 41px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 43px;
     color: #888;
     background-color: transparent;
@@ -2249,13 +2285,14 @@ textarea {
   }
   .order-content__field--number {
     padding: 16px 10px;
-    width: 36.333%;
+    width: 38%;
     border: 1px solid #ffe900;
   }
   .order-content__field--price {
     padding: 15px;
+    padding-left: 23px;
     text-align: center;
-    font-weight: 300;
+    font-weight: lighter;
     color: #0044cc;
     letter-spacing: 4px;
   }
@@ -2263,7 +2300,7 @@ textarea {
     display: block;
     text-align: center;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: lighter;
     font-size: 28px;
     line-height: 42px;
     color: #434343;
@@ -2292,7 +2329,7 @@ textarea {
     margin-bottom: 10px;
     text-align: center;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: lighter;
     font-size: 21px;
     line-height: 29px;
     color: #ff5b59;
@@ -2341,7 +2378,7 @@ textarea {
     background-color: #888;
   }
   .order-content .decrease-btn {
-    left: 0;
+    left: 25px;
   }
   .order-content .increase-btn {
     right: 0;
@@ -2379,9 +2416,8 @@ textarea {
   }
   .add-more-items {
     font-size: 0;
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
+    float: right;
+    width: 46%;
   }
   .add-item {
     position: relative;
@@ -2411,6 +2447,10 @@ textarea {
     vertical-align: top;
     max-width: 300px;
   }
+  .add-item__label:hover {
+    color: #fff;
+    background-color: #3363ff;
+  }
   .add-item input[type="checkbox"]:checked + .add-item__label {
     color: #fff;
     background-color: #3363ff;
@@ -2418,6 +2458,7 @@ textarea {
   .delivery-type {
     margin-bottom: 38px;
     font-size: 0;
+    letter-spacing: 0;
   }
   .delivery-type__col {
     position: relative;
@@ -2439,6 +2480,7 @@ textarea {
     border: 1px solid #ffe37f;
   }
   .delivery-type__col.right {
+    letter-spacing: 0;
     padding-left: 13px;
     min-height: 130px;
   }
@@ -2448,7 +2490,7 @@ textarea {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 15px;
     line-height: 18px;
     color: #434343;
@@ -2459,6 +2501,9 @@ textarea {
   }
   .delivery-type__toggle:last-child {
     border-bottom: none;
+  }
+  .delivery-type__toggle:hover {
+    background-color: rgba(255, 227, 127, 0.5);
   }
   .delivery-type input[type="radio"]:checked + .delivery-type__toggle {
     background-color: #ffe37f;
@@ -2512,7 +2557,7 @@ textarea {
   .delivery-type__field {
     width: 100%;
     text-align: center;
-    font-weight: 100;
+    font-weight: lighter;
     font-size: 41px;
     line-height: 43px;
     color: #0044cc;
@@ -2538,7 +2583,7 @@ textarea {
     width: 62.5%;
     text-align: center;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: lighter;
     line-height: 20px;
     letter-spacing: 2px;
     color: #bcbcbc;
@@ -2624,7 +2669,7 @@ textarea {
   }
   .stamp-preview__price .units {
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
-    font-weight: 400;
+    font-weight: normal;
   }
   .stamp-preview__price-amount {
     display: inline-block;
@@ -2673,16 +2718,24 @@ textarea {
   .upload-link__title {
     text-transform: uppercase;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     font-size: 26px;
     line-height: 40px;
     letter-spacing: 4px;
   }
   .upload-link__text {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 14px;
     line-height: 36px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .left-on-wide-screen {
+    padding-right: 15vw;
+  }
+  .container {
+    width: 1060px;
   }
 }
 @media screen and (max-width: 959px) {
