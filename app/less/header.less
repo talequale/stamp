@@ -7,11 +7,12 @@
   z-index: 100;
 
   & .container{
-    position: relative;  
+    position: relative;
     width: 100%;
   }
 
   & .range {
+    background-color: #fff;
     opacity: 1;
     transition: all 0.3s ease;
   }
@@ -19,32 +20,41 @@
 }
 
 .fast-phone{
-  .col-5;
-  float: right;
-  text-align: right;
-  padding-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 17px;
+  padding-top: 8px;
+  width: 300px;
 
   &__link{
     display: block;
-    padding-top: 10px;
     text-decoration: none;
-    font-weight: bolder;
-    font-size: 35px;
-    line-height: 50px;
-    letter-spacing: 5px; 
-    color: #fffe00;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: 3.8px;
+    color: #0044cc;
   }
 
   &__slogan{
-    .proxima(lighter);
-    font-size: 18px;
-    letter-spacing: 3px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2.2px;
     text-transform: uppercase;
     margin: 0;
-    margin-top: -4px;
-    color: #fffe00;
+    color: #777;
   }
 
+  &__address {
+    margin: 0;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 27px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #777;
+  }
 }
 
 .header-logo{
@@ -82,11 +92,36 @@
     font-size: 18px;
     line-height: 135%;
     background-color: #222;
-    color: #fff;    
-    height: 123px;    
+    color: #fff;
+    height: 123px;
     text-transform: uppercase;
     letter-spacing: 3px;
 
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 15px;
+    width: 174px;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #ebebeb;
+    letter-spacing: 1.3px;
+  }
+
+  &__action {
+    text-transform: uppercase;
+    font-family: "Proxima Nova", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+    color: #fff650;
+    letter-spacing: 4.6px;
+    white-space: nowrap;
   }
 
   &:after {
@@ -112,6 +147,31 @@
     }
   }
 
+  &--dark-gray {
+    display: inline-block;
+    vertical-align: top;
+    padding: 25px 10px 5px 20px;
+    width: 375px;
+    background-color: #343c4a;
+
+    .header-logo__logo {
+      float: none;
+      height: auto;
+      width: 348px;
+      background-color: #343c4a;
+
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 170px;
+        height: 31px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
 }
 
 
@@ -127,7 +187,7 @@
   .proxima-cond(lighter);
   font-size: 22px;
   line-height: 35px;
-  color: #fff;  
+  color: #fff;
   letter-spacing: 2.7px;
   border-bottom: 2px solid #413834;
   box-shadow: 0 1px 22px 0 rgba(25,25,25,0.15);
@@ -145,7 +205,7 @@
   &__text, &__contacts, &__phone, &__social{
     display: inline;
   }
-  
+
   &__text {
     display: block;
   }
@@ -153,7 +213,7 @@
   &__phone, &__social, &__sociallink{
     color: @c-blue;
     text-decoration: none;
-    position: relative;    
+    position: relative;
   }
 
   &__sociallink:after {
@@ -179,6 +239,41 @@
 
 .decision-header--stop {
   position: absolute;
-  // +top 
+  // +top
   transition: none;
+}
+
+.express-order {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  display: block;
+  box-sizing: border-box;
+  padding: 9px;
+  width: 242px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Proxima Nova", Arial, sans-serif;
+  color: #fff;
+  background-color: #ff4749;
+  box-shadow: 0 6px 0 #cd282f;
+  border-radius: 0 0 3px 3px;
+
+  span {
+    display: block;
+  }
+
+  &__slogan {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 1.8px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #434343;
+    letter-spacing: 2.3px;
+  }
 }
