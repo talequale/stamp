@@ -16,12 +16,13 @@
   font-style: normal;
   font-weight: lighter;
 }
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('fonts/ProximaNovaBold.woff') format('woff'), url('fonts/ProximaNovaBold.0tf') format('opentype');
-  font-style: normal;
-  font-weight: bolder;
-}
+/*@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNovaBold.woff") format("woff"),
+    url("../fonts/ProximaNovaBold.otf") format("opentype");
+    font-style: normal;
+    font-weight: bolder;
+}*/
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
 
@@ -441,6 +442,7 @@ label {
     -webkit-box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
     box-shadow: 0 1px 22px 0 rgba(25, 25, 25, 0.15);
     opacity: 0;
+    z-index: -1;
     -webkit-transition: opacity 0.8s ease;
     transition: opacity 0.8s ease;
   }
@@ -479,6 +481,7 @@ label {
   }
   .decision-header--scroll {
     opacity: 1;
+    z-index: 1;
   }
   .decision-header--stop {
     position: absolute;
@@ -831,17 +834,15 @@ label {
     width: 100%;
     height: 290px;
     background-color: #020c22;
-    z-index: 0;
-  }
-  .order__product-type .container {
-    position: relative;
-    z-index: 1;
+    z-index: 2;
   }
   .order__product-type .order__step-title {
+    position: relative;
     margin-bottom: 0;
     padding-top: 18px;
     color: #66bbff;
     letter-spacing: 2.5px;
+    z-index: 3;
   }
   .order__order-content {
     margin-bottom: 10px;
@@ -850,6 +851,14 @@ label {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .order__order-content .order__step-title {
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 34px;
+    color: #cdcdcd;
+    letter-spacing: 3px;
   }
   .order__add-more {
     font-size: 0;
@@ -874,6 +883,7 @@ label {
     text-align: left;
     font-size: 28px;
     line-height: 40px;
+    color: #003cff;
     letter-spacing: 2.7px;
   }
   .order__delivery-type .order__step-title {
@@ -895,9 +905,10 @@ label {
     max-width: 1024px;
     margin: 0 auto;
     margin-bottom: 54px;
-    padding-top: 60px;
-    margin-top: 110px;
+    padding-top: 30px;
+    margin-top: 115px;
     border: 3px solid #ffe37f;
+    border-bottom: 3px dashed #ffe37f;
   }
   .type-stamp {
     margin-left: -6px;
@@ -2031,16 +2042,20 @@ label {
     background-color: #ffffff;
   }
   .product-types {
-    padding: 0 5px 5px;
+    padding: 0 5px;
     font-size: 0;
     text-align: center;
     background-color: rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0 32px 87px rgba(193, 193, 193, 0.2);
+    box-shadow: 0 32px 87px rgba(193, 193, 193, 0.2);
   }
   .product-type {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: 16.333%;
     cursor: pointer;
+    z-index: 3;
   }
   .product-type__inner {
     position: relative;
@@ -2096,17 +2111,32 @@ label {
     font-family: "Proxima Nova", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
-    -webkit-transition: background-color, -webkit-box-shadow 0.4s ease;
-    transition: background-color, box-shadow 0.4s ease;
+  }
+  .product-type__order-block:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -5px;
+    right: -5px;
+    background-color: #fffab1;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
   }
   .product-type__order-block:last-child {
     margin-bottom: 0;
   }
-  .product-type__order-block.chosen,
-  .product-type__order-block:hover {
+  .product-type__order-block.chosen:before,
+  .product-type__order-block:hover:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -5px;
+    right: -5px;
     background-color: #fffab1;
-    -webkit-box-shadow: 0px 7px 0px 6px #fffab1, 0px -4px 0px 6px #fffab1;
-    box-shadow: 0px 7px 0px 6px #fffab1, 0px -4px 0px 6px #fffab1;
+    opacity: 1;
   }
   .product-type__order-block.chosen .product-type__title,
   .product-type__order-block:hover .product-type__title {
@@ -2121,6 +2151,7 @@ label {
     background-color: rgba(255, 255, 255, 0);
   }
   .product-type__title {
+    position: relative;
     margin: 0;
     padding: 10px;
     text-transform: uppercase;
@@ -2131,6 +2162,7 @@ label {
     color: #434343;
     background-color: #ededed;
     letter-spacing: 2px;
+    z-index: 2;
   }
   .product-type__price-block {
     position: relative;
@@ -2319,7 +2351,7 @@ label {
     width: 100%;
     text-align: center;
     font-size: 41px;
-    font-weight: normal;
+    font-weight: 900;
     line-height: 43px;
     color: #888;
     background-color: transparent;
@@ -2328,14 +2360,14 @@ label {
   .order-content__field--number {
     padding: 16px 10px;
     width: 38%;
-    border: 1px solid #ffe900;
+    border: 3px solid #ffe900;
   }
   .order-content__field--price {
     padding: 15px;
     padding-left: 23px;
     text-align: center;
     font-weight: lighter;
-    color: #0044cc;
+    color: #003cff;
     letter-spacing: 4px;
   }
   .order-content__edit-btn {
@@ -2479,7 +2511,7 @@ label {
     line-height: 29px;
     color: #434343;
     letter-spacing: 3px;
-    border: 1px solid #0044cc;
+    border: 1px solid #003cff;
     -webkit-border-radius: 4px;
     border-radius: 4px;
     cursor: pointer;
@@ -2608,7 +2640,7 @@ label {
     font-weight: lighter;
     font-size: 41px;
     line-height: 43px;
-    color: #0044cc;
+    color: #003cff;
     background-color: transparent;
     border: 1px solid transparent;
     letter-spacing: 4px;
@@ -2621,6 +2653,8 @@ label {
   .order-contacts .contacts-info {
     top: 0;
     width: 58.4%;
+    -webkit-box-shadow: 0 3px 18px 0 rgba(0, 68, 204, 0.32);
+    box-shadow: 0 3px 18px 0 rgba(0, 68, 204, 0.32);
   }
   .order-contacts .contacts-info__input:first-child {
     width: 53%;
