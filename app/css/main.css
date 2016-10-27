@@ -1993,7 +1993,7 @@ label {
     font-weight: 900;
     font-size: 20px;
     color: #0043cb;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid #000;
     -webkit-border-radius: 21px;
     border-radius: 21px;
@@ -2003,11 +2003,11 @@ label {
     border: 1px solid #bdbdbd;
     letter-spacing: 4px;
     cursor: pointer;
-    -webkit-transition: opacity 0.4s;
-    transition: opacity 0.4s;
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;
   }
   .btn-submit:hover {
-    opacity: 0.7;
+    background-color: #ffffff;
   }
   .btn-reset {
     display: inline-block;
@@ -2020,15 +2020,15 @@ label {
     font-weight: 900;
     line-height: 22px;
     color: #434343;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid #bdbdbd;
     letter-spacing: 4px;
     cursor: pointer;
-    -webkit-transition: opacity 0.4s;
-    transition: opacity 0.4s;
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;
   }
   .btn-reset:hover {
-    opacity: 0.7;
+    background-color: #ffffff;
   }
   .product-types {
     padding: 0 5px 5px;
@@ -2220,7 +2220,7 @@ label {
   .order-content__right-col {
     display: inline-block;
     vertical-align: top;
-    width: 57%;
+    width: 58%;
   }
   .order-content__data {
     padding-bottom: 10px;
@@ -2287,7 +2287,7 @@ label {
   }
   .order-content__qty {
     float: left;
-    width: 55%;
+    width: 54%;
   }
   .order-content__qty .order-content__label {
     padding-left: 27px;
@@ -2295,7 +2295,7 @@ label {
   .order-content__price {
     float: right;
     padding-bottom: 10px;
-    width: 38%;
+    width: 40%;
     min-width: 205px;
     -webkit-box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
     box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
