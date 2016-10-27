@@ -28,7 +28,6 @@
 
     &.right {
       letter-spacing: 0;
-      padding-left: 13px;
       min-height: 130px;
     }
   }
@@ -36,17 +35,19 @@
   &__toggle {
     display: block;
     padding: 11px;
+    padding-left: 42px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: 900;
     font-size: 15px;
     line-height: 18px;
     color: #434343;
-    letter-spacing: 2.6px;
+    letter-spacing: 2.4px;
     background-color: #fff;
     border-bottom: 1px solid #ffe37f;
     cursor: pointer;
+    transition: background-color 0.4s ease;
 
     &:last-child {
       border-bottom: none;
@@ -65,32 +66,33 @@
   &__total {
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 51%;
     text-align: center;
   }
 
   &__payment-info {
     position: relative;
-    padding-top: 85px;
+    padding-top: 88px;
+    width: 49%;
     text-transform: uppercase;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     font-size: 13px;
     line-height: 15px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 
     &:before {
       .sprite(@icon-finger);
       content: "";
       position: absolute;
-      top: 7px;
-      left: 50%;
+      top: 10px;
+      left: 49%;
       transform: translateX(-50%);
     }
   }
 
   &__total {
-    padding: 9px 10px;
+    padding: 12px 10px;
     padding-bottom: 20px;
     box-shadow: 0 0 6px rgba(193,193,193,.58);
   }
@@ -100,10 +102,10 @@
     margin-bottom: 24px;
     text-transform: uppercase;
     text-align: center;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 3.9px;
   }
 
   &__field {
@@ -115,5 +117,6 @@
     color: @c-blue;
     background-color: transparent;
     border: 1px solid transparent;
+    letter-spacing: 4px;
   }
 }

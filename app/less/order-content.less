@@ -11,7 +11,7 @@
     background-color: #fffffe;
 
     &.gray {
-      padding-bottom: 8px;
+      padding-bottom: 9px;
       background-image: url("../img/bg-order-content.png");
       background-repeat: repeat-x;
       background-position: top left;
@@ -26,14 +26,15 @@
   }
 
   &__data {
+    .clearfix();
     padding-bottom: 10px;
   }
 
   &__img {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 12px;
-    max-width: 40%;
+    float: right;
+    margin-top: 25px;
+    margin-right: 19px;
+    max-width: 120px;
     max-height: 100%;
     overflow: hidden;
 
@@ -46,32 +47,34 @@
   }
 
   &__text {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     margin: 0;
     padding: 23px 18px;
-    padding-left: 40px;
-    padding-top: 38px;
+    padding-left: 41px;
+    padding-top: 35px;
     width: 60%;
     min-height: 80px;
     font-weight: lighter;
     font-size: 14px;
     line-height: 17px;
     color: #777;
+    letter-spacing: 1.4px;
   }
 
   &__message {
     display: block;
     width: 100%;
     height: 82px;
-    padding: 10px 18px;
-    font-size: 13px;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 900;
     line-height: 15px;
     background-color: #f9f9fd;
     border: none;
     border-top: 1px solid #ebebf7;
     border-left: 1px solid #ebebf7;
     border-radius: 4px;
+    letter-spacing: 1.5px;
     resize: none;
   }
 
@@ -90,6 +93,10 @@
   &__qty {
     float: left;
     width: 55%;
+
+    .order-content__label {
+      padding-left: 27px;
+    }
   }
 
   &__price {
@@ -105,11 +112,11 @@
     margin-bottom: 10px;
     margin-top: 13px;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 14px;
     line-height: 18px;
     color: #454545;
-    letter-spacing: 4px;
+    letter-spacing: 4.3px;
   }
 
   &__field-wrapper {
@@ -151,7 +158,6 @@
     font-size: 28px;
     line-height: 42px;
     color: #434343;
-    letter-spacing: 4px;
 
     &:hover {
       opacity: 0.8;
@@ -161,6 +167,7 @@
       position: relative;
       display: inline-block;
       vertical-align: top;
+      letter-spacing: 2.8px;
 
       &:before {
         content: "";
@@ -184,7 +191,6 @@
     font-size: 21px;
     line-height: 29px;
     color: #ff5b59;
-    letter-spacing: 2px;
 
     &:hover {
       opacity: 0.8;
@@ -204,6 +210,7 @@
         width: 100%;
         height: 1px;
         background-color: #ff5b5a;
+        letter-spacing: 2px;
       }
     }
   }

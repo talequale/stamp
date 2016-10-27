@@ -1,6 +1,7 @@
 .product-types {
   padding: 0 5px 5px;
   font-size: 0;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -11,10 +12,27 @@
   cursor: pointer;
 
   &__inner {
+    position: relative;
     display: block;
     text-decoration: none;
     padding-top: 20px;
     border-bottom: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -3.5%;
+      right: -3.5%;
+      height: 100%;
+      background-image: url("../img/bg-active-product.png");
+      background-repeat: repeat-x;
+      background-size: 1px 84px;
+      background-position: bottom left;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
   }
 
   &__name {
@@ -52,6 +70,7 @@
     font-family: "Proxima Nova", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
+    transition: background-color, box-shadow 0.4s ease;
 
     &:last-child {
       margin-bottom: 0;
@@ -81,7 +100,7 @@
     padding: 10px;
     text-transform: uppercase;
     text-align: center;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 15px;
     line-height: 35px;
     color: #434343;
@@ -90,8 +109,10 @@
   }
 
   &__price-block {
-    padding: 0 2px;
+    position: relative;
+    right: -3px;
     font-size: 0;
+    letter-spacing: 0;
   }
 
   &__price {
@@ -99,17 +120,21 @@
     vertical-align: top;
     box-sizing: border-box;
     padding: 0;
-    width: 49%;
+    padding-right: 4px;
+    width: 53%;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     text-align: right;
+    font-weight: 900;
     font-size: 16px;
     line-height: 34px;
     color: #000;
     white-space: nowrap;
+    letter-spacing: 2px;
 
     &--old {
       position: relative;
-      padding: 0 0 0 6px;
+      padding: 0;
+      width: 47%;
       text-align: left;
       color: #bebebe;
 
@@ -130,7 +155,6 @@
   &:hover {
 
     .product-type__inner {
-      position: relative;
 
       &:before {
         content: "";
@@ -143,6 +167,7 @@
         background-repeat: repeat-x;
         background-size: 1px 84px;
         background-position: bottom left;
+        opacity: 1;
       }
     }
 

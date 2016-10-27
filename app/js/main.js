@@ -77,9 +77,10 @@ $(document).ready(function(){
     $('body').removeClass('overflow');
   });
 
-  $('.btn-reset').on('click', function() {
+  $('.btn-reset').on('click', function(e) {
     $(this).parents('.popup').removeClass('popup--active');
     $('body').removeClass('overflow');
+    e.preventDefault();
   });
 
   $('.page-main').removeClass('blur');

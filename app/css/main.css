@@ -299,10 +299,10 @@ label {
   .fast-phone__link {
     display: block;
     text-decoration: none;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 19px;
     line-height: 28px;
-    letter-spacing: 3.8px;
+    letter-spacing: 4.3px;
     color: #0044cc;
   }
   .fast-phone__slogan {
@@ -366,14 +366,14 @@ label {
     display: inline-block;
     vertical-align: middle;
     padding-left: 15px;
-    width: 170px;
+    width: 174px;
     font-family: "Proxima Nova", Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 12px;
     line-height: 18px;
     color: #ebebeb;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.9px;
   }
   .header-logo__action {
     text-transform: uppercase;
@@ -527,6 +527,9 @@ label {
     background-repeat: no-repeat;
     background-position: 100% 0;
     padding-top: 135px;
+  }
+  .promo .container {
+    padding-left: 40px;
   }
   .promo__accent {
     font-family: "Proxima Nova", Arial, sans-serif;
@@ -735,12 +738,14 @@ label {
     width: 37.5%;
     padding: 0 6px;
     float: left;
+    width: 34.2%;
     list-style: none;
   }
   .steps__item:first-child {
     width: 25%;
     padding: 0 6px;
     float: left;
+    width: 23.2%;
   }
   .steps__item:last-child {
     width: 25%;
@@ -851,10 +856,11 @@ label {
   }
   .order__add-more .container {
     margin: 0;
-    margin-left: 20px;
+    margin-left: 15px;
     padding-top: 12px;
     padding-bottom: 5px;
-    max-width: 750px;
+    padding-right: 14px;
+    max-width: 752px;
     background-image: url("../img/bg-order-content.png");
     background-repeat: repeat-x;
     background-position: top left;
@@ -862,12 +868,13 @@ label {
   }
   .order__add-more .order__step-title {
     padding-top: 0;
+    padding-left: 23px;
     float: left;
-    width: 50%;
+    width: 370px;
     text-align: left;
     font-size: 28px;
     line-height: 40px;
-    letter-spacing: 3px;
+    letter-spacing: 2.7px;
   }
   .order__delivery-type .order__step-title {
     margin-bottom: 7px;
@@ -876,6 +883,7 @@ label {
     line-height: 45px;
     color: #878787;
     background-color: #eee;
+    letter-spacing: 2.8px;
   }
   .order__delivery-type .container {
     width: 1024px;
@@ -1482,10 +1490,10 @@ label {
   }
   .guarantee__text {
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: 700;
     max-width: 745px;
-    font-size: 21px;
-    line-height: 27px;
+    font-size: 17px;
+    line-height: 28px;
     color: #ff4118;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -1794,7 +1802,7 @@ label {
     font-size: 24px;
     text-transform: lowercase;
     letter-spacing: 4px;
-    font-weight: normal;
+    font-weight: 900;
     padding: 7px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -1982,6 +1990,7 @@ label {
     margin: 0 6px;
     padding: 10px;
     min-width: 125px;
+    font-weight: 900;
     font-size: 20px;
     color: #0043cb;
     background-color: #fff;
@@ -2008,6 +2017,7 @@ label {
     min-width: 125px;
     text-transform: uppercase;
     font-size: 15px;
+    font-weight: 900;
     line-height: 22px;
     color: #434343;
     background-color: #fff;
@@ -2023,6 +2033,7 @@ label {
   .product-types {
     padding: 0 5px 5px;
     font-size: 0;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0);
   }
   .product-type {
@@ -2032,10 +2043,26 @@ label {
     cursor: pointer;
   }
   .product-type__inner {
+    position: relative;
     display: block;
     text-decoration: none;
     padding-top: 20px;
     border-bottom: none;
+  }
+  .product-type__inner:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -3.5%;
+    right: -3.5%;
+    height: 100%;
+    background-image: url("../img/bg-active-product.png");
+    background-repeat: repeat-x;
+    background-size: 1px 84px;
+    background-position: bottom left;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
   }
   .product-type__name {
     margin: 0;
@@ -2069,6 +2096,8 @@ label {
     font-family: "Proxima Nova", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
+    -webkit-transition: background-color, -webkit-box-shadow 0.4s ease;
+    transition: background-color, box-shadow 0.4s ease;
   }
   .product-type__order-block:last-child {
     margin-bottom: 0;
@@ -2096,7 +2125,7 @@ label {
     padding: 10px;
     text-transform: uppercase;
     text-align: center;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 15px;
     line-height: 35px;
     color: #434343;
@@ -2104,8 +2133,10 @@ label {
     letter-spacing: 2px;
   }
   .product-type__price-block {
-    padding: 0 2px;
+    position: relative;
+    right: -3px;
     font-size: 0;
+    letter-spacing: 0;
   }
   .product-type__price {
     display: inline-block;
@@ -2113,17 +2144,21 @@ label {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
-    width: 49%;
+    padding-right: 4px;
+    width: 53%;
     font-family: "Proxima Nova Condensed", Arial, sans-serif;
     text-align: right;
+    font-weight: 900;
     font-size: 16px;
     line-height: 34px;
     color: #000;
     white-space: nowrap;
+    letter-spacing: 2px;
   }
   .product-type__price--old {
     position: relative;
-    padding: 0 0 0 6px;
+    padding: 0;
+    width: 47%;
     text-align: left;
     color: #bebebe;
   }
@@ -2137,10 +2172,6 @@ label {
     height: 1px;
     background-color: #f0f0f0;
   }
-  .product-type.active .product-type__inner,
-  .product-type:hover .product-type__inner {
-    position: relative;
-  }
   .product-type.active .product-type__inner:before,
   .product-type:hover .product-type__inner:before {
     content: "";
@@ -2153,6 +2184,7 @@ label {
     background-repeat: repeat-x;
     background-size: 1px 84px;
     background-position: bottom left;
+    opacity: 1;
   }
   .product-type.active .product-type__title,
   .product-type:hover .product-type__title {
@@ -2179,7 +2211,7 @@ label {
     background-color: #fffffe;
   }
   .order-content__left-col.gray {
-    padding-bottom: 8px;
+    padding-bottom: 9px;
     background-image: url("../img/bg-order-content.png");
     background-repeat: repeat-x;
     background-position: top left;
@@ -2193,11 +2225,16 @@ label {
   .order-content__data {
     padding-bottom: 10px;
   }
+  .order-content__data:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
   .order-content__img {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 12px;
-    max-width: 40%;
+    float: right;
+    margin-top: 25px;
+    margin-right: 19px;
+    max-width: 120px;
     max-height: 100%;
     overflow: hidden;
   }
@@ -2208,25 +2245,26 @@ label {
     height: auto;
   }
   .order-content__text {
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     margin: 0;
     padding: 23px 18px;
-    padding-left: 40px;
-    padding-top: 38px;
+    padding-left: 41px;
+    padding-top: 35px;
     width: 60%;
     min-height: 80px;
     font-weight: lighter;
     font-size: 14px;
     line-height: 17px;
     color: #777;
+    letter-spacing: 1.4px;
   }
   .order-content__message {
     display: block;
     width: 100%;
     height: 82px;
-    padding: 10px 18px;
-    font-size: 13px;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 900;
     line-height: 15px;
     background-color: #f9f9fd;
     border: none;
@@ -2234,6 +2272,7 @@ label {
     border-left: 1px solid #ebebf7;
     -webkit-border-radius: 4px;
     border-radius: 4px;
+    letter-spacing: 1.5px;
     resize: none;
   }
   .order-content__price-block {
@@ -2250,6 +2289,9 @@ label {
     float: left;
     width: 55%;
   }
+  .order-content__qty .order-content__label {
+    padding-left: 27px;
+  }
   .order-content__price {
     float: right;
     padding-bottom: 10px;
@@ -2263,11 +2305,11 @@ label {
     margin-bottom: 10px;
     margin-top: 13px;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 14px;
     line-height: 18px;
     color: #454545;
-    letter-spacing: 4px;
+    letter-spacing: 4.3px;
   }
   .order-content__field-wrapper {
     position: relative;
@@ -2304,7 +2346,6 @@ label {
     font-size: 28px;
     line-height: 42px;
     color: #434343;
-    letter-spacing: 4px;
   }
   .order-content__edit-btn:hover {
     opacity: 0.8;
@@ -2313,6 +2354,7 @@ label {
     position: relative;
     display: inline-block;
     vertical-align: top;
+    letter-spacing: 2.8px;
   }
   .order-content__edit-btn span:before {
     content: "";
@@ -2333,7 +2375,6 @@ label {
     font-size: 21px;
     line-height: 29px;
     color: #ff5b59;
-    letter-spacing: 2px;
   }
   .order-content__cancel-btn:hover {
     opacity: 0.8;
@@ -2352,6 +2393,7 @@ label {
     width: 100%;
     height: 1px;
     background-color: #ff5b5a;
+    letter-spacing: 2px;
   }
   .order-content .order-btn {
     position: absolute;
@@ -2417,7 +2459,7 @@ label {
   .add-more-items {
     font-size: 0;
     float: right;
-    width: 46%;
+    width: 323px;
   }
   .add-item {
     position: relative;
@@ -2441,11 +2483,14 @@ label {
     -webkit-border-radius: 4px;
     border-radius: 4px;
     cursor: pointer;
+    -webkit-transition: color, background-color 0.4s ease;
+    transition: color, background-color 0.4s ease;
   }
   .add-item__label span {
     display: inline-block;
     vertical-align: top;
     max-width: 300px;
+    letter-spacing: 2px;
   }
   .add-item__label:hover {
     color: #fff;
@@ -2481,23 +2526,25 @@ label {
   }
   .delivery-type__col.right {
     letter-spacing: 0;
-    padding-left: 13px;
     min-height: 130px;
   }
   .delivery-type__toggle {
     display: block;
     padding: 11px;
+    padding-left: 42px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: 900;
     font-size: 15px;
     line-height: 18px;
     color: #434343;
-    letter-spacing: 2.6px;
+    letter-spacing: 2.4px;
     background-color: #fff;
     border-bottom: 1px solid #ffe37f;
     cursor: pointer;
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
   }
   .delivery-type__toggle:last-child {
     border-bottom: none;
@@ -2512,18 +2559,19 @@ label {
   .delivery-type__total {
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 51%;
     text-align: center;
   }
   .delivery-type__payment-info {
     position: relative;
-    padding-top: 85px;
+    padding-top: 88px;
+    width: 49%;
     text-transform: uppercase;
     font-family: "Proxima Nova", Arial, sans-serif;
     font-weight: lighter;
     font-size: 13px;
     line-height: 15px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
   }
   .delivery-type__payment-info:before {
     background-image: url(../img/sprite.png);
@@ -2532,14 +2580,14 @@ label {
     height: 64px;
     content: "";
     position: absolute;
-    top: 7px;
-    left: 50%;
+    top: 10px;
+    left: 49%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   .delivery-type__total {
-    padding: 9px 10px;
+    padding: 12px 10px;
     padding-bottom: 20px;
     -webkit-box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
     box-shadow: 0 0 6px rgba(193, 193, 193, 0.58);
@@ -2549,10 +2597,10 @@ label {
     margin-bottom: 24px;
     text-transform: uppercase;
     text-align: center;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 3.9px;
   }
   .delivery-type__field {
     width: 100%;
@@ -2563,6 +2611,7 @@ label {
     color: #0044cc;
     background-color: transparent;
     border: 1px solid transparent;
+    letter-spacing: 4px;
   }
   .order-contacts {
     position: relative;
@@ -2571,21 +2620,29 @@ label {
   }
   .order-contacts .contacts-info {
     top: 0;
-    width: 62.5%;
+    width: 58.4%;
+  }
+  .order-contacts .contacts-info__input:first-child {
+    width: 53%;
   }
   .order-contacts .form-send {
     top: 0;
     right: 0;
+    padding: 0;
+    width: 21%;
+  }
+  .order-contacts .btn-send {
+    padding: 7px 15px;
   }
   .order-contacts__note {
     margin: 0 auto;
     padding-top: 60px;
-    width: 62.5%;
+    width: 70%;
     text-align: center;
     font-size: 16px;
-    font-weight: lighter;
+    font-weight: 900;
     line-height: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     color: #bcbcbc;
   }
   .stamp-previews {
@@ -2610,6 +2667,8 @@ label {
     border: 1px solid #ddd;
     -webkit-border-radius: 4px;
     border-radius: 4px;
+    -webkit-transition: background, border, -webkit-box-shadow 0.4s ease;
+    transition: background, border, box-shadow 0.4s ease;
   }
   .stamp-preview__name {
     display: inline-block;
