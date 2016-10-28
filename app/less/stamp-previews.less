@@ -1,10 +1,12 @@
 .stamp-previews {
-  .clearfix();
+  font-size: 0;
   text-align: left;
+  letter-spacing: 0;
 }
 
 .stamp-preview {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   margin: 0 0.545%;
   margin-bottom: 25px;
   width: 23.91%;
@@ -12,20 +14,22 @@
   cursor: pointer;
 
   &__inner {
+    position: relative;
     margin-bottom: 5px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: background, border, box-shadow 0.4s ease;
+    letter-spacing: 0;
   }
 
   &__name {
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-    padding: 10px;
-    min-height: 72px;
+    padding: 10px 5px;
     width: 50%;
+    min-height: 136px;
     text-align: center;
     font-size: 13px;
     line-height: 18px;
@@ -36,6 +40,12 @@
   }
 
   &__name-part {
+    letter-spacing: 1.2px;
+    word-wrap: break-word;
+
+    span {
+      display: block;
+    }
 
     &.title {
       .proxima(300);
@@ -58,8 +68,8 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 48%;
-    min-height: 126px;
+    width: 50%;
+    height: 136px;
     overflow: hidden;
 
     img {

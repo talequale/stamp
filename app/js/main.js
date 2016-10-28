@@ -47,7 +47,19 @@ $(document).ready(function(){
   $('.stamp-preview').on('click', function() {
     $('.stamp-preview').removeClass('active');
     $(this).toggleClass('active');
-  })
+  });
+
+  var stampPre = $('.stamp-preview');
+  $(document).ready(function() {
+    $.each(stampPre, function() {
+      var stampPreHeight = $(this).find('.stamp-preview__name').height();
+      if($(this).find('.stamp-preview__name').height() > 136) {
+        var innerHeight = $(this).find('.stamp-preview__name').height();
+        console.log(innerHeight);
+        $(this).siblings().find('.stamp-preview__name').height(innerHeight);
+      }
+    })
+  });
 
   //
 
