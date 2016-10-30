@@ -1,14 +1,22 @@
 @font-face {
   font-family: "Proxima Nova Condensed";
-  src: url("../fonts/Proxima_Nova_Condensed_Regular.woff") format("woff"), url("../fonts/Proxima_Nova_Condensed_Regular.otf") format("opentype");
+  src: url("../fonts/Proxima_Nova_Condensed_Regular.eot");
+  src: url("../fonts/Proxima_Nova_Condensed_Regular.eot") format("embedded-opentype"), url("../fonts/Proxima_Nova_Condensed_Regular.svg#Proxima_Nova_Condensed_Regular") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Proxima Nova Condensed";
-  src: url("../fonts/Proxima_Nova_Condensed_Thin.woff") format("woff"), url("../fonts/Proxima_Nova_Condensed_Thin.otf") format("opentype");
+  src: url("../fonts/Proxima_Nova_Condensed_Thin.eot");
+  src: url("../fonts/Proxima_Nova_Condensed_Thin.eot") format("embedded-opentype"), url("../fonts/Proxima_Nova_Condensed_Thin.woff2") format("woff2"), url("../fonts/Proxima_Nova_Condensed_Thin.woff") format("woff"), url("../fonts/Proxima_Nova_Condensed_Thin.ttf") format("truetype"), url("../fonts/Proxima_Nova_Condensed_Thin.svg#Proxima_Nova_Condensed_Thin") format("svg");
   font-style: normal;
   font-weight: lighter;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNovaBold.woff") format("woff"), url("../fonts/ProximaNovaBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: bolder;
 }
 @font-face {
   font-family: "Proxima Nova";
@@ -16,13 +24,6 @@
   font-style: normal;
   font-weight: lighter;
 }
-/*@font-face {
-    font-family: "Proxima Nova";
-    src: url("../fonts/ProximaNovaBold.woff") format("woff"),
-    url("../fonts/ProximaNovaBold.otf") format("opentype");
-    font-style: normal;
-    font-weight: bolder;
-}*/
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
 
@@ -370,7 +371,6 @@ label {
     width: 174px;
     font-family: "Proxima Nova", Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: bolder;
     font-size: 12px;
     line-height: 18px;
     color: #ebebeb;
@@ -1079,7 +1079,7 @@ label {
     font-size: 13px;
     letter-spacing: 3.5px;
     font-family: "Proxima Nova", Arial, sans-serif;
-    font-weight: bold;
+    font-weight: lighter;
     width: 40%;
     padding: 8px 15px;
     -webkit-border-radius: 20px;
@@ -2186,7 +2186,7 @@ label {
     line-height: 34px;
     color: #000;
     white-space: nowrap;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
   .product-type__price--old {
     position: relative;
@@ -2568,7 +2568,6 @@ label {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 900;
     font-size: 15px;
     line-height: 18px;
     color: #434343;
@@ -2673,9 +2672,9 @@ label {
     margin: 0 auto;
     padding-top: 60px;
     width: 70%;
+    text-transform: uppercase;
     text-align: center;
     font-size: 16px;
-    font-weight: 900;
     line-height: 20px;
     letter-spacing: 4px;
     color: #bcbcbc;
@@ -2685,16 +2684,42 @@ label {
     text-align: left;
     letter-spacing: 0;
   }
+  .stamp-previews__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .stamp-preview {
-    display: inline-block;
-    vertical-align: top;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 0 0.545%;
     margin-bottom: 25px;
     width: 23.91%;
+    max-width: 23.91%;
     font-size: 0;
     cursor: pointer;
   }
   .stamp-preview__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     position: relative;
     margin-bottom: 5px;
     background-color: #fff;
@@ -2712,7 +2737,7 @@ label {
     box-sizing: border-box;
     padding: 10px 5px;
     width: 50%;
-    min-height: 136px;
+    min-height: 100%;
     text-align: center;
     font-size: 13px;
     line-height: 18px;

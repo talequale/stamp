@@ -49,7 +49,7 @@ $(document).ready(function(){
     $(this).toggleClass('active');
   });
 
-  var stampPre = $('.stamp-preview');
+  /*var stampPre = $('.stamp-preview');
   $(document).ready(function() {
     $.each(stampPre, function() {
       var stampPreHeight = $(this).find('.stamp-preview__name').height();
@@ -59,7 +59,7 @@ $(document).ready(function(){
         $(this).siblings().find('.stamp-preview__name').height(innerHeight);
       }
     })
-  });
+  });*/
 
   //
 
